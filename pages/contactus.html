@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/Screenshot 2025-09-01 114611.png" type="image/x-icon">
     <title>Contact Us - SISTAS Wing Union</title>
     <meta name="description" content="Get in touch with SISTAS Wing Union. Contact us for inquiries, partnerships, volunteering opportunities, or general information.">
     
@@ -78,6 +79,18 @@
         
         .success-message {
             animation: slideUp 0.5s ease-out;
+        }
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
         }
     </style>
 </head>
@@ -407,18 +420,7 @@
                     </div>
                 </div>
                 
-                <!-- Directions -->
-                <div class="mt-8 grid md:grid-cols-2 gap-8">
-                    <div class="bg-brand-blue rounded-lg p-6">
-                        <h3 class="text-lg font-bold text-gray-800 mb-3">By Public Transport</h3>
-                        <p class="text-gray-700">Take the trotro to East Legon Junction, then it's a 5-minute walk to Community Lane. Look for the blue and pink SISTAS Wing Union signage.</p>
-                    </div>
-                    
-                    <div class="bg-brand-pink rounded-lg p-6">
-                        <h3 class="text-lg font-bold text-gray-800 mb-3">By Car</h3>
-                        <p class="text-gray-700">Parking is available on-site. From Accra Mall, head towards East Legon and turn left at Community Lane. We're in the second building on the right.</p>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </section>
@@ -431,13 +433,13 @@
                 <p class="text-lg md:text-xl mb-8 text-pink-100">Become a volunteer or partner with us today and help us create meaningful change in our communities.</p>
                 
                 <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                    <button class="px-8 py-4 bg-white text-pink-600 font-semibold rounded-full hover:bg-pink-50 transition-all duration-300 transform hover:scale-105 shadow-lg">
-                        Volunteer With Us
-                    </button>
+                    <a href="../pages/volunteer.html" >  <button class="px-8 py-4 bg-white text-pink-600 font-semibold rounded-full hover:bg-pink-50 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                  Volunteer With Us  
+                    </button> </a> 
                     
-                    <button class="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-pink-600 transition-all duration-300 transform hover:scale-105">
-                        Partner With Us
-                    </button>
+                     <a href="../pages/patnerwithus.html"> <button class="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-pink-600 transition-all duration-300 transform hover:scale-105">
+                     Partner With Us
+                    </button> </a> 
                 </div>
             </div>
         </div>

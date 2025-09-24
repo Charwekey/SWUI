@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/Screenshot 2025-09-01 114611.png" type="image/x-icon">
     <title>Media Gallery - SISTAS Wing Union</title>
     <meta name="description" content="Explore photos and videos from SISTAS Wing Union programs, events, and initiatives. See our impact in action.">
     
@@ -167,6 +168,19 @@
         
         .lazy-load.loaded {
             opacity: 1;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
         }
     </style>
 </head>
@@ -567,13 +581,13 @@
                 <p class="text-lg md:text-xl mb-8 text-pink-100">Join us in creating impact and making a difference in the lives of women across Ghana.</p>
                 
                 <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                    <button class="px-8 py-4 bg-white text-pink-600 font-semibold rounded-full hover:bg-pink-50 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                  <a href="../pages/volunteer.html">  <button class="px-8 py-4 bg-white text-pink-600 font-semibold rounded-full hover:bg-pink-50 transition-all duration-300 transform hover:scale-105 shadow-lg">
                         Get Involved
-                    </button>
+                    </button> </a>
                     
-                    <button class="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-pink-600 transition-all duration-300 transform hover:scale-105">
-                        Share Our Story
-                    </button>
+                    <a href="../pages/patnerwithus.html"> <button class="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-pink-600 transition-all duration-300 transform hover:scale-105">
+                        Partner With Us
+                    </button> </a>
                 </div>
             </div>
         </div>
@@ -636,7 +650,7 @@
                         <li><a href="../pages/volunteer.html" class="text-gray-300 hover:text-pink-400 transition-colors">Volunteer</a></li>
                         <li><a href="../pages/volunteer.html" class="text-gray-300 hover:text-pink-400 transition-colors">Become a Member</a></li>
                         <li><a href="../pages/patnerwithus.html" class="text-gray-300 hover:text-pink-400 transition-colors">Partner With Us</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-pink-400 transition-colors">Spread the Word</a></li>
+                        
                     </ul>
                 </div>
             </div>

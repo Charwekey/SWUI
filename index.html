@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/Screenshot 2025-09-01 114611.png" type="image/x-icon">
     <title>SISTAS Wing Union - Empowering Women Through Unity</title>
     <meta name="description" content="SISTAS Wing Union empowers women through initiatives, advocacy, and community building. Join us in making a difference.">
     
@@ -34,6 +35,18 @@
     </script>
     
     <style>
+         .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
@@ -74,7 +87,6 @@
                 
                 <div class="text-center">
                     <div class="mb-4">
-                        <!-- Replace with actual welcome image -->
                         <img src="images/Screenshot 2025-09-01 114611.png" alt="SISTAS Wing Union Welcome" class="w-20 h-20 mx-auto rounded-full border-4 border-brand-pink">
                     </div>
                     
@@ -89,11 +101,12 @@
                         </button>
                         
                         <button class="w-full bg-brand-blue hover:bg-brand-blue-dark text-blue-800 py-3 px-4 rounded-lg font-semibold transition-all duration-200">
-                            🤝 Volunteer / Become a Member
+                            <a href="pages/volunteer.html" >🤝 Volunteer / Become a Member  </a>
                         </button>
                         
+                    
                         <button class="w-full border-2 border-brand-pink text-pink-700 py-3 px-4 rounded-lg font-semibold hover:bg-brand-pink transition-all duration-200">
-                            🤲 Partner With Us
+                             <a href="pages/patnerwithus.html">  🤲 Partner With Us </a>
                         </button>
                     </div>
                 </div>
@@ -237,10 +250,13 @@
                     </button> 
 
                     
+                 <a href="pages/initiative.html">
+
+            
                     <button class="px-8 py-4 bg-white text-gray-800 font-semibold rounded-full border-2 border-gray-300 hover:border-pink-400 hover:bg-pink-50 transition-all duration-300 shadow-lg">
                       
                         🌟 Explore Initiatives
-                    </button>
+                    </button> </a>
                 </div>
             </div>
         </div>
@@ -308,7 +324,7 @@
                         <li><a href="pages/volunteer.html" class="text-gray-300 hover:text-pink-400 transition-colors">Volunteer</a></li>
                         <li><a href="pages/volunteer.html" class="text-gray-300 hover:text-pink-400 transition-colors">Become a Member</a></li>
                         <li><a href="pages/patnerwithus.html" class="text-gray-300 hover:text-pink-400 transition-colors">Partner With Us</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-pink-400 transition-colors">Spread the Word</a></li>
+                        
                     </ul>
                 </div>
             </div>
