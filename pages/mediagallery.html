@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Gallery - SISTAS Wing Union</title>
+    <meta name="description" content="Explore photos and videos from SISTAS Wing Union programs, events, and initiatives. See our impact in action.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Paystack Inline Script -->
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+    
+    <!-- Custom Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-pink': '#FAD1E8',
+                        'brand-blue': '#BFE6FF',
+                        'brand-pink-dark': '#F8BBD9',
+                        'brand-blue-dark': '#9DD6FF'
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.3s ease-out',
+                        'scale-in': 'scaleIn 0.3s ease-out',
+                        'float': 'float 3s ease-in-out infinite',
+                        'zoom-in': 'zoomIn 0.3s ease-out',
+                        'slide-in': 'slideIn 0.4s ease-out'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes scaleIn {
+            from { transform: scale(0.9); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        @keyframes zoomIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        
+        @keyframes slideIn {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        .modal-backdrop {
+            backdrop-filter: blur(8px);
+        }
+        
+        .dropdown-enter {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        
+        .dropdown-enter-active {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+        }
+        
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            aspect-ratio: 4/3;
+        }
+        
+        .gallery-item img {
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(59, 130, 246, 0.8);
+            opacity: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.3s ease;
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+        
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        
+        .lightbox.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .lightbox-content {
+            max-width: 90vw;
+            max-height: 90vh;
+            position: relative;
+        }
+        
+        .lightbox img {
+            max-width: 100%;
+            max-height: 90vh;
+            object-fit: contain;
+        }
+        
+        .filter-btn.active {
+            background: linear-gradient(to right, #ec4899, #8b5cf6);
+            color: white;
+        }
+        
+        .video-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .lazy-load {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .lazy-load.loaded {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-white font-sans">
+    <!-- Header with Sticky Navigation -->
+    <header class="sticky top-0 z-40 bg-white shadow-lg">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <img src="../images/Screenshot 2025-09-01 114611.png" alt="SISTAS Wing Union Logo" class="w-10 h-10 rounded-full">
+                    <span class="text-xl font-bold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">SISTAS Wing Union</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+               <div class="hidden md:flex items-center space-x-8">
+                    <!-- About Us Dropdown -->
+                    <div class="relative group">
+                        <button class="flex items-center space-x-1 text-gray-700 hover:text-pink-600 font-medium transition-colors duration-200" aria-haspopup="true" aria-expanded="false">
+                            <span>About Us</span>
+                            <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        
+                        <div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 dropdown-enter group-hover:dropdown-enter-active">
+                            <div class="py-2">
+                              
+                                <a href="../pages/aboutus.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-brand-pink hover:text-pink-700 transition-colors duration-150">About, Vision & Mission</a>
+                                <a href="../pages/volunteer.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-brand-pink hover:text-pink-700 transition-colors duration-150">Volunteer/Become a Member</a>
+                                <a href="../pages/patnerwithus.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-brand-pink hover:text-pink-700 transition-colors duration-150">Partner With Us</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="../pages/initiative.html" class="text-gray-700 hover:text-pink-600 font-medium transition-colors duration-200">Initiatives</a>
+                   <div class="relative group">
+                        <button class="flex items-center space-x-1 text-pink-600 font-medium transition-colors duration-200" aria-haspopup="true" aria-expanded="false">
+                            <span>News & Event</span>
+                            <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        
+                        <div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 dropdown-enter group-hover:dropdown-enter-active">
+                            <div class="py-2">
+                                <a href="../pages/Upcomingevent.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-brand-pink hover:text-pink-700 transition-colors duration-150">Upcoming Event</a>
+                                <a href="mediagallery.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-brand-pink hover:text-pink-700 transition-colors duration-150">Media Gallery</a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <a href="../pages/contactus.html" class="text-gray-700 font-semibold ">Contact</a>
+                    
+                    <button class="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-6 py-2 rounded-full font-semibold hover:from-pink-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105" onclick="openPaystackCheckout()">
+                        Donate🧡🧡
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-gray-100" aria-label="Toggle mobile menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4 border-t border-gray-100">
+                <div class="space-y-2 pt-4"> 
+                    <div class="border-b border-gray-100 pb-2">
+                        <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide px-2 pb-2">About Us</p>
+                       
+                        <a href="../pages/aboutus.html" class="block px-2 py-2 text-gray-700 hover:bg-brand-pink hover:text-pink-700 rounded transition-colors">About, Vision & Mission</a>
+                        <a href="../pages/volunteer.html" class="block px-2 py-2 text-gray-700 hover:bg-brand-pink hover:text-pink-700 rounded transition-colors">Volunteer/Become a Member</a>
+                        <a href="../pages/patnerwithus.html" class="block px-2 py-2 text-gray-700 hover:bg-brand-pink hover:text-pink-700 rounded transition-colors">Partner With Us</a>
+                    </div>
+                    <a href="../pages/initiative.html" class="block px-2 py-2 text-gray-700 hover:bg-brand-pink hover:text-pink-700 rounded transition-colors">Initiatives</a>
+    <div class="relative group">
+                        <button class="flex items-center space-x-1 text-gray-700 hover:text-pink-600 font-medium transition-colors duration-200" aria-haspopup="true" aria-expanded="false">
+                            <span>News & Event</span>
+                            <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        
+                        <div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 dropdown-enter group-hover:dropdown-enter-active">
+                            <div class="py-2">
+                                <a href="../pages/Upcomingevent.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-brand-pink hover:text-pink-700 transition-colors duration-150">Upcoming Event</a>
+                                <a href="mediagallery.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-brand-pink hover:text-pink-700 transition-colors duration-150">Media Gallery</a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <a href="../pages/contactus.html" class="block px-2 py-2 text-pink-600 font-semibold bg-pink-50 rounded">Contact</a>
+                    <button class="w-full mt-3 bg-gradient-to-r from-pink-500 to-purple-600 text-white py-3 px-4 rounded-lg font-semibold" onclick="openPaystackCheckout()">
+                        Donate🧡🧡
+                    </button>
+                </div>
+            </div>
+     
+
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="bg-soft-gray border-b border-gray-200">
+        <div class="container mx-auto px-4 py-3">
+            <nav class="flex items-center space-x-2 text-sm" aria-label="Breadcrumb">
+                <a href="../index.html" class="flex items-center text-gray-500 hover:text-pink-600 transition-colors">
+                    <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
+                    </svg>
+                    Home
+                </a>
+                <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+                <span class="text-pink-600 font-medium">Media Gallery</span>
+            </nav>
+        </div>
+    </div>
+
+
+    <!-- Hero Section with Wavy SVG -->
+    <section class="relative overflow-hidden">
+        <!-- Wavy SVG Background -->
+        <div class="absolute inset-0">
+            <svg class="w-full h-full object-cover" viewBox="0 0 1200 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#FAD1E8;stop-opacity:0.8" />
+                        <stop offset="50%" style="stop-color:#BFE6FF;stop-opacity:0.6" />
+                        <stop offset="100%" style="stop-color:#FAD1E8;stop-opacity:0.4" />
+                    </linearGradient>
+                </defs>
+                <path d="M0,80 C300,160 600,0 1200,120 L1200,400 L0,400 Z" fill="url(#gradient1)" />
+                <path d="M0,150 C400,230 800,70 1200,180 L1200,400 L0,400 Z" fill="#BFE6FF" fill-opacity="0.3" />
+                <path d="M0,250 C350,320 850,140 1200,280 L1200,400 L0,400 Z" fill="#FAD1E8" fill-opacity="0.2" />
+            </svg>
+        </div>
+        
+        <!-- Hero Content -->
+        <div class="relative container mx-auto px-4 py-16 md:py-24">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6 leading-tight">
+                    Media Gallery
+                </h1>
+                
+                <p class="text-lg md:text-xl text-gray-700 mb-8 max-w-2xl mx-auto leading-relaxed">
+                    Explore photos and videos from our programs, events, and initiatives.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Photo Gallery</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Capturing moments of impact, empowerment, and community building through our various programs and events.</p>
+            </div>
+            
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-3 mb-12">
+                <button class="filter-btn px-6 py-3 rounded-full border-2 border-gray-300 text-gray-700 font-semibold transition-all duration-300 hover:border-pink-400 active" data-filter="all">
+                    All Photos
+                </button>
+                <button class="filter-btn px-6 py-3 rounded-full border-2 border-gray-300 text-gray-700 font-semibold transition-all duration-300 hover:border-pink-400" data-filter="workshops">
+                    Workshops
+                </button>
+                <button class="filter-btn px-6 py-3 rounded-full border-2 border-gray-300 text-gray-700 font-semibold transition-all duration-300 hover:border-pink-400" data-filter="events">
+                    Community Events
+                </button>
+                <button class="filter-btn px-6 py-3 rounded-full border-2 border-gray-300 text-gray-700 font-semibold transition-all duration-300 hover:border-pink-400" data-filter="campaigns">
+                    Campaigns
+                </button>
+            </div>
+            
+            <!-- Photo Grid -->
+            <div id="photoGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Workshop Photos -->
+                <div class="gallery-item rounded-xl overflow-hidden shadow-lg bg-gray-100 filter-item workshops" data-category="workshops">
+                    <img src="https://via.placeholder.com/400x300/FAD1E8/663399?text=Hair+Tech+Workshop" alt="Hair Tech Workshop participants learning new skills" class="w-full h-full object-cover lazy-load" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="text-center text-white">
+                            <svg class="w-12 h-12 mx-auto mb-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/>
+                            </svg>
+                            <p class="font-semibold">Hair Tech Workshop</p>
+                            <p class="text-sm opacity-90">Empowering women in technology</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item rounded-xl overflow-hidden shadow-lg bg-gray-100 filter-item workshops" data-category="workshops">
+                    <img src="https://via.placeholder.com/400x300/BFE6FF/663399?text=Skills+Training" alt="Skills training session with participants" class="w-full h-full object-cover lazy-load" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="text-center text-white">
+                            <svg class="w-12 h-12 mx-auto mb-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/>
+                            </svg>
+                            <p class="font-semibold">Skills Training Session</p>
+                            <p class="text-sm opacity-90">Building practical capabilities</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Community Events Photos -->
+                <div class="gallery-item rounded-xl overflow-hidden shadow-lg bg-gray-100 filter-item events" data-category="events">
+                    <img src="https://via.placeholder.com/400x300/F8BBD9/663399?text=Community+Outreach" alt="Community outreach event with volunteers" class="w-full h-full object-cover lazy-load" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="text-center text-white">
+                            <svg class="w-12 h-12 mx-auto mb-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/>
+                            </svg>
+                            <p class="font-semibold">Community Outreach</p>
+                            <p class="text-sm opacity-90">Reaching out to support families</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item rounded-xl overflow-hidden shadow-lg bg-gray-100 filter-item events" data-category="events">
+                    <img src="https://via.placeholder.com/400x300/9DD6FF/663399?text=Happy+Smile+Event" alt="Happy Smile donation event with community members" class="w-full h-full object-cover lazy-load" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="text-center text-white">
+                            <svg class="w-12 h-12 mx-auto mb-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/>
+                            </svg>
+                            <p class="font-semibold">Happy Smile Event</p>
+                            <p class="text-sm opacity-90">Bringing joy to the community</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Campaign Photos -->
+                <div class="gallery-item rounded-xl overflow-hidden shadow-lg bg-gray-100 filter-item campaigns" data-category="campaigns">
+                    <img src="https://via.placeholder.com/400x300/FFB6C1/663399?text=Breast+Cancer+Awareness" alt="Breast cancer awareness campaign participants" class="w-full h-full object-cover lazy-load" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="text-center text-white">
+                            <svg class="w-12 h-12 mx-auto mb-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/>
+                            </svg>
+                            <p class="font-semibold">Breast Cancer Awareness</p>
+                            <p class="text-sm opacity-90">Raising awareness and support</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item rounded-xl overflow-hidden shadow-lg bg-gray-100 filter-item campaigns" data-category="campaigns">
+                    <img src="https://via.placeholder.com/400x300/ADD8E6/663399?text=Women+Empowerment" alt="Women empowerment campaign rally" class="w-full h-full object-cover lazy-load" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="text-center text-white">
+                            <svg class="w-12 h-12 mx-auto mb-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/>
+                            </svg>
+                            <p class="font-semibold">Women Empowerment Rally</p>
+                            <p class="text-sm opacity-90">Standing together for equality</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional photos for better grid -->
+                <div class="gallery-item rounded-xl overflow-hidden shadow-lg bg-gray-100 filter-item workshops" data-category="workshops">
+                    <img src="https://via.placeholder.com/400x300/E6E6FA/663399?text=Leadership+Training" alt="Leadership training workshop" class="w-full h-full object-cover lazy-load" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="text-center text-white">
+                            <svg class="w-12 h-12 mx-auto mb-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/>
+                            </svg>
+                            <p class="font-semibold">Leadership Training</p>
+                            <p class="text-sm opacity-90">Developing future leaders</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item rounded-xl overflow-hidden shadow-lg bg-gray-100 filter-item events" data-category="events">
+                    <img src="https://via.placeholder.com/400x300/FFC0CB/663399?text=Volunteer+Appreciation" alt="Volunteer appreciation event" class="w-full h-full object-cover lazy-load" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="text-center text-white">
+                            <svg class="w-12 h-12 mx-auto mb-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/>
+                            </svg>
+                            <p class="font-semibold">Volunteer Appreciation</p>
+                            <p class="text-sm opacity-90">Celebrating our amazing volunteers</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item rounded-xl overflow-hidden shadow-lg bg-gray-100 filter-item campaigns" data-category="campaigns">
+                    <img src="https://via.placeholder.com/400x300/F0E68C/663399?text=Unity+March" alt="Unity march for women's rights" class="w-full h-full object-cover lazy-load" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="text-center text-white">
+                            <svg class="w-12 h-12 mx-auto mb-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/>
+                            </svg>
+                            <p class="font-semibold">Unity March</p>
+                            <p class="text-sm opacity-90">Marching for women's rights</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Load More Button -->
+            <div class="text-center mt-12">
+                <button id="loadMoreBtn" class="px-8 py-3 bg-blue-600 hover:bg-pink-600 text-white font-semibold rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg">
+                    Load More Photos
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Videos from Our Events</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Watch highlights from our programs and see the impact we're making in our communities.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Video Card 1 -->
+                <div class="video-card">
+                    <div class="aspect-video bg-gray-200 relative">
+                        <iframe 
+                            src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                            title="SISTAS Wing Union Workshop Highlights"
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen
+                            class="w-full h-full"
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Workshop Highlights</h3>
+                        <p class="text-gray-600 mb-4">See how our workshops are transforming lives and building skills in our community.</p>
+                        <span class="text-sm text-blue-600 font-semibold">2 weeks ago</span>
+                    </div>
+                </div>
+
+                <!-- Video Card 2 -->
+                <div class="video-card">
+                    <div class="aspect-video bg-gray-200 relative">
+                        <iframe 
+                            src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                            title="Community Outreach Program"
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen
+                            class="w-full h-full"
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Community Outreach</h3>
+                        <p class="text-gray-600 mb-4">Watch our team in action as we reach out to support families in need across Accra.</p>
+                        <span class="text-sm text-blue-600 font-semibold">1 month ago</span>
+                    </div>
+                </div>
+
+                <!-- Video Card 3 -->
+                <div class="video-card">
+                    <div class="aspect-video bg-gray-200 relative">
+                        <iframe 
+                            src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                            title="Breast Cancer Awareness Campaign"
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen
+                            class="w-full h-full"
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Breast Cancer Awareness</h3>
+                        <p class="text-gray-600 mb-4">Join us in our mission to raise awareness and provide support for breast cancer prevention.</p>
+                        <span class="text-sm text-blue-600 font-semibold">2 months ago</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- View More Videos Button -->
+            <div class="text-center mt-12">
+                <button class="px-8 py-3 border-2 border-gray-800 text-gray-800 hover:bg-pink-600 hover:border-pink-600 hover:text-white font-semibold rounded-full transition-all duration-300 transform hover:scale-105">
+                    View More Videos
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Highlights Banner -->
+    <section class="py-16 bg-gradient-to-r from-pink-500 to-purple-600">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center text-white">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Want to be part of our story?</h2>
+                <p class="text-lg md:text-xl mb-8 text-pink-100">Join us in creating impact and making a difference in the lives of women across Ghana.</p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <button class="px-8 py-4 bg-white text-pink-600 font-semibold rounded-full hover:bg-pink-50 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                        Get Involved
+                    </button>
+                    
+                    <button class="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-pink-600 transition-all duration-300 transform hover:scale-105">
+                        Share Our Story
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Mission Blurb -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <img src="../images/Screenshot 2025-09-01 114611.png" alt="SISTAS Wing Union" class="w-8 h-8 rounded-full">
+                        <span class="text-xl font-bold">SISTAS Wing Union</span>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed mb-4">
+                        Empowering women through unity, advocacy, and meaningful initiatives. We believe in the power of collective action to create positive change in our communities and beyond.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-pink-400 transition-colors" aria-label="Facebook">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors" aria-label="Twitter">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-purple-400 transition-colors" aria-label="Instagram">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.62 5.367 11.987 11.988 11.987c6.62 0 11.987-5.367 11.987-11.987C24.014 5.367 18.637.001 12.017.001zM8.449 16.988c-1.297 0-2.448-.49-3.323-1.297C4.198 14.895 3.708 13.744 3.708 12.447c0-1.297.49-2.448 1.297-3.323c.875-.807 2.026-1.297 3.323-1.297c1.297 0 2.448.49 3.323 1.297c.807.875 1.297 2.026 1.297 3.323c0 1.297-.49 2.448-1.297 3.323c-.875.807-2.026 1.297-3.323 1.297zm7.83-6.541c0-.613-.148-1.175-.392-1.664c-.245-.49-.612-.918-1.102-1.163c-.49-.245-1.05-.392-1.664-.392c-.613 0-1.175.147-1.664.392c-.49.245-.918.673-1.163 1.163c-.245.49-.392 1.05-.392 1.664c0 .613.147 1.175.392 1.664c.245.49.673.918 1.163 1.163c.49.245 1.05.392 1.664.392c.613 0 1.175-.147 1.664-.392c.49-.245.918-.673 1.163-1.163c.245-.49.392-1.05.392-1.664z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-blue-600 transition-colors" aria-label="LinkedIn">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Navigation -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="../pages/aboutus.html" class="text-gray-300 hover:text-pink-400 transition-colors">About the Union</a></li>
+                        <li><a href="../pages/initiative.html" class="text-gray-300 hover:text-pink-400 transition-colors">Our Initiatives</a></li>
+                        <li><a href="mediagallery.html" class="text-pink-400 font-medium">Media Gallery</a></li>
+                        <li><a href="../pages/Upcomingevent.html" class="text-gray-300 hover:text-pink-400 transition-colors">News & Updates</a></li>
+                        <li><a href="../pages/contactus.html" class="text-gray-300 hover:text-pink-400 transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Support -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Support Us</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html#donate" class="text-gray-300 hover:text-pink-400 transition-colors">Make a Donation</a></li>
+                        <li><a href="../pages/volunteer.html" class="text-gray-300 hover:text-pink-400 transition-colors">Volunteer</a></li>
+                        <li><a href="../pages/volunteer.html" class="text-gray-300 hover:text-pink-400 transition-colors">Become a Member</a></li>
+                        <li><a href="../pages/patnerwithus.html" class="text-gray-300 hover:text-pink-400 transition-colors">Partner With Us</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-pink-400 transition-colors">Spread the Word</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">
+                    &copy; 2025 SISTAS Wing Union. All rights reserved. Made with 💖 for women empowerment.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+       <div class="whatsapp-float">
+                <a href="https://wa.me/your-whatsapp-invite-link" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg transition-colors duration-300" aria-label="Join our WhatsApp community">
+            <!-- TODO: Replace with actual WhatsApp invite URL -->
+            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.863 3.488"/>
+            </svg>
+        </a>
+    </div>
+
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightbox-title">
+        <div class="lightbox-content">
+            <button id="closeLightbox" class="absolute top-4 right-4 text-white text-4xl font-bold z-10 hover:text-pink-300 transition-colors" aria-label="Close lightbox">&times;</button>
+            <img id="lightboxImage" src="" alt="" class="animate-zoom-in">
+            <div class="absolute bottom-4 left-4 right-4 text-white text-center bg-black bg-opacity-50 rounded-lg p-4">
+                <h3 id="lightbox-title" class="text-xl font-bold mb-2"></h3>
+                <p id="lightboxDescription" class="text-sm opacity-90"></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ========== REPLACE THESE PLACEHOLDERS ==========
+        const PAYSTACK_PUBLIC_KEY = 'pk_test_your_paystack_public_key_here';
+        const WHATSAPP_INVITE_URL = 'https://wa.me/your-whatsapp-invite-link';
+        // ================================================
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Gallery filtering functionality
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.filter-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                btn.classList.add('active');
+
+                const filter = btn.getAttribute('data-filter');
+                
+                galleryItems.forEach(item => {
+                    if (filter === 'all' || item.classList.contains(filter)) {
+                        item.style.display = 'block';
+                        item.classList.add('animate-slide-in');
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Lightbox functionality
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.getElementById('lightboxImage');
+        const lightboxTitle = document.getElementById('lightbox-title');
+        const lightboxDescription = document.getElementById('lightboxDescription');
+        const closeLightboxBtn = document.getElementById('closeLightbox');
+        const galleryItemsClickable = document.querySelectorAll('.gallery-item');
+
+        galleryItemsClickable.forEach(item => {
+            item.addEventListener('click', () => {
+                const img = item.querySelector('img');
+                const title = item.querySelector('.gallery-overlay p:first-child').textContent;
+                const description = item.querySelector('.gallery-overlay p:last-child').textContent;
+                
+                lightboxImage.src = img.src;
+                lightboxImage.alt = img.alt;
+                lightboxTitle.textContent = title;
+                lightboxDescription.textContent = description;
+                
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        closeLightboxBtn.addEventListener('click', closeLightbox);
+
+        // Close lightbox when clicking outside
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        // Close lightbox with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                closeLightbox();
+            }
+        });
+
+        // Load More Photos functionality
+        const loadMoreBtn = document.getElementById('loadMoreBtn');
+        let loadedPhotos = 9; // Initial number of photos
+
+        loadMoreBtn.addEventListener('click', () => {
+            // Simulate loading more photos
+            const morePhotos = [
+                { category: 'workshops', title: 'Digital Skills Training', description: 'Teaching digital literacy', src: 'https://via.placeholder.com/400x300/DDA0DD/663399?text=Digital+Skills' },
+                { category: 'events', title: 'International Women\'s Day', description: 'Celebrating women\'s achievements', src: 'https://via.placeholder.com/400x300/98FB98/663399?text=Women\'s+Day' },
+                { category: 'campaigns', title: 'Health Awareness Drive', description: 'Promoting women\'s health', src: 'https://via.placeholder.com/400x300/F0E68C/663399?text=Health+Drive' }
+            ];
+
+            const photoGrid = document.getElementById('photoGrid');
+            
+            morePhotos.forEach((photo, index) => {
+                const photoElement = document.createElement('div');
+                photoElement.className = `gallery-item rounded-xl overflow-hidden shadow-lg bg-gray-100 filter-item ${photo.category} animate-slide-in`;
+                photoElement.setAttribute('data-category', photo.category);
+                photoElement.innerHTML = `
+                    <img src="${photo.src}" alt="${photo.title}" class="w-full h-full object-cover lazy-load" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="text-center text-white">
+                            <svg class="w-12 h-12 mx-auto mb-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/>
+                            </svg>
+                            <p class="font-semibold">${photo.title}</p>
+                            <p class="text-sm opacity-90">${photo.description}</p>
+                        </div>
+                    </div>
+                `;
+                
+                // Add click event for lightbox
+                photoElement.addEventListener('click', () => {
+                    const img = photoElement.querySelector('img');
+                    const title = photo.title;
+                    const description = photo.description;
+                    
+                    lightboxImage.src = img.src;
+                    lightboxImage.alt = img.alt;
+                    lightboxTitle.textContent = title;
+                    lightboxDescription.textContent = description;
+                    
+                    lightbox.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+                
+                photoGrid.appendChild(photoElement);
+            });
+
+            loadedPhotos += morePhotos.length;
+            
+            // Hide button after loading more (simulate end of photos)
+            if (loadedPhotos >= 15) {
+                loadMoreBtn.style.display = 'none';
+            }
+        });
+
+        // Lazy loading for images
+        const lazyImages = document.querySelectorAll('.lazy-load');
+        
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.classList.add('loaded');
+                    observer.unobserve(img);
+                }
+            });
+        });
+
+        lazyImages.forEach(img => {
+            imageObserver.observe(img);
+        });
+
+        // Paystack Integration
+        function openPaystackCheckout() {
+            const handler = PaystackPop.setup({
+                key: PAYSTACK_PUBLIC_KEY,
+                email: 'donor@example.com',
+                amount: 1000,
+                currency: 'GHS',
+                ref: 'sw_' + Math.floor((Math.random() * 1000000000) + 1),
+                metadata: {
+                    custom_fields: [
+                        {
+                            display_name: "Purpose",
+                            variable_name: "purpose",
+                            value: "General Donation"
+                        }
+                    ]
+                },
+                callback: function(response) {
+                    alert('Payment successful! Thank you for your donation. Reference: ' + response.reference);
+                },
+                onClose: function() {
+                    console.log('Payment cancelled');
+                }
+            });
+            
+            handler.openIframe();
+        }
+
+        // Keyboard navigation for dropdown
+        const dropdownButton = document.querySelector('.group > button');
+        const dropdownItems = document.querySelectorAll('.group .absolute a');
+
+        if (dropdownButton) {
+            dropdownButton.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowDown') {
+                    e.preventDefault();
+                    dropdownItems[0]?.focus();
+                }
+            });
+        }
+
+        dropdownItems.forEach((item, index) => {
+            item.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowDown') {
+                    e.preventDefault();
+                    dropdownItems[index + 1]?.focus();
+                } else if (e.key === 'ArrowUp') {
+                    e.preventDefault();
+                    if (index === 0) {
+                        dropdownButton.focus();
+                    } else {
+                        dropdownItems[index - 1]?.focus();
+                    }
+                } else if (e.key === 'Escape') {
+                    dropdownButton.focus();
+                }
+            });
+        });
+
+        // Update WhatsApp link
+        const whatsappLink = document.querySelector('[href="https://wa.me/your-whatsapp-invite-link"]');
+        if (whatsappLink) {
+            whatsappLink.href = WHATSAPP_INVITE_URL;
+        }
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for scroll animations
+        document.querySelectorAll('.video-card, .filter-btn').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+            observer.observe(el);
+        });
+
+        console.log('📸 SISTAS Wing Union Media Gallery Loaded Successfully!');
+        console.log('🎥 Features: Photo filtering, lightbox, lazy loading, video embedding');
+        console.log('📝 Replace placeholders: YouTube video URLs, actual photo URLs');
+    </script>
+</body>
+</html>
