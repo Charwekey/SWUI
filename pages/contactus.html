@@ -226,20 +226,26 @@
     <!-- Hero Section with Wavy SVG -->
     <section class="relative overflow-hidden">
         <!-- Wavy SVG Background -->
-        <div class="absolute inset-0">
-            <svg class="w-full h-full object-cover" viewBox="0 0 1200 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                    <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" style="stop-color:#BFE6FF;stop-opacity:0.8" />
-                        <stop offset="50%" style="stop-color:#FAD1E8;stop-opacity:0.6" />
-                        <stop offset="100%" style="stop-color:#BFE6FF;stop-opacity:0.4" />
-                    </linearGradient>
-                </defs>
-                <path d="M0,80 C300,160 600,0 1200,120 L1200,400 L0,400 Z" fill="url(#gradient1)" />
-                <path d="M0,150 C400,230 800,70 1200,180 L1200,400 L0,400 Z" fill="#FAD1E8" fill-opacity="0.3" />
-                <path d="M0,250 C350,320 850,140 1200,280 L1200,400 L0,400 Z" fill="#BFE6FF" fill-opacity="0.2" />
-            </svg>
-        </div>
+        <div class="absolute inset-0 w-full h-full overflow-hidden">
+  <svg class="w-full h-full object-cover transform rotate-180" 
+       viewBox="0 0 1200 400" 
+       fill="none" 
+       xmlns="http://www.w3.org/2000/svg" 
+       preserveAspectRatio="none">
+    <defs>
+      <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color:#FAD1E8;stop-opacity:0.8" />
+        <stop offset="50%" style="stop-color:#BFE6FF;stop-opacity:0.6" />
+        <stop offset="100%" style="stop-color:#FAD1E8;stop-opacity:0.4" />
+      </linearGradient>
+    </defs>
+
+    <path d="M0,80 C300,160 600,0 1200,120 L1200,400 L0,400 Z" fill="url(#gradient1)" />
+    <path d="M0,150 C400,230 800,70 1200,180 L1200,400 L0,400 Z" fill="#BFE6FF" fill-opacity="0.3" />
+    <path d="M0,250 C350,320 850,140 1200,280 L1200,400 L0,400 Z" fill="#FAD1E8" fill-opacity="0.2" />
+  </svg>
+</div>
+
         
         <!-- Hero Content -->
         <div class="relative container mx-auto px-4 py-16 md:py-24">
