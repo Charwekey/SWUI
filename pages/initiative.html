@@ -13,12 +13,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../images/Screenshot 2025-09-01 114611.png" type="image/x-icon">
-    <title>Our Initiatives - SISTAS Wing Union</title>
+    <title>Our Initiatives - SWUI</title>
     <meta name="description" content="Discover SISTAS Wing Union's initiatives: Her Tech Rising, Happy Smile Donation, and Breast Cancer Awareness. Programs that empower women and transform communities.">
     <meta name="keywords" content="women empowerment, tech initiatives, community programs, breast cancer awareness, SISTAS Wing Union">
     <script src="https://kit.fontawesome.com/9f7fe64ab7.js" crossorigin="anonymous"></script>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <!-- Paystack Inline Script -->
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     
     <!-- Custom brand colors -->
     <style>
@@ -129,12 +137,24 @@
             0%, 100% { transform: scale(1); }
             50% { transform: scale(1.05); }
         }
-        
+
+        #top{
+            font-family: "PT serif", serif;
+        }
+    
+         #font{
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.5rem;
+        }
+        #fonts
+        {
+            font-family: 'Dancing Script', cursive;
+        }
         /* Section divider wave */
         
     </style>
 </head>
-<body class="bg-brand-soft-gray text-brand-charcoal font-sans">
+<body class="bg-brand-soft-gray text-brand-charcoal font-sans" id="top">
     <!-- Navigation -->
      <header class="sticky top-0 z-40 bg-white shadow-lg">
         <nav class="container mx-auto px-4 py-4">
@@ -143,7 +163,7 @@
                 <div class="flex items-center space-x-2">
                     <!-- TODO: Replace with actual logo -->
                     <img src="../images/Screenshot 2025-09-01 114611.png" alt="SISTAS Wing Union Logo" class="w-10 h-10 rounded-full">
-                    <a href="index.html" class="text-xl font-bold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">SISTAS Wing Union</a>
+                    <a href="index.html" class="text-xl font-bold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent" id="font">SWUI</a>
                 </div>
 
                 <!-- Desktop Navigation -->
@@ -161,7 +181,7 @@
                             <div class="py-2">
                                 
                                 <a href="../pages/aboutus.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-brand-pink hover:text-pink-700 transition-colors duration-150">About, Mission & Vision</a>
-                                <a href="../pages/volunteer.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-brand-pink hover:text-pink-700 transition-colors duration-150">Volunteer/Become a Member</a>
+                                <a href="../pages/volunteer.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-brand-pink hover:text-pink-700 transition-colors duration-150">Volunteer/Become a Donor Member</a>
                                 <a href="../pages/patnerwithus.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-brand-pink hover:text-pink-700 transition-colors duration-150">Partner With Us</a>
                             </div>
                         </div>
@@ -206,7 +226,7 @@
                         <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide px-2 pb-2">About Us</p>
                        
                         <a href="../pages/aboutus.html"class="block px-2 py-2 text-gray-700 hover:bg-brand-pink hover:text-pink-700 rounded transition-colors">About, Vision & Mission</a>
-                        <a href="../pages/volunteer.html" class="block px-2 py-2 text-gray-700 hover:bg-brand-pink hover:text-pink-700 rounded transition-colors">Volunteer/Become a Member</a>
+                        <a href="../pages/volunteer.html" class="block px-2 py-2 text-gray-700 hover:bg-brand-pink hover:text-pink-700 rounded transition-colors">Volunteer/Become a Donor Member</a>
                         <a href="../pages/patnerwithus.html" class="block px-2 py-2 text-gray-700 hover:bg-brand-pink hover:text-pink-700 rounded transition-colors">Partner With Us</a>
                     </div>
                     <a href="initiative.html" class="block px-2 py-2 text-gray-700 hover:bg-brand-pink hover:text-pink-700 rounded transition-colors">Initiatives</a>
@@ -265,9 +285,13 @@
        preserveAspectRatio="none">
     <defs>
       <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" style="stop-color:#FAD1E8;stop-opacity:0.8" />
+        <!-- <stop offset="0%" style="stop-color:#FAD1E8;stop-opacity:0.8" />
         <stop offset="50%" style="stop-color:#BFE6FF;stop-opacity:0.6" />
-        <stop offset="100%" style="stop-color:#FAD1E8;stop-opacity:0.4" />
+        <stop offset="100%" style="stop-color:#FAD1E8;stop-opacity:0.4" /> -->
+
+              <stop offset="0%" style="stop-color:#fe0592;stop-opacity:0.8" />
+        <stop offset="50%" style="stop-color:#08a0ff;stop-opacity:0.6" />
+        <stop offset="100%" style="stop-color:#ff0392;stop-opacity:0.4" />
       </linearGradient>
     </defs>
 
@@ -280,11 +304,11 @@
         
         
   <!-- Content -->
-  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
-    <h1 class="text-4xl md:text-6xl font-bold text-brand-charcoal mb-6">
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center">
+    <h1 class="text-4xl md:text-6xl font-bold text-brand-charcoal mb-6" id="fonts">
       Our Initiatives
     </h1>
-    <p class="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto">
+    <p class="text-xl md:text-2xl text-black max-w-4xl mx-auto">
       Discover the programs and projects that drive our mission to empower women and communities.
     </p>
   </div>
@@ -353,7 +377,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <div>
-                    <h2 class="text-3xl md:text-4xl font-bold text-brand-charcoal mb-6">Her Tech Rising</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold text-brand-charcoal mb-6" id="fonts">Her Tech Rising</h2>
                     <div class="prose prose-lg text-gray-600 space-y-4">
                         <p>
                             Her Tech Rising is our flagship program designed to bridge the gender gap in technology. We believe that women deserve equal representation and opportunities in the rapidly evolving tech industry.
@@ -399,8 +423,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="order-1 lg:order-2">
-                    <h2 class="text-3xl md:text-4xl font-bold text-brand-charcoal mb-6">Happy Smile Donation</h2>
+                <div class="order-1 lg:order-2"> 
+                    <h2 class="text-3xl md:text-4xl font-bold text-brand-charcoal mb-6" id="fonts">Happy Smile Donation</h2>
                     <div class="prose prose-lg text-gray-600 space-y-4">
                         <p>
                             The Happy Smile Donation initiative embodies our commitment to community support and social responsibility. We focus on providing direct assistance to underprivileged women and children who need it most.
@@ -427,7 +451,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <div>
-                    <h2 class="text-3xl md:text-4xl font-bold text-brand-charcoal mb-6">Breast Cancer Awareness</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold text-brand-charcoal mb-6" id="fonts">Breast Cancer Awareness </h2>
                     <div class="prose prose-lg text-gray-600 space-y-4">
                         <p>
                             Our Breast Cancer Awareness initiative is dedicated to education, early detection, and support for women affected by breast cancer. We believe that knowledge and community support are powerful tools in the fight against this disease.
@@ -462,7 +486,7 @@
     <!-- Call-to-Action Banner -->
     <section class="py-20 bg-brand-charcoal text-black">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6" id="fonts">
                 Together, we can create lasting impact. Support one of our initiatives today.
             </h2>
             <p class="text-xl mb-8 opacity-90">
@@ -487,10 +511,11 @@
                 <div class="md:col-span-2">
                     <div class="flex items-center space-x-2 mb-4">
                         <img src="../images/Screenshot 2025-09-01 114611.png" alt="SISTAS Wing Union" class="w-8 h-8 rounded-full">
-                        <span class="text-xl font-bold">SISTAS Wing Union</span>
+                        <span class="text-xl font-bold" id="font"
+                        >SWUI</span>
                     </div>
                     <p class="text-gray-300 leading-relaxed mb-4">
-                        Empowering women through unity, advocacy, and meaningful initiatives. We believe in the power of collective action to create positive change in our communities and beyond.
+                       Restoring hope to girls and women one community at a time. We believe that when one woman is empowered the entire nation is transformed.
                     </p>
                     <div class="flex space-x-4">
                         <a
@@ -539,7 +564,7 @@
                     <ul class="space-y-2">
                         <li><a href="index.html#donate" class="text-gray-300 hover:text-pink-400 transition-colors">Make a Donation</a></li>
                         <li><a href="../pages/volunteer.html" class="text-gray-300 hover:text-pink-400 transition-colors">Volunteer</a></li>
-                        <li><a href="../pages/volunteer.html" class="text-gray-300 hover:text-pink-400 transition-colors">Become a Member</a></li>
+                        <li><a href="../pages/volunteer.html" class="text-gray-300 hover:text-pink-400 transition-colors">Become a  Donor Member</a></li>
                         <li><a href="../pages/patnerwithus.html" class="text-gray-300 hover:text-pink-400 transition-colors">Partner With Us</a></li>
                        
                     </ul>
@@ -549,7 +574,7 @@
             <!-- Copyright -->
             <div class="border-t border-gray-800 mt-8 pt-8 text-center">
                 <p class="text-gray-400">
-                    &copy; 2025 SISTAS Wing Union. All rights reserved. Made with 💖 for women empowerment.
+                    &copy; 2025 Sistas Wing Union. All rights reserved. Made with 💖 for women empowerment.
                 </p>
             </div>
         </div>

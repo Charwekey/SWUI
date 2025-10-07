@@ -13,7 +13,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../images/Screenshot 2025-09-01 114611.png" type="image/x-icon">
-    <title>Media Gallery - SISTAS Wing Union</title>
+    <title>Media Gallery - SWUI</title>
     <meta name="description" content="Explore photos and videos from SISTAS Wing Union programs, events, and initiatives. See our impact in action.">
     
     <!-- Tailwind CSS CDN -->
@@ -21,6 +21,14 @@
     <script src="https://kit.fontawesome.com/9f7fe64ab7.js" crossorigin="anonymous"></script>
     <!-- Paystack Inline Script -->
     <script src="https://js.paystack.co/v1/inline.js"></script>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
     
     <!-- Custom Tailwind Config -->
     <script>
@@ -46,6 +54,17 @@
     </script>
     
     <style>
+          #top{
+            font-family: "PT Serif", serif;
+        }
+        #font{
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.5rem;
+        }
+        #fonts
+        {
+            font-family: 'Dancing Script', cursive;
+        }
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
@@ -192,7 +211,7 @@
         }
     </style>
 </head>
-<body class="bg-white font-sans">
+<body class="bg-white font-sans" id="top">
     <!-- Header with Sticky Navigation -->
     <header class="sticky top-0 z-40 bg-white shadow-lg">
         <nav class="container mx-auto px-4 py-4">
@@ -200,7 +219,7 @@
                 <!-- Logo -->
                 <div class="flex items-center space-x-2">
                     <img src="../images/Screenshot 2025-09-01 114611.png" alt="SISTAS Wing Union Logo" class="w-10 h-10 rounded-full">
-                    <span class="text-xl font-bold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">SISTAS Wing Union</span>
+                    <span class="text-xl font-bold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent" id="font">SWUI</span>
                 </div>
 
                 <!-- Desktop Navigation -->
@@ -218,7 +237,7 @@
                             <div class="py-2">
                               
                                 <a href="../pages/aboutus.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-brand-pink hover:text-pink-700 transition-colors duration-150">About, Vision & Mission</a>
-                                <a href="../pages/volunteer.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-brand-pink hover:text-pink-700 transition-colors duration-150">Volunteer/Become a Member</a>
+                                <a href="../pages/volunteer.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-brand-pink hover:text-pink-700 transition-colors duration-150">Volunteer/Become a Donor Member</a>
                                 <a href="../pages/patnerwithus.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-brand-pink hover:text-pink-700 transition-colors duration-150">Partner With Us</a>
                             </div>
                         </div>
@@ -263,7 +282,7 @@
                         <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide px-2 pb-2">About Us</p>
                        
                         <a href="../pages/aboutus.html" class="block px-2 py-2 text-gray-700 hover:bg-brand-pink hover:text-pink-700 rounded transition-colors">About, Vision & Mission</a>
-                        <a href="../pages/volunteer.html" class="block px-2 py-2 text-gray-700 hover:bg-brand-pink hover:text-pink-700 rounded transition-colors">Volunteer/Become a Member</a>
+                        <a href="../pages/volunteer.html" class="block px-2 py-2 text-gray-700 hover:bg-brand-pink hover:text-pink-700 rounded transition-colors">Volunteer/Become a Donor Member</a>
                         <a href="../pages/patnerwithus.html" class="block px-2 py-2 text-gray-700 hover:bg-brand-pink hover:text-pink-700 rounded transition-colors">Partner With Us</a>
                     </div>
                     <a href="../pages/initiative.html" class="block px-2 py-2 text-gray-700 hover:bg-brand-pink hover:text-pink-700 rounded transition-colors">Initiatives</a>
@@ -324,9 +343,9 @@
          preserveAspectRatio="none">
       <defs>
         <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" style="stop-color:#FAD1E8;stop-opacity:0.8" />
-          <stop offset="50%" style="stop-color:#BFE6FF;stop-opacity:0.6" />
-          <stop offset="100%" style="stop-color:#FAD1E8;stop-opacity:0.4" />
+               <stop offset="0%" style="stop-color:#fe0592;stop-opacity:0.8" />
+        <stop offset="50%" style="stop-color:#08a0ff;stop-opacity:0.6" />
+        <stop offset="100%" style="stop-color:#ff0392;stop-opacity:0.4" />
         </linearGradient>
       </defs>
 
@@ -337,18 +356,18 @@
   </div>
 
   <!-- Hero Content -->
-  <div class="relative container mx-auto px-4 py-16 md:py-24 text-center">
-    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6 leading-tight">
+  <div class="relative container mx-auto px-4 py-16 md:py-32 text-center">
+    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6 leading-tight" id="fonts">
       Media Gallery
     </h1>
 
-    <p class="text-lg md:text-xl text-gray-700 mb-8 max-w-2xl mx-auto leading-relaxed">
+    <p class="text-lg md:text-xl text-black mb-8 max-w-2xl mx-auto leading-relaxed">
       Capturing moments of impact, empowerment, and community building through our various programs and events
     </p>
   </div>
 </section>
 
-<section class="gallery-section">
+<!-- <section class="gallery-section">
         <div class="container">
            
 
@@ -374,13 +393,322 @@
                 </div>
             </div>
         </div>
+    </section> -->
+
+    <section class="py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="filter-tab active px-6 py-3 rounded-full font-medium text-brand-gray" data-filter="all">
+                    All Photos
+                </button>
+                <button class="filter-tab px-6 py-3 rounded-full font-medium text-gray-600 bg-gray-100" data-filter="Community Outreach"
+                >
+                    Community Outreach
+                </button>
+                <button class="filter-tab px-6 py-3 rounded-full font-medium text-gray-600 bg-gray-100" data-filter="community">
+                    Community Events
+                </button>
+                <button class="filter-tab px-6 py-3 rounded-full font-medium text-gray-600 bg-gray-100" data-filter="campaigns">
+                    Campaigns
+                </button>
+                <button class="filter-tab px-6 py-3 rounded-full font-medium text-gray-600 bg-gray-100" data-filter="tech">
+                    Tech Events
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section class="py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-brand-gray mb-12">Photo Gallery</h2>
+            
+            <!-- Loading Spinner -->
+            <div id="loading-spinner" class="flex justify-center items-center py-12 hidden">
+                <div class="spinner"></div>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div id="gallery-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Workshop Photos -->
+                <div class="gallery-item filter-item workshops rounded-xl shadow-lg overflow-hidden bg-white" 
+                     data-src="../images/IMG-20251005-WA0045.jpg" 
+                     data-caption="Women learning coding fundamentals at our Tech Rising workshop">
+                    <div class="relative">
+                        <img src="../images/IMG-20251005-WA0045.jpg" 
+                             alt="Tech Workshop" class="w-full h-64 object-cover">
+                        <div class="gallery-overlay">
+                            <div class="text-white text-center">
+                                <i class="fas fa-expand text-3xl mb-2"></i>
+                                <p class="font-medium">View Full Image</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="p-4">
+                        <h3 class="font-semibold text-brand-gray mb-2">Tech Rising Workshop</h3>
+                        <p class="text-gray-600 text-sm">Women learning coding fundamentals</p>
+                    </div> -->
+                </div>
+
+                <div class="gallery-item filter-item workshops rounded-xl shadow-lg overflow-hidden bg-white" 
+                     data-src="../imagesIMG-20251005-WA0044.jpg/" 
+                     data-caption="Digital skills training session for women entrepreneurs">
+                    <div class="relative">
+                        <img src="../images/IMG-20251005-WA0044.jpg" 
+                             alt="Skills Training" class="w-full h-64 object-cover">
+                        <div class="gallery-overlay">
+                            <div class="text-white text-center">
+                                <i class="fas fa-expand text-3xl mb-2"></i>
+                                <p class="font-medium">View Full Image</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-brand-gray mb-2">Skills Training</h3>
+                        <p class="text-gray-600 text-sm">Digital skills for entrepreneurs</p>
+                    </div>
+                </div>
+
+                <!-- Community Events -->
+                <div class="gallery-item filter-item community rounded-xl shadow-lg overflow-hidden bg-white" 
+                     data-src="../images/IMG-20251005-WA0047.jpg" 
+                     data-caption="Happy Smile Donation drive supporting local families">
+                    <div class="relative">
+                        <img src="../images/IMG-20251005-WA0047.jpg" 
+                             alt="Community Outreach" class="w-full h-64 object-cover">
+                        <div class="gallery-overlay">
+                            <div class="text-white text-center">
+                                <i class="fas fa-expand text-3xl mb-2"></i>
+                                <p class="font-medium">View Full Image</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-brand-gray mb-2">Community Outreach</h3>
+                        <p class="text-gray-600 text-sm">Happy Smile Donation drive</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item filter-item community rounded-xl shadow-lg overflow-hidden bg-white" 
+                     data-src="../images/IMG-20251005-WA0048.jpg" 
+                     data-caption="Holiday celebration with supported families">
+                    <div class="relative">
+                        <img src="../images/IMG-20251005-WA0048.jpg" 
+                             alt="Holiday Event" class="w-full h-64 object-cover">
+                        <div class="gallery-overlay">
+                            <div class="text-white text-center">
+                                <i class="fas fa-expand text-3xl mb-2"></i>
+                                <p class="font-medium">View Full Image</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-brand-gray mb-2">Holiday Celebration</h3>
+                        <p class="text-gray-600 text-sm">Community gathering with families</p>
+                    </div>
+                </div>
+
+                
+                <div class="gallery-item filter-item community rounded-xl shadow-lg overflow-hidden bg-white" 
+                     data-src="../images/WhatsApp Image 2025-10-05 at 20.47.53_5f2d575a.jpg" 
+                     data-caption="Holiday celebration with supported families">
+                    <div class="relative">
+                        <img src="../images/WhatsApp Image 2025-10-05 at 20.47.53_5f2d575a.jpg" 
+                             alt="Holiday Event" class="w-full h-64 object-cover">
+                        <div class="gallery-overlay">
+                            <div class="text-white text-center">
+                                <i class="fas fa-expand text-3xl mb-2"></i>
+                                <p class="font-medium">View Full Image</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-brand-gray mb-2">Holiday Celebration</h3>
+                        <p class="text-gray-600 text-sm">Community gathering with families</p>
+                    </div>
+                </div>
+
+                <!-- Campaign Photos -->
+                <div class="gallery-item filter-item campaigns rounded-xl shadow-lg overflow-hidden bg-white" 
+                     data-src="../images/IMG-20250920-WA0147.jpg" 
+                     data-caption="Breast Cancer Awareness campaign launch event">
+                    <div class="relative">
+                        <img src="../images/IMG-20250920-WA0147.jpg" 
+                             alt="Awareness Campaign" class="w-full h-64 object-cover">
+                        <div class="gallery-overlay">
+                            <div class="text-white text-center">
+                                <i class="fas fa-expand text-3xl mb-2"></i>
+                                <p class="font-medium">View Full Image</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-brand-gray mb-2">Awareness Campaign</h3>
+                        <p class="text-gray-600 text-sm">Breast Cancer Awareness launch</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item filter-item campaigns rounded-xl shadow-lg overflow-hidden bg-white" 
+                     data-src="../images/IMG-20250920-WA0148.jpg" 
+                     data-caption="Free health screening and education session">
+                    <div class="relative">
+                        <img src="../images/IMG-20250920-WA0148.jpg" 
+                             alt="Health Screening" class="w-full h-64 object-cover">
+                        <div class="gallery-overlay">
+                            <div class="text-white text-center">
+                                <i class="fas fa-expand text-3xl mb-2"></i>
+                                <p class="font-medium">View Full Image</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-brand-gray mb-2">Health Screening</h3>
+                        <p class="text-gray-600 text-sm">Free health education session</p>
+                    </div>
+                </div>
+
+                <!-- Tech Events -->
+                <div class="gallery-item filter-item tech rounded-xl shadow-lg overflow-hidden bg-white" 
+                     data-src="../images/IMG-20250920-WA0149.jpg" 
+                     data-caption="Women in Tech conference keynote presentation">
+                    <div class="relative">
+                        <img src="../images/IMG-20250920-WA0149.jpg" 
+                             alt="Tech Conference" class="w-full h-64 object-cover">
+                        <div class="gallery-overlay">
+                            <div class="text-white text-center">
+                                <i class="fas fa-expand text-3xl mb-2"></i>
+                                <p class="font-medium">View Full Image</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-brand-gray mb-2">Tech Conference</h3>
+                        <p class="text-gray-600 text-sm">Women in Tech keynote</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item filter-item tech rounded-xl shadow-lg overflow-hidden bg-white" 
+                     data-src="../images/IMG-20250920-WA0150.jpg" 
+                     data-caption="Intensive coding bootcamp graduation ceremony">
+                    <div class="relative">
+                        <img src="../images/IMG-20250920-WA0150.jpg" 
+                             alt="Coding Bootcamp" class="w-full h-64 object-cover">
+                        <div class="gallery-overlay">
+                            <div class="text-white text-center">
+                                <i class="fas fa-expand text-3xl mb-2"></i>
+                                <p class="font-medium">View Full Image</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-brand-gray mb-2">Coding Bootcamp</h3>
+                        <p class="text-gray-600 text-sm">Graduation ceremony</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item filter-item workshops rounded-xl shadow-lg overflow-hidden bg-white" 
+                     data-src="../images/IMG-20250920-WA0151.jpg" 
+                     data-caption="One-on-one mentorship session between tech professional and mentee">
+                    <div class="relative">
+                        <img src="../images/IMG-20250920-WA0151.jpg" 
+                             alt="Mentorship Program" class="w-full h-64 object-cover">
+                        <div class="gallery-overlay">
+                            <div class="text-white text-center">
+                                <i class="fas fa-expand text-3xl mb-2"></i>
+                                <p class="font-medium">View Full Image</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-brand-gray mb-2">Mentorship Program</h3>
+                        <p class="text-gray-600 text-sm">Professional guidance session</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-brand-gray mb-12" id="fonts">Videos from Our Outreach</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Video Card 1 -->
+                <div class="video-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="aspect-w-16 aspect-h-9 relative">
+                        <iframe class="w-full h-64" 
+                                src="../images/VID-20251005-WA0001.mp4" 
+                                title="Her Tech Rising Program Overview" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-semibold text-brand-gray mb-2">Her Tech Rising Program</h3>
+                        <p class="text-gray-600 text-sm">Watch how we're empowering women in technology through hands-on training and mentorship.</p>
+                    </div>
+                </div>
+
+                <!-- Video Card 2 -->
+                <div class="video-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="aspect-w-16 aspect-h-9 relative">
+                        <iframe class="w-full h-64" 
+                                src="../images/VID-20251005-WA0002.mp4" 
+                                title="Happy Smile Donation Impact" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-semibold text-brand-gray mb-2">Happy Smile Donation</h3>
+                        <p class="text-gray-600 text-sm">See the impact of our community outreach programs supporting families in need.</p>
+                    </div>
+                </div>
+
+                <!-- Video Card 3 -->
+                <div class="video-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="aspect-w-16 aspect-h-9 relative">
+                        <iframe class="w-full h-64" 
+                                src="../images/WhatsApp Video 2025-10-05 at 20.56.28_8190fd95.mp4" 
+                                title="Breast Cancer Awareness Campaign" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-semibold text-brand-gray mb-2">Awareness Campaign</h3>
+                        <p class="text-gray-600 text-sm">Our breast cancer awareness initiatives and the lives they've touched.</p>
+                    </div>
+                </div>
+
+                  <div class="video-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="aspect-w-16 aspect-h-9 relative">
+                        <iframe class="w-full h-64" 
+                                src="../images/WhatsApp Video 2025-10-05 at 20.57.36_1a7a99b3.mp4" 
+                                title="Breast Cancer Awareness Campaign" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-semibold text-brand-gray mb-2">Awareness Campaign</h3>
+                        <p class="text-gray-600 text-sm">Our breast cancer awareness initiatives and the lives they've touched.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     
     <!-- Impact Highlights Banner -->
     <section class="py-16 bg-gradient-to-r from-pink-500 to-purple-600">
         <div class="container mx-auto px-4">
             <div class="max-w-4xl mx-auto text-center text-white">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Want to be part of our story?</h2>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" id="fonts">Want to be part of our story?</h2>
                 <p class="text-lg md:text-xl mb-8 text-pink-100">Join us in creating impact and making a difference in the lives of women across Ghana.</p>
                 
                 <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -404,10 +732,10 @@
                 <div class="md:col-span-2">
                     <div class="flex items-center space-x-2 mb-4">
                         <img src="../images/Screenshot 2025-09-01 114611.png" alt="SISTAS Wing Union" class="w-8 h-8 rounded-full">
-                        <span class="text-xl font-bold">SISTAS Wing Union</span>
+                      <span class="text-xl font-bold" id="font">SWUI</span>
                     </div>
                     <p class="text-gray-300 leading-relaxed mb-4">
-                        Empowering women through unity, advocacy, and meaningful initiatives. We believe in the power of collective action to create positive change in our communities and beyond.
+                       Restoring hope to girls and women one community at a time. We believe that when one woman is empowered the entire nation is transformed.
                     </p>
                     <div class="flex space-x-4">
                          <a
@@ -456,7 +784,7 @@
                     <ul class="space-y-2">
                         <li><a href="index.html#donate" class="text-gray-300 hover:text-pink-400 transition-colors">Make a Donation</a></li>
                         <li><a href="../pages/volunteer.html" class="text-gray-300 hover:text-pink-400 transition-colors">Volunteer</a></li>
-                        <li><a href="../pages/volunteer.html" class="text-gray-300 hover:text-pink-400 transition-colors">Become a Member</a></li>
+                        <li><a href="../pages/volunteer.html" class="text-gray-300 hover:text-pink-400 transition-colors">Become a Donor Member</a></li>
                         <li><a href="../pages/patnerwithus.html" class="text-gray-300 hover:text-pink-400 transition-colors">Partner With Us</a></li>
                         
                     </ul>
@@ -466,7 +794,7 @@
             <!-- Copyright -->
             <div class="border-t border-gray-800 mt-8 pt-8 text-center">
                 <p class="text-gray-400">
-                    &copy; 2025 SISTAS Wing Union. All rights reserved. Made with 💖 for women empowerment.
+                    &copy; 2025 Sistas Wing Union. All rights reserved. Made with 💖 for women empowerment.
                 </p>
             </div>
         </div>

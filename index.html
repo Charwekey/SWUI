@@ -26,7 +26,7 @@
       src="https://kit.fontawesome.com/9f7fe64ab7.js"
       crossorigin="anonymous"
     ></script>
-    <title>SISTAS Wing Union - Empowering Women Through Unity</title>
+    <title>SWUI- Empowering Women Through Unity</title>
     <meta
       name="description"
       content="SISTAS Wing Union empowers women through initiatives, advocacy, and community building. Join us in making a difference."
@@ -37,6 +37,14 @@
 
     <!-- Paystack Inline Script -->
     <script src="https://js.paystack.co/v1/inline.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+   
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
     <!-- Custom Tailwind Config -->
     <script>
@@ -121,9 +129,21 @@
         transform: translateY(0);
         transition: opacity 0.2s ease-out, transform 0.2s ease-out;
       }
+      #modal-title{
+        font-family: 'Dancing Script', cursive;
+        font-size: 1.5rem;
+      }
+
+      #modal-titlee{
+        font-family: 'Dancing Script', cursive;
+        font-size: 3rem;
+      }
+      #top{
+        font-family: "PT serif", serif;
+      }
     </style>
   </head>
-  <body class="bg-white font-sans">
+  <body class="bg-white font-sans" id="top">
     <!-- Welcome Modal -->
     <div
       id="welcomeModal"
@@ -154,7 +174,7 @@
             </div>
 
             <h2 id="modal-title" class="text-xl font-bold text-gray-800 mb-2">
-              Welcome to SISTAS Wing Union!
+              Welcome to Sistas Wing Union!
             </h2>
             <p class="text-gray-600 mb-6 text-sm leading-relaxed">
               Join our mission to empower women through unity, support, and
@@ -167,21 +187,21 @@
                 class="w-full bg-gradient-to-r from-pink-500 to-purple-600 text-white py-3 px-4 rounded-lg font-semibold hover:from-pink-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"
                 onclick="openPaystackCheckout()"
               >
-                💖 Donate Now
+                Donate Now
               </button>
 
               <button
                 class="w-full bg-brand-blue hover:bg-brand-blue-dark text-blue-800 py-3 px-4 rounded-lg font-semibold transition-all duration-200"
               >
                 <a href="pages/volunteer.html"
-                  >🤝 Volunteer / Become a Member
+                  >Volunteer / Become a Donor Member
                 </a>
               </button>
 
               <button
                 class="w-full border-2 border-brand-pink text-pink-700 py-3 px-4 rounded-lg font-semibold hover:bg-brand-pink transition-all duration-200"
               >
-                <a href="pages/patnerwithus.html"> 🤲 Partner With Us </a>
+                <a href="pages/patnerwithus.html"> Partner With Us </a>
               </button>
             </div>
           </div>
@@ -202,8 +222,8 @@
               class="w-10 h-10 rounded-full"
             />
             <span
-              class="text-xl font-bold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent"
-              >SISTAS Wing Union</span
+              class="text-xl font-bold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent" id="modal-title"
+              >SWUI</span
             >
           </div>
 
@@ -244,7 +264,7 @@
                   <a
                     href="pages/volunteer.html"
                     class="block px-4 py-3 text-sm text-gray-700 hover:bg-brand-pink hover:text-pink-700 transition-colors duration-150"
-                    >Volunteer/Become a Member</a
+                    >Volunteer/Become a Donor Member</a
                   >
                   <a
                     href="pages/patnerwithus.html"
@@ -362,7 +382,7 @@
               <a
                 href="#"
                 class="block px-2 py-2 text-gray-700 hover:bg-brand-pink hover:text-pink-700 rounded transition-colors"
-                >Volunteer/Become a Member</a
+                >Volunteer/Become a Donor Member</a
               >
               <a
                 href="#"
@@ -425,9 +445,9 @@
        preserveAspectRatio="none">
     <defs>
       <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" style="stop-color:#FAD1E8;stop-opacity:0.8" />
-        <stop offset="50%" style="stop-color:#BFE6FF;stop-opacity:0.6" />
-        <stop offset="100%" style="stop-color:#FAD1E8;stop-opacity:0.4" />
+           <stop offset="0%" style="stop-color:#fe0592;stop-opacity:0.8" />
+        <stop offset="50%" style="stop-color:#08a0ff;stop-opacity:0.6" />
+        <stop offset="100%" style="stop-color:#ff0392;stop-opacity:0.4" />
       </linearGradient>
     </defs>
 
@@ -442,7 +462,7 @@
       <div class="relative container mx-auto px-4 py-20 md:py-32">
         <div class="max-w-4xl mx-auto text-center">
           <h1
-            class="text-4xl md:text-6xl font-bold text-gray-800 mb-6 leading-tight"
+            class="text-4xl md:text-6xl font-bold text-gray-800 mb-6 leading-tight" id="modal-titlee"
           >
             Empowering Women Through
             <span
@@ -452,9 +472,9 @@
           </h1>
 
           <p
-            class="text-lg md:text-xl text-gray-700 mb-8 max-w-2xl mx-auto leading-relaxed"
+            class="text-lg md:text-xl text-black mb-8 max-w-2xl mx-auto leading-relaxed"
           >
-            Join SISTAS Wing Union in our mission to create meaningful change,
+            Join Sistas Wing Union in our mission to create meaningful change,
             support women's initiatives, and build stronger communities through
             collective action and empowerment.
           </p>
@@ -466,14 +486,14 @@
               class="px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold rounded-full hover:from-pink-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
               onclick="openPaystackCheckout()"
             >
-              💖 Donate Now
+              Donate Now
             </button>
 
             <a href="pages/initiative.html">
               <button
                 class="px-8 py-4 bg-white text-gray-800 font-semibold rounded-full border-2 border-gray-300 hover:border-pink-400 hover:bg-pink-50 transition-all duration-300 shadow-lg"
               >
-                🌟 Explore Initiatives
+                 Explore Initiatives
               </button>
             </a>
           </div>
@@ -497,13 +517,13 @@
                 alt="SISTAS Wing Union"
                 class="w-8 h-8 rounded-full"
               />
-              <span class="text-xl font-bold">SISTAS Wing Union</span>
-            </div>
-            <p class="text-gray-300 leading-relaxed mb-4">
-              Empowering women through unity, advocacy, and meaningful
-              initiatives. We believe in the power of collective action to
-              create positive change in our communities and beyond.
-            </p>
+               <span class="text-xl font-bold" id
+                ="modal-title" 
+            >SWUI</span>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed mb-4">
+                       Restoring hope to girls and women one community at a time. We believe that when one woman is empowered the entire nation is transformed.
+                    </p>
             <div class="flex space-x-4">
               <a
                 href="https://www.instagram.com/sistas_wingunion?igsh=eXh3ZmFvNWpjc2Zt&utm_source=qr"
@@ -560,7 +580,7 @@
                 <a
                   href="pages/Upcomingevent.html"
                   class="text-gray-300 hover:text-pink-400 transition-colors"
-                  >News & Updates</a
+                  >News & Event</a
                 >
               </li>
               <li>
@@ -595,7 +615,7 @@
                 <a
                   href="pages/volunteer.html"
                   class="text-gray-300 hover:text-pink-400 transition-colors"
-                  >Become a Member</a
+                  >Become a Donor Member</a
                 >
               </li>
               <li>
@@ -612,7 +632,7 @@
         <!-- Copyright -->
         <div class="border-t border-gray-800 mt-8 pt-8 text-center">
           <p class="text-gray-400">
-            &copy; 2025 SISTAS Wing Union. All rights reserved. Made with 💖 for
+            &copy; 2025 Sistas Wing Union. All rights reserved. Made with 💖 for
             women empowerment.
           </p>
         </div>
