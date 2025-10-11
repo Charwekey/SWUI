@@ -16,9 +16,9 @@
       rel="shortcut icon"
       href="../images/SWUI_logo.png"
       type="image/x-icon">
-    <title>Upcoming Events - SWUI</title>
+    <title>Upcoming Events | SWUI</title>
     <meta name="description" content="Stay informed about SISTAS Wing Union's upcoming events, workshops, and community gatherings. Join us in empowering women and transforming communities.">
-    <meta name="keywords" content="events, workshops, women empowerment, tech bootcamp, breast cancer awareness, SISTAS Wing Union">
+    <meta name="keywords" content="events, workshops, women empowerment, tech bootcamp, examine her initiative, SISTAS Wing Union">
     <script src="https://kit.fontawesome.com/9f7fe64ab7.js" crossorigin="anonymous"></script>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -196,7 +196,7 @@
                 <div class="flex items-center space-x-2">
                     <!-- Replace with actual logo -->
                     <img src="../images/Screenshot 2025-09-01 114611.png" alt="SISTAS Wing Union Logo" class="w-10 h-10 rounded-full">
-                    <a href="index.html" class="text-xl font-bold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent" id="font">SWUI</a>
+                    <a href="../index.html" class="text-xl font-bold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent" id="font">SWUI</a>
                 </div>
 
                 <!-- Desktop Navigation -->
@@ -390,11 +390,11 @@
         </div>
 
         <p class="text-black mb-6 text-sm leading-relaxed">
-            Join our community walk to raise awareness about breast cancer prevention and support.
+            Join our community walk to promote breast health awareness and support through our Examine Her Initiative.
             Includes health screenings, educational materials, and survivor testimonials.
         </p>
 
-        <button onclick="registerForEvent('breast-cancer-walk')"
+        <button onclick="registerForEvent('examine-her-walk')"
             class="btn-secondary text-black px-6 py-3 rounded-full font-semibold w-full hover-lift">
             Join Now
         </button>
@@ -486,18 +486,7 @@
                     <button onclick="registerForEvent('women-tech-workshop')" class="btn-primary text-black px-6 py-3 rounded-full font-semibold w-full hover-lift">
                         Register
                     </button>
-                </div>
-
-        
-
-               
-
-                <!-- Event 4: Happy Smile Community Outreach -->
-            
-    
-<
-
-              
+                    </div>
                 </div> 
             </div>
         </div>
@@ -637,7 +626,7 @@
             setTimeout(() => {
                 const registrationUrls = {
                     'women-tech-workshop': 'https://forms.google.com/d/e/WOMEN_TECH_WORKSHOP_FORM_ID/viewform',
-                    'breast-cancer-walk': 'https://forms.google.com/d/e/BREAST_CANCER_WALK_FORM_ID/viewform',
+                    'examine-her-walk': 'https://forms.google.com/d/e/BREAST_CANCER_WALK_FORM_ID/viewform',
                     'tech-rising-bootcamp': 'https://forms.google.com/d/e/TECH_RISING_BOOTCAMP_FORM_ID/viewform',
                     'happy-smile-outreach': 'https://forms.google.com/d/e/HAPPY_SMILE_OUTREACH_FORM_ID/viewform',
                     'leadership-summit': 'https://forms.google.com/d/e/LEADERSHIP_SUMMIT_FORM_ID/viewform',
@@ -664,8 +653,8 @@
             const eventElements = document.querySelectorAll('.event-card h3');
             let targetElement = null;
             
-            const eventTitles = {
-                'breast-cancer-walk': 'Breast Cancer Awareness Walk',
+                const eventTitles = {
+                'examine-her-walk': 'Examine Her Initiative Walk',
                 'mentorship-circle': 'Monthly Mentorship Circle'
             };
             
