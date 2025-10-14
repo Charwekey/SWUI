@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5F4GR198ER"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+	<head>
+		<!-- Google tag (gtag.js) -->
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=G-5F4GR198ER"
+		></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
 
   gtag('config', 'G-5F4GR198ER');
 </script>
@@ -23,7 +28,6 @@
     <script src="https://kit.fontawesome.com/9f7fe64ab7.js" crossorigin="anonymous"></script>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts -->
      <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
@@ -142,503 +146,952 @@
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
 
-        #top{
-            font-family: "PT Serif", serif;
-        }
-        #font{
-            font-family: 'Dancing Script', cursive;
-            font-size: 1.5rem;
-        }
-        #fonts
-        {
-            font-family: 'Dancing Script', cursive;
-        }
-    </style>
-</head>
-<body class="bg-brand-soft-gray text-brand-charcoal font-sans" id="top">
-    <!-- Navigation -->
-     <header class="sticky top-0 z-40 bg-white shadow-lg">
-        <nav class="container mx-auto px-4 py-4">
-            <div class="flex items-center justify-between">
-             
-                <div class="flex items-center space-x-2">
-                   
-                    <img src="../images/Screenshot 2025-09-01 114611.png" alt="SISTAS Wing Union Logo" class="w-10 h-10 rounded-full">
-                    <a href="index.html" class="text-xl font-bold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent" id="font">SWUI</a>
-                </div>
+			#top {
+				font-family: "PT Serif", serif;
+			}
+			#font {
+				font-family: "Dancing Script", cursive;
+				font-size: 1.5rem;
+			}
+			#fonts {
+				font-family: "Dancing Script", cursive;
+			}
+		</style>
+	</head>
+	<body class="bg-brand-soft-gray text-brand-charcoal font-sans" id="top">
+		<!-- Navigation -->
+		<header class="sticky top-0 z-40 bg-white shadow-lg">
+			<nav class="container mx-auto px-4 py-4">
+				<div class="flex items-center justify-between">
+					<div class="flex items-center space-x-2">
+						<img
+							src="../images/Screenshot 2025-09-01 114611.png"
+							alt="SISTAS Wing Union Logo"
+							class="w-10 h-10 rounded-full"
+						/>
+						<a
+							href="../index.html"
+							class="text-xl font-bold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent"
+							id="font"
+							>SWUI</a
+						>
+					</div>
 
-                <!-- Desktop Navigation -->
-                <div class="hidden md:flex items-center space-x-8">
-                    <!-- About Us Dropdown (Active) -->
-                    <div class="relative group">
-                        <button class="flex items-center space-x-1 text-pink-600 font-semibold transition-colors duration-200" aria-haspopup="true" aria-expanded="false">
-                            <span>About Us</span>
-                            <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </button>
-                        
-                        <div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 dropdown-enter group-hover:dropdown-enter-active">
-                            <div class="py-2">
-                                
-                                <a href="../pages/aboutus.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-brand-pink hover:text-pink-700 transition-colors duration-150">About, Mission & Vision</a>
-                                <a href="../pages/volunteer.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-brand-pink hover:text-pink-700 transition-colors duration-150">Volunteer/Become a Donor Member</a>
-                                <a href="partner.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-brand-pink hover:text-pink-700 transition-colors duration-150">Partner With Us</a>
-                            </div>
-                        </div>
-                    </div>
+					<!-- Desktop Navigation -->
+					<div class="hidden md:flex items-center space-x-8">
+						<!-- About Us Dropdown (Active) -->
+						<div class="relative group">
+							<button
+								class="flex items-center space-x-1 text-pink-600 font-semibold transition-colors duration-200"
+								aria-haspopup="true"
+								aria-expanded="false"
+							>
+								<span>About Us</span>
+								<svg
+									class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M19 9l-7 7-7-7"
+									></path>
+								</svg>
+							</button>
 
-                    <a href="../pages/initiative.html" class="text-gray-700 hover:text-pink-600 font-medium transition-colors duration-200">Initiatives</a>
-                        <div class="relative group">
-                        <button class="flex items-center space-x-1 text-gray-700 hover:text-pink-600 font-medium transition-colors duration-200" aria-haspopup="true" aria-expanded="false">
-                            <span>News & Event</span>
-                            <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </button>
-                        
-                        <div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 dropdown-enter group-hover:dropdown-enter-active">
-                            <div class="py-2">
-                                <a href="../pages/Upcomingevent.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-brand-pink hover:text-pink-700 transition-colors duration-150">Upcoming Event</a>
-                                <a href="../pages/mediagallery.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-brand-pink hover:text-pink-700 transition-colors duration-150">Media Gallery</a>
+							<div
+								class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 dropdown-enter group-hover:dropdown-enter-active"
+							>
+								<div class="py-2">
+									<a
+										href="../pages/aboutus.html"
+										class="block px-4 py-3 text-sm text-gray-700 hover:bg-brand-pink hover:text-pink-700 transition-colors duration-150"
+										>About, Mission & Vision</a
+									>
+									<a
+										href="../pages/volunteer.html"
+										class="block px-4 py-3 text-sm text-gray-700 hover:bg-brand-pink hover:text-pink-700 transition-colors duration-150"
+										>Volunteer/Become a Donor Member</a
+									>
+									<a
+										href="partner.html"
+										class="block px-4 py-3 text-sm text-gray-700 hover:bg-brand-pink hover:text-pink-700 transition-colors duration-150"
+										>Partner With Us</a
+									>
+								</div>
+							</div>
+						</div>
 
-                            </div>
-                        </div>
-                    </div>
-                     <a href="../pages/contactus.html" class="text-gray-700 hover:text-pink-600 font-medium transition-colors duration-200">Contact</a>
-                    
-                    
-                    <button class="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-6 py-2 rounded-full font-semibold hover:from-pink-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105">
-                        Donate🧡🧡
-                    </button>
-                </div>
+						<a
+							href="../pages/initiative.html"
+							class="text-gray-700 hover:text-pink-600 font-medium transition-colors duration-200"
+							>Initiatives</a
+						>
+						<div class="relative group">
+							<button
+								class="flex items-center space-x-1 text-gray-700 hover:text-pink-600 font-medium transition-colors duration-200"
+								aria-haspopup="true"
+								aria-expanded="false"
+							>
+								<span>News & Event</span>
+								<svg
+									class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M19 9l-7 7-7-7"
+									></path>
+								</svg>
+							</button>
 
-                <!-- Mobile Menu Button -->
-                <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-gray-100" aria-label="Toggle mobile menu">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-            </div>
+							<div
+								class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 dropdown-enter group-hover:dropdown-enter-active"
+							>
+								<div class="py-2">
+									<a
+										href="../pages/Upcomingevent.html"
+										class="block px-4 py-3 text-sm text-gray-700 hover:bg-brand-pink hover:text-pink-700 transition-colors duration-150"
+										>Upcoming Event</a
+									>
+									<a
+										href="../pages/mediagallery.html"
+										class="block px-4 py-3 text-sm text-gray-700 hover:bg-brand-pink hover:text-pink-700 transition-colors duration-150"
+										>Media Gallery</a
+									>
+								</div>
+							</div>
+						</div>
+						<a
+							href="../pages/contactus.html"
+							class="text-gray-700 hover:text-pink-600 font-medium transition-colors duration-200"
+							>Contact</a
+						>
 
-            <!-- Mobile Menu -->
-            <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4 border-t border-gray-100">
-                <div class="space-y-2 pt-4"> 
-                    <div class="border-b border-gray-100 pb-2">
-                        <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide px-2 pb-2">About Us</p>
-                       
-                        <a href="../pages/aboutus.html" class="block px-2 py-2 text-gray-700 hover:bg-brand-pink hover:text-pink-700 rounded transition-colors">About, Vision & Mission</a>
-                        <a href="volunteer.html" class="block px-2 py-2 text-gray-700 hover:bg-brand-pink hover:text-pink-700 rounded transition-colors">Volunteer/Become a Donor Member</a>
-                        <a href="../pages/patnerwithus.html" class="block px-2 py-2 text-gray-700 hover:bg-brand-pink hover:text-pink-700 rounded transition-colors">Partner With Us</a>
-                    </div>
-                    <a href="../pages/initiative.html" class="block px-2 py-2 text-gray-700 hover:bg-brand-pink hover:text-pink-700 rounded transition-colors">Initiatives</a>
-    <div class="relative group">
-                        <button class="flex items-center space-x-1 text-gray-700 hover:text-pink-600 font-medium transition-colors duration-200" aria-haspopup="true" aria-expanded="false">
-                            <span>News & Event</span>
-                            <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </button>
-                        
-                        <div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 dropdown-enter group-hover:dropdown-enter-active">
-                            <div class="py-2">
-                                <a href="../pages/Upcomingevent.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-brand-pink hover:text-pink-700 transition-colors duration-150">Upcoming Event</a>
-                                <a href="../pages/mediagallery.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-brand-pink hover:text-pink-700 transition-colors duration-150">Media Gallery</a>
+						<button
+							class="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-6 py-2 rounded-full font-semibold hover:from-pink-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"
+						>
+							Donate🧡🧡
+						</button>
+					</div>
 
-                            </div>
-                        </div>
-                    </div>
-                    <a href="../pages/contactus.html" class="block px-2 py-2 text-pink-600 font-semibold bg-pink-50 rounded">Contact</a>
-                    <button class="w-full mt-3 bg-gradient-to-r from-pink-500 to-purple-600 text-white py-3 px-4 rounded-lg font-semibold" onclick="openPaystackCheckout()">
-                        Donate🧡🧡
-                    </button>
-                </div>
-            </div>
-     
+					<!-- Mobile Menu Button -->
+					<button
+						id="mobileMenuBtn"
+						class="md:hidden p-2 rounded-lg hover:bg-gray-100"
+						aria-label="Toggle mobile menu"
+					>
+						<svg
+							class="w-6 h-6"
+							fill="none"
+							stroke="currentColor"
+							viewBox="0 0 24 24"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M4 6h16M4 12h16M4 18h16"
+							></path>
+						</svg>
+					</button>
+				</div>
 
-        </nav>
-    </header>                    
+				<!-- Mobile Menu -->
+				<div
+					id="mobileMenu"
+					class="hidden md:hidden mt-4 pb-4 border-t border-gray-100"
+				>
+					<div class="space-y-2 pt-4">
+						<div class="border-b border-gray-100 pb-2">
+							<p
+								class="text-xs font-semibold text-gray-500 uppercase tracking-wide px-2 pb-2"
+							>
+								About Us
+							</p>
 
-    <!-- Breadcrumb -->
-   <div class="bg-soft-gray border-b border-gray-200">
-        <div class="container mx-auto px-4 py-3">
-            <nav class="flex items-center space-x-2 text-sm" aria-label="Breadcrumb">
-                <a href="../index.html" class="flex items-center text-gray-500 hover:text-pink-600 transition-colors">
-                    <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
-                    </svg>
-                    Home
-                </a>
-                <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                </svg>
-                <span class="text-pink-600 font-medium">Patner With Us </span>
-            </nav>
-        </div>
-    </div>
+							<a
+								href="../pages/aboutus.html"
+								class="block px-2 py-2 text-gray-700 hover:bg-brand-pink hover:text-pink-700 rounded transition-colors"
+								>About, Vision & Mission</a
+							>
+							<a
+								href="volunteer.html"
+								class="block px-2 py-2 text-gray-700 hover:bg-brand-pink hover:text-pink-700 rounded transition-colors"
+								>Volunteer/Become a Donor Member</a
+							>
+							<a
+								href="../pages/patnerwithus.html"
+								class="block px-2 py-2 text-gray-700 hover:bg-brand-pink hover:text-pink-700 rounded transition-colors"
+								>Partner With Us</a
+							>
+						</div>
+						<a
+							href="../pages/initiative.html"
+							class="block px-2 py-2 text-gray-700 hover:bg-brand-pink hover:text-pink-700 rounded transition-colors"
+							>Initiatives</a
+						>
+						<div class="relative group">
+							<button
+								class="flex items-center space-x-1 text-gray-700 hover:text-pink-600 font-medium transition-colors duration-200"
+								aria-haspopup="true"
+								aria-expanded="false"
+							>
+								<span>News & Event</span>
+								<svg
+									class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M19 9l-7 7-7-7"
+									></path>
+								</svg>
+							</button>
 
+							<div
+								class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 dropdown-enter group-hover:dropdown-enter-active"
+							>
+								<div class="py-2">
+									<a
+										href="../pages/Upcomingevent.html"
+										class="block px-4 py-3 text-sm text-gray-700 hover:bg-brand-pink hover:text-pink-700 transition-colors duration-150"
+										>Upcoming Event</a
+									>
+									<a
+										href="../pages/mediagallery.html"
+										class="block px-4 py-3 text-sm text-gray-700 hover:bg-brand-pink hover:text-pink-700 transition-colors duration-150"
+										>Media Gallery</a
+									>
+								</div>
+							</div>
+						</div>
+						<a
+							href="../pages/contactus.html"
+							class="block px-2 py-2 text-pink-600 font-semibold bg-pink-50 rounded"
+							>Contact</a
+						>
+						<button
+							class="w-full mt-3 bg-gradient-to-r from-pink-500 to-purple-600 text-white py-3 px-4 rounded-lg font-semibold"
+							onclick="openPaystackCheckout()"
+						>
+							Donate🧡🧡
+						</button>
+					</div>
+				</div>
+			</nav>
+		</header>
 
-    <!-- Hero Section -->
-    <section class="relative bg-white overflow-hidden">
-        <!-- Wavy SVG Background -->
-    <div class="absolute inset-0 w-full h-full overflow-hidden">
-  <svg class="w-full h-full object-cover transform rotate-180" 
-       viewBox="0 0 1200 400" 
-       fill="none" 
-       xmlns="http://www.w3.org/2000/svg" 
-       preserveAspectRatio="none">
-    <defs>
-      <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-     <stop offset="0%" style="stop-color:#fb0b93;stop-opacity:0.8" />
-        <stop offset="50%" style="stop-color:#08a0ff;stop-opacity:0.6" />
-        <stop offset="100%" style="stop-color:#ff0392;stop-opacity:0.4" />
-      </linearGradient>
-    </defs>
+		<!-- Breadcrumb -->
+		<div class="bg-soft-gray border-b border-gray-200">
+			<div class="container mx-auto px-4 py-3">
+				<nav
+					class="flex items-center space-x-2 text-sm"
+					aria-label="Breadcrumb"
+				>
+					<a
+						href="../index.html"
+						class="flex items-center text-gray-500 hover:text-pink-600 transition-colors"
+					>
+						<svg
+							class="w-4 h-4 mr-1"
+							fill="currentColor"
+							viewBox="0 0 20 20"
+						>
+							<path
+								d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"
+							></path>
+						</svg>
+						Home
+					</a>
+					<svg
+						class="w-4 h-4 text-gray-400"
+						fill="none"
+						stroke="currentColor"
+						viewBox="0 0 24 24"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M9 5l7 7-7 7"
+						></path>
+					</svg>
+					<span class="text-pink-600 font-medium"
+						>Patner With Us
+					</span>
+				</nav>
+			</div>
+		</div>
 
-    <path d="M0,80 C300,160 600,0 1200,120 L1200,400 L0,400 Z" fill="url(#gradient1)" />
-    <path d="M0,150 C400,230 800,70 1200,180 L1200,400 L0,400 Z" fill="#BFE6FF" fill-opacity="0.3" />
-    <path d="M0,250 C350,320 850,140 1200,280 L1200,400 L0,400 Z" fill="#FAD1E8" fill-opacity="0.2" />
-  </svg>
-</div>
+		<!-- Hero Section -->
+		<section class="relative bg-white overflow-hidden">
+			<!-- Wavy SVG Background -->
+			<div class="absolute inset-0 w-full h-full overflow-hidden">
+				<svg
+					class="w-full h-full object-cover transform rotate-180"
+					viewBox="0 0 1200 400"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+					preserveAspectRatio="none"
+				>
+					<defs>
+						<linearGradient
+							id="gradient1"
+							x1="0%"
+							y1="0%"
+							x2="100%"
+							y2="100%"
+						>
+							<stop
+								offset="0%"
+								style="stop-color: #fb0b93; stop-opacity: 0.8"
+							/>
+							<stop
+								offset="50%"
+								style="stop-color: #08a0ff; stop-opacity: 0.6"
+							/>
+							<stop
+								offset="100%"
+								style="stop-color: #ff0392; stop-opacity: 0.4"
+							/>
+						</linearGradient>
+					</defs>
 
-        
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28">
-            <div class="text-center fade-in-up">
-                <h1 class="text-4xl md:text-6xl font-bold text-brand-charcoal mb-6" id="fonts">
-                    Partner With Us
-                </h1>
-                <p class="text-xl md:text-2xl text-black max-w-3xl mx-auto mb-10">
-                    Let's collaborate to empower women and transform communities together.
-                </p>
-            
-            </div>
-        </div>
-    </section>
+					<path
+						d="M0,80 C300,160 600,0 1200,120 L1200,400 L0,400 Z"
+						fill="url(#gradient1)"
+					/>
+					<path
+						d="M0,150 C400,230 800,70 1200,180 L1200,400 L0,400 Z"
+						fill="#BFE6FF"
+						fill-opacity="0.3"
+					/>
+					<path
+						d="M0,250 C350,320 850,140 1200,280 L1200,400 L0,400 Z"
+						fill="#FAD1E8"
+						fill-opacity="0.2"
+					/>
+				</svg>
+			</div>
 
-    <!-- Why Partner With SISTAS Section -->
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-brand-charcoal mb-4">Why Partner With Us</h2>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Join us in creating meaningful change and building a stronger community of empowered women.</p>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Card 1: Empower Women in Tech -->
-                <div class="partnership-card rounded-2xl p-8 text-center hover-lift shadow-md">
-                    <div class="inline-flex items-center justify-center w-16 h-16 rounded-full mb-6" style="background: linear-gradient(135deg, #FAD1E8, #f8a5c2);">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-brand-charcoal mb-4">Empower Women in Tech</h3>
-                    <p class="text-gray-600">Support women breaking barriers in technology and entrepreneurship through mentorship, funding, and career development programs.</p>
-                </div>
-                
-                <!-- Card 2: Drive Social Impact -->
-                <div class="partnership-card rounded-2xl p-8 text-center hover-lift shadow-md">
-                    <div class="inline-flex items-center justify-center w-16 h-16 rounded-full mb-6" style="background: linear-gradient(135deg, #BFE6FF, #9dd1f1);">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-brand-charcoal mb-4">Drive Social Impact</h3> 
-                    <p class="text-gray-600">Your contributions help fund initiatives like Her Tech Rising Happy Smile Donation and SWUI Examine Her, creating lasting positive change in communities.</p>
-                </div>
-                
-                <!-- Card 3: Build a Strong Network -->
-                <div class="partnership-card rounded-2xl p-8 text-center hover-lift shadow-md">
-                    <div class="inline-flex items-center justify-center w-16 h-16 rounded-full mb-6" style="background: linear-gradient(135deg, #FAD1E8, #BFE6FF);">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-brand-charcoal mb-4">Build a Strong Network</h3>
-                    <p class="text-gray-600">Collaborate with a vibrant community of changemakers and innovators while building valuable connections and relationships.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+			<div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28">
+				<div class="text-center fade-in-up">
+					<h1
+						class="text-4xl md:text-6xl font-bold text-brand-charcoal mb-6"
+						id="fonts"
+					>
+						Partner With Us
+					</h1>
+					<p
+						class="text-xl md:text-2xl text-black max-w-3xl mx-auto mb-10"
+					>
+						Let's collaborate to empower women and transform
+						communities together.
+					</p>
+				</div>
+			</div>
+		</section>
 
-    <!-- Partnership Opportunities Section -->
-    <section class="py-20 bg-brand-soft-gray">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-brand-charcoal mb-4">Ways to Partner With Us</h2>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Choose the partnership opportunity that aligns best with your organization's goals and values.</p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Corporate Sponsorship -->
-                <div class="bg-white rounded-xl p-6 shadow-md hover-lift">
-                    <div class="w-12 h-12 brand-pink rounded-lg flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-bold text-brand-charcoal mb-2">Corporate Sponsorship</h3>
-                    <p class="text-gray-600 text-sm">Support our initiatives through financial sponsorship and gain brand visibility in the women empowerment space.</p>
-                </div>
-                
-                <!-- Event Collaboration -->
-                <div class="bg-white rounded-xl p-6 shadow-md hover-lift">
-                    <div class="w-12 h-12 brand-blue rounded-lg flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-bold text-brand-charcoal mb-2">Event Collaboration</h3>
-                    <p class="text-gray-600 text-sm">Co-host workshops, conferences, and networking events that benefit both our communities and advance women's causes.</p>
-                </div>
-                
-                <!-- Resource Sharing -->
-                <div class="bg-white rounded-xl p-6 shadow-md hover-lift">
-                    <div class="w-12 h-12 brand-pink rounded-lg flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-bold text-brand-charcoal mb-2">Resource Sharing</h3>
-                    <p class="text-gray-600 text-sm">Share expertise, technology, workspace, or educational resources to accelerate our impact and reach.</p>
-                </div>
-                
-                <!-- Community Engagement -->
-                <div class="bg-white rounded-xl p-6 shadow-md hover-lift">
-                    <div class="w-12 h-12 brand-blue rounded-lg flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-bold text-brand-charcoal mb-2">Community Engagement</h3>
-                    <p class="text-gray-600 text-sm">Engage your employees in volunteer opportunities and corporate social responsibility initiatives with us.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+		<!-- Why Partner With SISTAS Section -->
+		<section class="py-20 bg-white">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center mb-16">
+					<h2
+						class="text-3xl md:text-4xl font-bold text-brand-charcoal mb-4"
+					>
+						Why Partner With Us
+					</h2>
+					<p class="text-lg text-gray-600 max-w-2xl mx-auto">
+						Join us in creating meaningful change and building a
+						stronger community of empowered women.
+					</p>
+				</div>
+
+				<div class="grid md:grid-cols-3 gap-8">
+					<!-- Card 1: Empower Women in Tech -->
+					<div
+						class="partnership-card rounded-2xl p-8 text-center hover-lift shadow-md"
+					>
+						<div
+							class="inline-flex items-center justify-center w-16 h-16 rounded-full mb-6"
+							style="
+								background: linear-gradient(
+									135deg,
+									#fad1e8,
+									#f8a5c2
+								);
+							"
+						>
+							<svg
+								class="w-8 h-8 text-white"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+								></path>
+							</svg>
+						</div>
+						<h3 class="text-xl font-bold text-brand-charcoal mb-4">
+							Empower Women in Tech
+						</h3>
+						<p class="text-gray-600">
+							Support women breaking barriers in technology and
+							entrepreneurship through mentorship, funding, and
+							career development programs.
+						</p>
+					</div>
+
+					<!-- Card 2: Drive Social Impact -->
+					<div
+						class="partnership-card rounded-2xl p-8 text-center hover-lift shadow-md"
+					>
+						<div
+							class="inline-flex items-center justify-center w-16 h-16 rounded-full mb-6"
+							style="
+								background: linear-gradient(
+									135deg,
+									#bfe6ff,
+									#9dd1f1
+								);
+							"
+						>
+							<svg
+								class="w-8 h-8 text-white"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+								></path>
+							</svg>
+						</div>
+						<h3 class="text-xl font-bold text-brand-charcoal mb-4">
+							Drive Social Impact
+						</h3>
+						<p class="text-gray-600">
+							Your contributions help fund initiatives like Her
+							Tech Rising Happy Smile Donation and SWUI Examine
+							Her, creating lasting positive change in
+							communities.
+						</p>
+					</div>
+
+					<!-- Card 3: Build a Strong Network -->
+					<div
+						class="partnership-card rounded-2xl p-8 text-center hover-lift shadow-md"
+					>
+						<div
+							class="inline-flex items-center justify-center w-16 h-16 rounded-full mb-6"
+							style="
+								background: linear-gradient(
+									135deg,
+									#fad1e8,
+									#bfe6ff
+								);
+							"
+						>
+							<svg
+								class="w-8 h-8 text-white"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+								></path>
+							</svg>
+						</div>
+						<h3 class="text-xl font-bold text-brand-charcoal mb-4">
+							Build a Strong Network
+						</h3>
+						<p class="text-gray-600">
+							Collaborate with a vibrant community of changemakers
+							and innovators while building valuable connections
+							and relationships.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Partnership Opportunities Section -->
+		<section class="py-20 bg-brand-soft-gray">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center mb-16">
+					<h2
+						class="text-3xl md:text-4xl font-bold text-brand-charcoal mb-4"
+					>
+						Ways to Partner With Us
+					</h2>
+					<p class="text-lg text-gray-600 max-w-2xl mx-auto">
+						Choose the partnership opportunity that aligns best with
+						your organization's goals and values.
+					</p>
+				</div>
+
+				<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+					<!-- Corporate Sponsorship -->
+					<div class="bg-white rounded-xl p-6 shadow-md hover-lift">
+						<div
+							class="w-12 h-12 brand-pink rounded-lg flex items-center justify-center mb-4"
+						>
+							<svg
+								class="w-6 h-6 text-white"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+								></path>
+							</svg>
+						</div>
+						<h3 class="text-lg font-bold text-brand-charcoal mb-2">
+							Corporate Sponsorship
+						</h3>
+						<p class="text-gray-600 text-sm">
+							Support our initiatives through financial
+							sponsorship and gain brand visibility in the women
+							empowerment space.
+						</p>
+					</div>
+
+					<!-- Event Collaboration -->
+					<div class="bg-white rounded-xl p-6 shadow-md hover-lift">
+						<div
+							class="w-12 h-12 brand-blue rounded-lg flex items-center justify-center mb-4"
+						>
+							<svg
+								class="w-6 h-6 text-white"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+								></path>
+							</svg>
+						</div>
+						<h3 class="text-lg font-bold text-brand-charcoal mb-2">
+							Event Collaboration
+						</h3>
+						<p class="text-gray-600 text-sm">
+							Co-host workshops, conferences, and networking
+							events that benefit both our communities and advance
+							women's causes.
+						</p>
+					</div>
+
+					<!-- Resource Sharing -->
+					<div class="bg-white rounded-xl p-6 shadow-md hover-lift">
+						<div
+							class="w-12 h-12 brand-pink rounded-lg flex items-center justify-center mb-4"
+						>
+							<svg
+								class="w-6 h-6 text-white"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"
+								></path>
+							</svg>
+						</div>
+						<h3 class="text-lg font-bold text-brand-charcoal mb-2">
+							Resource Sharing
+						</h3>
+						<p class="text-gray-600 text-sm">
+							Share expertise, technology, workspace, or
+							educational resources to accelerate our impact and
+							reach.
+						</p>
+					</div>
+
+					<!-- Community Engagement -->
+					<div class="bg-white rounded-xl p-6 shadow-md hover-lift">
+						<div
+							class="w-12 h-12 brand-blue rounded-lg flex items-center justify-center mb-4"
+						>
+							<svg
+								class="w-6 h-6 text-white"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"
+								></path>
+							</svg>
+						</div>
+						<h3 class="text-lg font-bold text-brand-charcoal mb-2">
+							Community Engagement
+						</h3>
+						<p class="text-gray-600 text-sm">
+							Engage your employees in volunteer opportunities and
+							corporate social responsibility initiatives with us.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
 
     <!-- Partner Form Section -->
-<div class="bg-brand-soft-gray rounded-2xl p-8 shadow-lg text-center">
-  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdMFd-3-YF5C0ESCQbDbWvEUMXKYZACWjnfwA9aeommXWC4Aw/viewform"
-     target="_blank"
-     class="inline-block bg-pink-500 hover:bg-blue-200 hover:text-black text-white font-semibold py-4 px-8 rounded-full shadow-md transition duration-300">
-    Open Partnership Form
-  </a>
-</div>
-
-
-
-    <!-- Call-to-Action Banner -->
-    <section class="py-20 bg-brand-charcoal text-black">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6" id="fonts">
-                Together, we can empower more women. Be a partner today.
-            </h2>
-            <p class="text-xl mb-8 opacity-90">
-                Join our mission to create lasting change and build stronger communities.
-            </p>
-            <button onclick="scrollToPartnerForm()" class="btn-secondary text-black px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover-lift">
-                Get Started
-            </button>
+    <section id="partner-form" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-charcoal mb-4">Partnership Application</h2>
+                <p class="text-lg text-gray-600">Tell us about your organization and how you'd like to partner with us.</p>
+            </div>
+            
+            <!-- Google Form Embed -->
+            <div class="bg-brand-soft-gray rounded-2xl p-8 shadow-lg">
+                <!-- TODO: Replace with actual Google Form embed URL -->
+                <iframe 
+                    src="https://forms.gle/BToyP4t6XTnyzWcv6" 
+                    width="100%" 
+                    height="800" 
+                    frameborder="0" 
+                    marginheight="0" 
+                    marginwidth="0"
+                    class="rounded-lg"
+                    title="Partnership Application Form">
+                    Loading partnership application form...
+                </iframe>
+                
+                
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
-   <footer class="bg-gray-900 text-white py-12">
-        <div class="container mx-auto px-4">
-            <div class="grid md:grid-cols-4 gap-8">
-                <!-- Mission Blurb -->
-                <div class="md:col-span-2">
-                    <div class="flex items-center space-x-2 mb-4">
-                        <img src="../images/Screenshot 2025-09-01 114611.png" alt="SISTAS Wing Union" class="w-8 h-8 rounded-full">
-                        <span class="text-xl font-bold" id="font"
-                        >SWUI</span>
-                    </div>
-                    <p class="text-gray-300 leading-relaxed mb-4">
-                       Restoring hope to girls and women one community at a time. We believe that when one woman is empowered the entire nation is transformed.
-                    </p>
-                    <div class="flex space-x-4">
-                       <a
-                href="https://www.instagram.com/sistas_wingunion?igsh=eXh3ZmFvNWpjc2Zt&utm_source=qr"
-                class="text-gray-400 hover:text-pink-400 transition-colors"
-                aria-label="Instagram"
-                target="_blank"
-              >
-                <i class="fa-brands fa-instagram"></i>
-              </a>
+		<!-- Call-to-Action Banner -->
+		<section class="py-20 bg-brand-charcoal text-black">
+			<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+				<h2 class="text-3xl md:text-4xl font-bold mb-6" id="fonts">
+					Together, we can empower more women. Be a partner today.
+				</h2>
+				<p class="text-xl mb-8 opacity-90">
+					Join our mission to create lasting change and build stronger
+					communities.
+				</p>
+				<button
+					onclick="scrollToPartnerForm()"
+					class="btn-secondary text-black px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover-lift"
+				>
+					Get Started
+				</button>
+			</div>
+		</section>
 
-              <a
-                href="https://www.linkedin.com/posts/sistas-wing-union-international-swui-001373387_breastcancerawareness-health-selfcare-activity-7379845256286146560-3j41?utm_source=share&utm_medium=member_ios&rcm=ACoAAF9Fn0EBiWc-_lkAi76zg_X6qiiHURmnAuA"
-                class="text-gray-400 hover:text-pink-400 transition-colors"
-                aria-label="Instagram"
-                target="_blank"
-              >
-                <i class="fa-brands fa-linkedin"></i>
-              </a>
-              <a
-                href="https://www.tiktok.com/@sistas_wingunion?_t=ZM-90HQlCNZ8Hr&_r=1"
-                class="text-gray-400 hover:text-pink-400 transition-colors"
-                aria-label="Instagram"
-                target="_blank"
-              >
-                <i class="fa-brands fa-tiktok"></i>
-              </a>
-                    </div>
-                </div>
-                
-                <!-- Quick Navigation -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
-                    <ul class="space-y-2">
-                        <li><a href="../pages/aboutus.html" class="text-gray-300 hover:text-pink-400 transition-colors">About the Union</a></li>
-                        <li><a href="../pages/initiative.html" class="text-gray-300 hover:text-pink-400 transition-colors">Our Initiatives</a></li>
-      
-                        <li><a href="../pages/mediagallery.html" class="text-gray-300 hover:text-pink-400 transition-colors">Media Gallery</a></li>
-                        <li><a href="../pages/Upcomingevent.html" class="text-gray-300 hover:text-pink-400 transition-colors">News & Event</a></li>
-                        <li><a href="../pages/contactus.html" class="text-gray-300 hover:text-pink-400 transition-colors">Contact Us</a></li>
-                        
-                    </ul>
-                </div>
-                
-                <!-- Support -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Support Us</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-300 hover:text-pink-400 transition-colors">Make a Donation</a></li>
-                        <li><a href="../pages/volunteer.html" class="text-gray-300 hover:text-pink-400 transition-colors">Volunteer</a></li>
-                        <li><a href="../pages/volunteer.html" class="text-gray-300 hover:text-pink-400 transition-colors">Become a Donor Member</a></li>
-                        <li><a href="patnerwithus.html" class="text-pink-300 font-medium ">Partner With Us</a></li>
-                                        </ul>
-                </div>
-            </div>
-            
-            <!-- Copyright -->
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
-                <p class="text-gray-400">
-                    &copy; 2025 Sistas Wing Union. All rights reserved. Made with 💖 for women empowerment.
-                </p>
-            </div>
-        </div>
-    </footer>
+		<!-- Footer -->
+		<footer class="bg-gray-900 text-white py-12">
+			<div class="container mx-auto px-4">
+				<div class="grid md:grid-cols-4 gap-8">
+					<!-- Mission Blurb -->
+					<div class="md:col-span-2">
+						<div class="flex items-center space-x-2 mb-4">
+							<img
+								src="../images/Screenshot 2025-09-01 114611.png"
+								alt="SISTAS Wing Union"
+								class="w-8 h-8 rounded-full"
+							/>
+							<span class="text-xl font-bold" id="font"
+								>SWUI</span
+							>
+						</div>
+						<p class="text-gray-300 leading-relaxed mb-4">
+							Restoring hope to girls and women one community at a
+							time. We believe that when one woman is empowered
+							the entire nation is transformed.
+						</p>
+						<div class="flex space-x-4">
+							<a
+								href="https://www.instagram.com/sistas_wingunion"
+								class="text-gray-400 hover:text-pink-400 transition-colors"
+								aria-label="Instagram"
+								target="_blank"
+							>
+								<i class="fa-brands fa-instagram"></i>
+							</a>
 
-    <!-- Floating WhatsApp Button -->
-       <div class="whatsapp-float">
-                <a href="https://wa.me/your-whatsapp-invite-link" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg transition-colors duration-300" aria-label="Join our WhatsApp community">
-            <!-- TODO: Replace with actual WhatsApp invite URL -->
-            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.863 3.488"/>
-            </svg>
-        </a>
-    </div>
+							<a
+								href="https://www.linkedin.com/in/sistas-wing-union-international-swui-ghana-001373387"
+								class="text-gray-400 hover:text-pink-400 transition-colors"
+								aria-label="Instagram"
+								target="_blank"
+							>
+								<i class="fa-brands fa-linkedin"></i>
+							</a>
+							<a
+								href="https://www.tiktok.com/@sistas_wingunion"
+								class="text-gray-400 hover:text-pink-400 transition-colors"
+								aria-label="Instagram"
+								target="_blank"
+							>
+								<i class="fa-brands fa-tiktok"></i>
+							</a>
+						</div>
+					</div>
 
- 
+					<!-- Quick Navigation -->
+					<div>
+						<h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+						<ul class="space-y-2">
+							<li>
+								<a
+									href="../pages/aboutus.html"
+									class="text-gray-300 hover:text-pink-400 transition-colors"
+									>About the Union</a
+								>
+							</li>
+							<li>
+								<a
+									href="../pages/initiative.html"
+									class="text-gray-300 hover:text-pink-400 transition-colors"
+									>Our Initiatives</a
+								>
+							</li>
 
-    <!-- Paystack Script -->
-    <script src="https://js.paystack.co/v1/inline.js"></script>
-    
-    <script>
-        // Mobile menu toggle
-       const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
+							<li>
+								<a
+									href="../pages/mediagallery.html"
+									class="text-gray-300 hover:text-pink-400 transition-colors"
+									>Media Gallery</a
+								>
+							</li>
+							<li>
+								<a
+									href="../pages/Upcomingevent.html"
+									class="text-gray-300 hover:text-pink-400 transition-colors"
+									>News & Event</a
+								>
+							</li>
+							<li>
+								<a
+									href="../pages/contactus.html"
+									class="text-gray-300 hover:text-pink-400 transition-colors"
+									>Contact Us</a
+								>
+							</li>
+						</ul>
+					</div>
 
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-        
-        // Smooth scrolling for anchor links
-        function scrollToPartnerForm() {
-            document.getElementById('partner-form').scrollIntoView({ 
-                behavior: 'smooth' 
-            });
-        }
-        
-        // Paystack donation checkout
-        function openDonationCheckout() {
-            const handler = PaystackPop.setup({
-                key: 'pk_test_your_paystack_public_key_here', // TODO: Replace with actual Paystack public key
-                email: 'donor@example.com',
-                amount: 5000, // Amount in kobo (50 GHS)
-                currency: 'GHS',
-                ref: 'donation_' + Math.floor((Math.random() * 1000000000) + 1),
-                metadata: {
-                   custom_fields: [
-                      {
-                        display_name: "Donation Purpose",
-                        variable_name: "donation_purpose",
-                        value: "General Support"
-                      }
-                   ]
-                },
-                callback: function(response) {
-                    // TODO: Implement server-side verification
-                    alert('Payment completed! Reference: ' + response.reference);
-                    // In production, send response.reference to your server for verification
-                },
-                onClose: function() {
-                    console.log('Payment window closed.');
-                }
-            });
-            handler.openIframe();
-        }
-        
-        // Partner form submission
-        function handlePartnerFormSubmit(event) {
-            event.preventDefault();
-            
-            const submitButton = event.target.querySelector('button[type="submit"]');
-            const submitText = submitButton.querySelector('.submit-text');
-            const spinner = submitButton.querySelector('.spinner');
-            
-            // Show loading state
-            submitText.textContent = 'Submitting...';
-            spinner.classList.remove('hidden');
-            submitButton.disabled = true;
-            
-            // Simulate form submission (replace with actual form handling)
-            setTimeout(() => {
-                alert('Thank you for your partnership application! We will review your submission and contact you within 2-3 business days.');
-                
-                // Reset form
-                event.target.reset();
-                
-                // Reset button state
-                submitText.textContent = 'Submit Partnership Application';
-                spinner.classList.add('hidden');
-                submitButton.disabled = false;
-            }, 2000);
-        }
-        
-        // Intersection Observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in-up');
-                }
-            });
-        }, observerOptions);
-        
-        // Observe elements for animation
-        document.addEventListener('DOMContentLoaded', () => {
-            const animateElements = document.querySelectorAll('.partnership-card, .bg-white.rounded-xl');
-            animateElements.forEach(el => {
-                observer.observe(el);
-            });
-        });
-        
-        // TODO: Production Notes
-        // 1. Replace Google Form embed URL with actual form
-        // 2. Replace Paystack public key with production key
-        // 3. Replace WhatsApp invite URL with actual group invite
-        // 4. Replace placeholder logo with actual SISTAS Wing Union logo
-        // 5. Implement server-side payment verification for security
-        // 6. Add Google Analytics or other tracking if needed
-        // 7. Optimize images and add proper alt text for accessibility
-    </script>
-</body>
+					<!-- Support -->
+					<div>
+						<h3 class="text-lg font-semibold mb-4">Support Us</h3>
+						<ul class="space-y-2">
+							<li>
+								<a
+									href="#"
+									class="text-gray-300 hover:text-pink-400 transition-colors"
+									>Make a Donation</a
+								>
+							</li>
+							<li>
+								<a
+									href="../pages/volunteer.html"
+									class="text-gray-300 hover:text-pink-400 transition-colors"
+									>Volunteer</a
+								>
+							</li>
+							<li>
+								<a
+									href="../pages/volunteer.html"
+									class="text-gray-300 hover:text-pink-400 transition-colors"
+									>Become a Donor Member</a
+								>
+							</li>
+							<li>
+								<a
+									href="patnerwithus.html"
+									class="text-pink-300 font-medium"
+									>Partner With Us</a
+								>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- Copyright -->
+				<div class="border-t border-gray-800 mt-8 pt-8 text-center">
+					<p class="text-gray-400">
+						&copy; 2025 Sistas Wing Union. All rights reserved. Made
+						with 💖 for women empowerment.
+					</p>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Floating WhatsApp Button -->
+		<div class="whatsapp-float">
+			<a
+				href="https://wa.me/233209759737"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="flex items-center justify-center w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg transition-colors duration-300"
+				aria-label="Join our WhatsApp community"
+			>
+				<!-- TODO: Replace with actual WhatsApp invite URL -->
+				<svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+					<path
+						d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.863 3.488"
+					/>
+				</svg>
+			</a>
+		</div>
+
+		<!-- Paystack Script -->
+		<script src="https://js.paystack.co/v1/inline.js"></script>
+
+		<script>
+			// Mobile menu toggle
+			const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+			const mobileMenu = document.getElementById("mobileMenu");
+
+			mobileMenuBtn.addEventListener("click", () => {
+				mobileMenu.classList.toggle("hidden");
+			});
+
+			// Smooth scrolling for anchor links
+			function scrollToPartnerForm() {
+				document.getElementById("partner-form").scrollIntoView({
+					behavior: "smooth",
+				});
+			}
+
+			// Paystack donation checkout
+			function openDonationCheckout() {
+				const handler = PaystackPop.setup({
+					key: "pk_test_your_paystack_public_key_here", // TODO: Replace with actual Paystack public key
+					email: "donor@example.com",
+					amount: 5000, // Amount in kobo (50 GHS)
+					currency: "GHS",
+					ref:
+						"donation_" +
+						Math.floor(Math.random() * 1000000000 + 1),
+					metadata: {
+						custom_fields: [
+							{
+								display_name: "Donation Purpose",
+								variable_name: "donation_purpose",
+								value: "General Support",
+							},
+						],
+					},
+					callback: function (response) {
+						// TODO: Implement server-side verification
+						alert(
+							"Payment completed! Reference: " +
+								response.reference
+						);
+						// In production, send response.reference to your server for verification
+					},
+					onClose: function () {
+						console.log("Payment window closed.");
+					},
+				});
+				handler.openIframe();
+			}
+
+			// Partner form submission
+			function handlePartnerFormSubmit(event) {
+				event.preventDefault();
+
+				const submitButton = event.target.querySelector(
+					'button[type="submit"]'
+				);
+				const submitText = submitButton.querySelector(".submit-text");
+				const spinner = submitButton.querySelector(".spinner");
+
+				// Show loading state
+				submitText.textContent = "Submitting...";
+				spinner.classList.remove("hidden");
+				submitButton.disabled = true;
+
+				// Simulate form submission (replace with actual form handling)
+				setTimeout(() => {
+					alert(
+						"Thank you for your partnership application! We will review your submission and contact you within 2-3 business days."
+					);
+
+					// Reset form
+					event.target.reset();
+
+					// Reset button state
+					submitText.textContent = "Submit Partnership Application";
+					spinner.classList.add("hidden");
+					submitButton.disabled = false;
+				}, 2000);
+			}
+
+			// Intersection Observer for animations
+			const observerOptions = {
+				threshold: 0.1,
+				rootMargin: "0px 0px -50px 0px",
+			};
+
+			const observer = new IntersectionObserver((entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add("fade-in-up");
+					}
+				});
+			}, observerOptions);
+
+			// Observe elements for animation
+			document.addEventListener("DOMContentLoaded", () => {
+				const animateElements = document.querySelectorAll(
+					".partnership-card, .bg-white.rounded-xl"
+				);
+				animateElements.forEach((el) => {
+					observer.observe(el);
+				});
+			});
+
+			// TODO: Production Notes
+			// 1. Replace Google Form embed URL with actual form
+			// 2. Replace Paystack public key with production key
+			// 3. Replace WhatsApp invite URL with actual group invite
+			// 4. Replace placeholder logo with actual SISTAS Wing Union logo
+			// 5. Implement server-side payment verification for security
+			// 6. Add Google Analytics or other tracking if needed
+			// 7. Optimize images and add proper alt text for accessibility
+		</script>
+	</body>
 </html>
-
-

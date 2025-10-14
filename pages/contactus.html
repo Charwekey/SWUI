@@ -1,545 +1,966 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5F4GR198ER"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+	<head>
+		<!-- Google tag (gtag.js) -->
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=G-5F4GR198ER"
+		></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
 
-  gtag('config', 'G-5F4GR198ER');
-</script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-      rel="shortcut icon"
-      href="../images/SWUI_logo.png"
-      type="image/x-icon"
-    />
-    <title>Contact Us - SISTAS Wing Union</title>
-    <meta name="description" content="Get in touch with SISTAS Wing Union. Contact us for inquiries, partnerships, volunteering opportunities, or general information.">
-    <script src="https://kit.fontawesome.com/9f7fe64ab7.js" crossorigin="anonymous"></script>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
-    <!-- Paystack Inline Script -->
-    <script src="https://js.paystack.co/v1/inline.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <!-- Custom Tailwind Config -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'brand-pink': '#FAD1E8',
-                        'brand-blue': '#BFE6FF',
-                        'brand-pink-dark': '#F8BBD9',
-                        'brand-blue-dark': '#9DD6FF'
-                    },
-                    animation: {
-                        'fade-in': 'fadeIn 0.3s ease-out',
-                        'scale-in': 'scaleIn 0.3s ease-out',
-                        'float': 'float 3s ease-in-out infinite',
-                        'slide-up': 'slideUp 0.6s ease-out'
-                    }
-                }
-            }
-        }
-    </script>
-    
-    <style>
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        
-        @keyframes scaleIn {
-            from { transform: scale(0.9); opacity: 0; }
-            to { transform: scale(1); opacity: 1; }
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
-        
-        @keyframes slideUp {
-            from { transform: translateY(30px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-        
-        .modal-backdrop {
-            backdrop-filter: blur(4px);
-        }
-        
-        .dropdown-enter {
-            opacity: 0;
-            transform: translateY(-10px);
-        }
-        
-        .dropdown-enter-active {
-            opacity: 1;
-            transform: translateY(0);
-            transition: opacity 0.2s ease-out, transform 0.2s ease-out;
-        }
-        
-        .form-input:focus {
-            outline: none;
-            border-color: #ec4899;
-            box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.1);
-        }
-        
-        .success-message {
-            animation: slideUp 0.5s ease-out;
-        }
-        .whatsapp-float {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 1000;
-            animation: pulse 2s infinite;
-        }
-        #top{
-            font-family: "PT Serif", serif;
-        }
-        #font{
-            font-family: 'Dancing Script', cursive;
-            font-size: 1.5rem;
-        }
-        #fonts
-        {
-            font-family: 'Dancing Script', cursive;
-        }
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-        }
-    </style>
-</head>
-<body class="bg-white font-sans" id="top">
-    <!-- Header with Sticky Navigation -->
-    <header class="sticky top-0 z-40 bg-white shadow-lg">
-        <nav class="container mx-auto px-4 py-4">
-            <div class="flex items-center justify-between">
-                <!-- Logo -->
-                <div class="flex items-center space-x-2">
-                    <!-- Replace with actual logo -->
-                    <img src="../images/Screenshot 2025-09-01 114611.png" alt="SISTAS Wing Union Logo" class="w-10 h-10 rounded-full">
-                    <span class="text-xl font-bold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent" id="font">SWUI</span>
-                </div>
+			gtag("config", "G-5F4GR198ER");
+		</script>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="shortcut icon"
+			href="../images/SWUI_logo.png"
+			type="image/x-icon"
+		/>
+		<title>Contact Us - SISTAS Wing Union</title>
+		<meta
+			name="description"
+			content="Get in touch with SISTAS Wing Union. Contact us for inquiries, partnerships, volunteering opportunities, or general information."
+		/>
+		<script
+			src="https://kit.fontawesome.com/9f7fe64ab7.js"
+			crossorigin="anonymous"
+		></script>
+		<!-- Tailwind CSS CDN -->
+		<script src="https://cdn.tailwindcss.com"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- Paystack Inline Script -->
+		<script src="https://js.paystack.co/v1/inline.js"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- Custom Tailwind Config -->
+		<script>
+			tailwind.config = {
+				theme: {
+					extend: {
+						colors: {
+							"brand-pink": "#FAD1E8",
+							"brand-blue": "#BFE6FF",
+							"brand-pink-dark": "#F8BBD9",
+							"brand-blue-dark": "#9DD6FF",
+						},
+						animation: {
+							"fade-in": "fadeIn 0.3s ease-out",
+							"scale-in": "scaleIn 0.3s ease-out",
+							float: "float 3s ease-in-out infinite",
+							"slide-up": "slideUp 0.6s ease-out",
+						},
+					},
+				},
+			};
+		</script>
 
-                <!-- Desktop Navigation -->
-                <div class="hidden md:flex items-center space-x-8">
-                    <!-- About Us Dropdown -->
-                    <div class="relative group">
-                        <button class="flex items-center space-x-1 text-gray-700 hover:text-pink-600 font-medium transition-colors duration-200" aria-haspopup="true" aria-expanded="false">
-                            <span>About Us</span>
-                            <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </button>
-                        
-                        <div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 dropdown-enter group-hover:dropdown-enter-active">
-                            <div class="py-2">
-                              
-                                <a href="../pages/aboutus.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-brand-pink hover:text-pink-700 transition-colors duration-150">About, Vision & Mission</a>
-                                <a href="../pages/volunteer.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-brand-pink hover:text-pink-700 transition-colors duration-150">Volunteer/Become a Donor Member</a>
-                                <a href="../pages/patnerwithus.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-brand-pink hover:text-pink-700 transition-colors duration-150">Partner With Us</a>
-                            </div>
-                        </div>
-                    </div>
+		<style>
+			@keyframes fadeIn {
+				from {
+					opacity: 0;
+				}
+				to {
+					opacity: 1;
+				}
+			}
 
-                    <a href="../pages/initiative.html" class="text-gray-700 hover:text-pink-600 font-medium transition-colors duration-200">Initiatives</a>
-                   <div class="relative group">
-                        <button class="flex items-center space-x-1 text-gray-700 hover:text-pink-600 font-medium transition-colors duration-200" aria-haspopup="true" aria-expanded="false">
-                            <span>News & Event</span>
-                            <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </button>
-                        
-                        <div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 dropdown-enter group-hover:dropdown-enter-active">
-                            <div class="py-2">
-                                <a href="../pages/Upcomingevent.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-brand-pink hover:text-pink-700 transition-colors duration-150">Upcoming Event</a>
-                                <a href="../pages/mediagallery.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-brand-pink hover:text-pink-700 transition-colors duration-150">Media Gallery</a>
+			@keyframes scaleIn {
+				from {
+					transform: scale(0.9);
+					opacity: 0;
+				}
+				to {
+					transform: scale(1);
+					opacity: 1;
+				}
+			}
 
-                            </div>
-                        </div>
-                    </div>
-                    <a href="contactus.html" class="text-pink-600 font-semibold border-b-2 border-pink-600">Contact</a>
-                    
-                    <button class="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-6 py-2 rounded-full font-semibold hover:from-pink-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105" onclick="openPaystackCheckout()">
-                        Donate🧡🧡
-                    </button>
-                </div>
+			@keyframes float {
+				0%,
+				100% {
+					transform: translateY(0px);
+				}
+				50% {
+					transform: translateY(-10px);
+				}
+			}
 
-                <!-- Mobile Menu Button -->
-                <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-gray-100" aria-label="Toggle mobile menu">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-            </div>
+			@keyframes slideUp {
+				from {
+					transform: translateY(30px);
+					opacity: 0;
+				}
+				to {
+					transform: translateY(0);
+					opacity: 1;
+				}
+			}
 
-            <!-- Mobile Menu -->
-            <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4 border-t border-gray-100">
-                <div class="space-y-2 pt-4"> 
-                    <div class="border-b border-gray-100 pb-2">
-                        <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide px-2 pb-2">About Us</p>
-                       
-                        <a href="../pages/aboutus.html" class="block px-2 py-2 text-gray-700 hover:bg-brand-pink hover:text-pink-700 rounded transition-colors">About, Vision & Mission</a>
-                        <a href="../pages/volunteer.html" class="block px-2 py-2 text-gray-700 hover:bg-brand-pink hover:text-pink-700 rounded transition-colors">Volunteer/Become a Donor Member</a>
-                        <a href="../pages/patnerwithus.html" class="block px-2 py-2 text-gray-700 hover:bg-brand-pink hover:text-pink-700 rounded transition-colors">Partner With Us</a>
-                    </div>
-                    <a href="../pages/initiative.html" class="block px-2 py-2 text-gray-700 hover:bg-brand-pink hover:text-pink-700 rounded transition-colors">Initiatives</a>
-    <div class="relative group">
-                        <button class="flex items-center space-x-1 text-gray-700 hover:text-pink-600 font-medium transition-colors duration-200" aria-haspopup="true" aria-expanded="false">
-                            <span>News & Event</span>
-                            <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </button>
-                        
-                        <div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 dropdown-enter group-hover:dropdown-enter-active">
-                            <div class="py-2">
-                                <a href="../pages/Upcomingevent.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-brand-pink hover:text-pink-700 transition-colors duration-150">Upcoming Event</a>
-                                <a href="../pages/mediagallery.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-brand-pink hover:text-pink-700 transition-colors duration-150">Media Gallery</a>
+			.modal-backdrop {
+				backdrop-filter: blur(4px);
+			}
 
-                            </div>
-                        </div>
-                    </div>
-                    <a href="contactus.html" class="block px-2 py-2 text-pink-600 font-semibold bg-pink-50 rounded">Contact</a>
-                    <button class="w-full mt-3 bg-gradient-to-r from-pink-500 to-purple-600 text-white py-3 px-4 rounded-lg font-semibold" onclick="openPaystackCheckout()">
-                        Donate🧡🧡
-                    </button>
-                </div>
-            </div>
-        </nav>
-    </header>
+			.dropdown-enter {
+				opacity: 0;
+				transform: translateY(-10px);
+			}
 
-    <!-- Breadcrumb -->
-  <div class="bg-soft-gray border-b border-gray-200">
-        <div class="container mx-auto px-4 py-3">
-            <nav class="flex items-center space-x-2 text-sm" aria-label="Breadcrumb">
-                <a href="../index.html" class="flex items-center text-gray-500 hover:text-pink-600 transition-colors">
-                    <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
-                    </svg>
-                    Home
-                </a>
-                <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                </svg>
-                <span class="text-pink-600 font-medium">Contact Us</span>
-            </nav>
-        </div>
-    </div>
+			.dropdown-enter-active {
+				opacity: 1;
+				transform: translateY(0);
+				transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+			}
 
+			.form-input:focus {
+				outline: none;
+				border-color: #ec4899;
+				box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.1);
+			}
 
-    <!-- Hero Section with Wavy SVG -->
-    <section class="relative overflow-hidden">
-        <!-- Wavy SVG Background -->
-        <div class="absolute inset-0 w-full h-full overflow-hidden">
-  <svg class="w-full h-full object-cover transform rotate-180" 
-       viewBox="0 0 1200 400" 
-       fill="none" 
-       xmlns="http://www.w3.org/2000/svg" 
-       preserveAspectRatio="none">
-    <defs>
-      <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style="stop-color:#fe0592;stop-opacity:0.8" />
-        <stop offset="50%" style="stop-color:#08a0ff;stop-opacity:0.6" />
-        <stop offset="100%" style="stop-color:#ff0392;stop-opacity:0.4" />
-      </linearGradient>
-    </defs>
+			.success-message {
+				animation: slideUp 0.5s ease-out;
+			}
+			.whatsapp-float {
+				position: fixed;
+				bottom: 20px;
+				right: 20px;
+				z-index: 1000;
+				animation: pulse 2s infinite;
+			}
+			#top {
+				font-family: "PT Serif", serif;
+			}
+			#font {
+				font-family: "Dancing Script", cursive;
+				font-size: 1.5rem;
+			}
+			#fonts {
+				font-family: "Dancing Script", cursive;
+			}
+			@keyframes pulse {
+				0%,
+				100% {
+					transform: scale(1);
+				}
+				50% {
+					transform: scale(1.05);
+				}
+			}
+		</style>
+	</head>
+	<body class="bg-white font-sans" id="top">
+		<!-- Header with Sticky Navigation -->
+		<header class="sticky top-0 z-40 bg-white shadow-lg">
+			<nav class="container mx-auto px-4 py-4">
+				<div class="flex items-center justify-between">
+					<!-- Logo -->
+					<div class="flex items-center space-x-2">
+						<!-- Replace with actual logo -->
+						<img
+							src="../images/Screenshot 2025-09-01 114611.png"
+							alt="SISTAS Wing Union Logo"
+							class="w-10 h-10 rounded-full"
+						/>
+						<a href="../index.html">
+							<span
+								class="text-xl font-bold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent"
+								id="font"
+								>SWUI</span
+							>
+						</a>
+					</div>
 
-    <path d="M0,80 C300,160 600,0 1200,120 L1200,400 L0,400 Z" fill="url(#gradient1)" />
-    <path d="M0,150 C400,230 800,70 1200,180 L1200,400 L0,400 Z" fill="#BFE6FF" fill-opacity="0.3" />
-    <path d="M0,250 C350,320 850,140 1200,280 L1200,400 L0,400 Z" fill="#FAD1E8" fill-opacity="0.2" />
-  </svg>
-</div>
+					<!-- Desktop Navigation -->
+					<div class="hidden md:flex items-center space-x-8">
+						<!-- About Us Dropdown -->
+						<div class="relative group">
+							<button
+								class="flex items-center space-x-1 text-gray-700 hover:text-pink-600 font-medium transition-colors duration-200"
+								aria-haspopup="true"
+								aria-expanded="false"
+							>
+								<span>About Us</span>
+								<svg
+									class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M19 9l-7 7-7-7"
+									></path>
+								</svg>
+							</button>
 
-        
-        <!-- Hero Content -->
-        <div class="relative container mx-auto px-4 py-16 md:py-32">
-            <div class="max-w-3xl mx-auto text-center">
-                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6 leading-tight" id="fonts">
-                    Contact Us
-                </h1>
-                
-                <p class="text-lg md:text-xl text-black mb-8 max-w-2xl mx-auto leading-relaxed">
-                    We'd love to hear from you. Reach out to us anytime!
-                </p>
-            </div>
-        </div>
-    </section>
+							<div
+								class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 dropdown-enter group-hover:dropdown-enter-active"
+							>
+								<div class="py-2">
+									<a
+										href="../pages/aboutus.html"
+										class="block px-4 py-3 text-sm text-gray-700 hover:bg-brand-pink hover:text-pink-700 transition-colors duration-150"
+										>About, Vision & Mission</a
+									>
+									<a
+										href="../pages/volunteer.html"
+										class="block px-4 py-3 text-sm text-gray-700 hover:bg-brand-pink hover:text-pink-700 transition-colors duration-150"
+										>Volunteer/Become a Donor Member</a
+									>
+									<a
+										href="../pages/patnerwithus.html"
+										class="block px-4 py-3 text-sm text-gray-700 hover:bg-brand-pink hover:text-pink-700 transition-colors duration-150"
+										>Partner With Us</a
+									>
+								</div>
+							</div>
+						</div>
 
-    <!-- Contact Information Section -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="max-w-5xl mx-auto">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4 ">Get in Touch</h2>
-                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">Choose the best way to reach us. We're here to help and answer any questions you may have.</p>
-                </div>
-                
-                <div class="grid md:grid-cols-3 gap-8 mb-16">
-                    <!-- Address Card -->
-                    <div class="bg-gradient-to-br from-brand-blue to-brand-blue-dark rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 text-center">
-                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6">
-                            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">Our Address</h3>
-                        <p class="text-gray-700 leading-relaxed">
-                          Dawa Industrial Zone<br>
-                            Ningo Prampram<br>
-                            Accra, Ghana
-                        </p>
-                    </div>
-                    
-                    <!-- Phone Card -->
-                    <div class="bg-gradient-to-br from-brand-pink to-brand-pink-dark rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 text-center">
-                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6">
-                            <svg class="w-8 h-8 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">Call Us</h3>
-                        <p class="text-gray-700 leading-relaxed">
-                            <a href="tel:+233209759737" class="hover:text-pink-800 transition-colors">+233 209 759 737</a><br>
-                        
-                        </p>
-                    </div>
-                    
-                    <!-- Email Card -->
-                    <div class="bg-gradient-to-br from-purple-100 to-pink-100 rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 text-center">
-                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6">
-                            <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">Email Us</h3>
-                        <p class="text-gray-700 leading-relaxed">
-                            <a href="mailto:sistaswingofficial@gmail.com" class="hover:text-purple-800 transition-colors">sistaswingofficial@gmail.com</a><br>
-                        
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div> 
-    </section>
+						<a
+							href="../pages/initiative.html"
+							class="text-gray-700 hover:text-pink-600 font-medium transition-colors duration-200"
+							>Initiatives</a
+						>
+						<div class="relative group">
+							<button
+								class="flex items-center space-x-1 text-gray-700 hover:text-pink-600 font-medium transition-colors duration-200"
+								aria-haspopup="true"
+								aria-expanded="false"
+							>
+								<span>News & Event</span>
+								<svg
+									class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M19 9l-7 7-7-7"
+									></path>
+								</svg>
+							</button>
 
-    <!-- Contact Form Section -->
-    
+							<div
+								class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 dropdown-enter group-hover:dropdown-enter-active"
+							>
+								<div class="py-2">
+									<a
+										href="../pages/Upcomingevent.html"
+										class="block px-4 py-3 text-sm text-gray-700 hover:bg-brand-pink hover:text-pink-700 transition-colors duration-150"
+										>Upcoming Event</a
+									>
+									<a
+										href="../pages/mediagallery.html"
+										class="block px-4 py-3 text-sm text-gray-700 hover:bg-brand-pink hover:text-pink-700 transition-colors duration-150"
+										>Media Gallery</a
+									>
+								</div>
+							</div>
+						</div>
+						<a
+							href="contactus.html"
+							class="text-pink-600 font-semibold border-b-2 border-pink-600"
+							>Contact</a
+						>
 
-    <!-- Map Section -->
- 
+						<button
+							class="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-6 py-2 rounded-full font-semibold hover:from-pink-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"
+							onclick="openPaystackCheckout()"
+						>
+							Donate🧡🧡
+						</button>
+					</div>
 
-    <!-- Call-to-Action Banner -->
-    <section class="py-16 bg-gradient-to-r from-pink-500 to-purple-600">
-        <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto text-center text-white">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4" id="fonts">Looking to get involved?</h2>
-                <p class="text-lg md:text-xl mb-8 text-pink-100">Become a volunteer or partner with us today and help us create meaningful change in our communities.</p>
-                
-                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                    <a href="../pages/volunteer.html" >  <button class="px-8 py-4 bg-white text-pink-600 font-semibold rounded-full hover:bg-pink-50 transition-all duration-300 transform hover:scale-105 shadow-lg">
-                  Volunteer With Us  
-                    </button> </a> 
-                    
-                     <a href="../pages/patnerwithus.html"> <button class="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-pink-600 transition-all duration-300 transform hover:scale-105">
-                     Partner With Us
-                    </button> </a> 
-                </div>
-            </div>
-        </div>
-    </section>
+					<!-- Mobile Menu Button -->
+					<button
+						id="mobileMenuBtn"
+						class="md:hidden p-2 rounded-lg hover:bg-gray-100"
+						aria-label="Toggle mobile menu"
+					>
+						<svg
+							class="w-6 h-6"
+							fill="none"
+							stroke="currentColor"
+							viewBox="0 0 24 24"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M4 6h16M4 12h16M4 18h16"
+							></path>
+						</svg>
+					</button>
+				</div>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="container mx-auto px-4">
-            <div class="grid md:grid-cols-4 gap-8">
-                <!-- Mission Blurb -->
-                <div class="md:col-span-2">
-                    <div class="flex items-center space-x-2 mb-4">
-                        <img src="../images/Screenshot 2025-09-01 114611.png" alt="SISTAS Wing Union" class="w-8 h-8 rounded-full">
-                       <span class="text-xl font-bold" id="font">SWUI</span>
-                    </div>
-                    <p class="text-gray-300 leading-relaxed mb-4">
-                       Restoring hope to girls and women one community at a time. We believe that when one woman is empowered the entire nation is transformed.
-                    </p>
-                    <div class="flex space-x-4">
-                        <a
-                href="https://www.instagram.com/sistas_wingunion?igsh=eXh3ZmFvNWpjc2Zt&utm_source=qr"
-                class="text-gray-400 hover:text-pink-400 transition-colors"
-                aria-label="Instagram"
-                target="_blank"
-              >
-                <i class="fa-brands fa-instagram"></i>
-              </a>
+				<!-- Mobile Menu -->
+				<div
+					id="mobileMenu"
+					class="hidden md:hidden mt-4 pb-4 border-t border-gray-100"
+				>
+					<div class="space-y-2 pt-4">
+						<div class="border-b border-gray-100 pb-2">
+							<p
+								class="text-xs font-semibold text-gray-500 uppercase tracking-wide px-2 pb-2"
+							>
+								About Us
+							</p>
 
-              <a
-                href="https://www.linkedin.com/posts/sistas-wing-union-international-swui-001373387_breastcancerawareness-health-selfcare-activity-7379845256286146560-3j41?utm_source=share&utm_medium=member_ios&rcm=ACoAAF9Fn0EBiWc-_lkAi76zg_X6qiiHURmnAuA"
-                class="text-gray-400 hover:text-pink-400 transition-colors"
-                aria-label="Instagram"
-                target="_blank"
-              >
-                <i class="fa-brands fa-linkedin"></i>
-              </a>
-              <a
-                href="https://www.tiktok.com/@sistas_wingunion?_t=ZM-90HQlCNZ8Hr&_r=1"
-                class="text-gray-400 hover:text-pink-400 transition-colors"
-                aria-label="Instagram"
-                target="_blank"
-              >
-                <i class="fa-brands fa-tiktok"></i>
-              </a>
-                    </div>
-                </div>
-                
-                <!-- Quick Navigation -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
-                    <ul class="space-y-2">
-                        <li><a href="../pages/aboutus.html" class="text-gray-300 hover:text-pink-400 transition-colors">About the Union</a></li>
-                        <li><a href="../pages/initiative.html" class="text-gray-300 hover:text-pink-400 transition-colors">Our Initiatives</a></li>
-      
-                        <li><a href="../pages/Upcomingevent.html" class="text-gray-300 hover:text-pink-400 transition-colors">Upcoming Events</a></li>
-                        <li><a href="../pages/mediagallery.html" class="text-gray-300 hover:text-pink-400 transition-colors">Media Gallery</a></li>
-                        <li><a href="contactus.html" class="text-pink-400 font-medium">Contact Us</a></li>
-                        
-                    </ul>
-                </div>
-                
-                <!-- Support -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Support Us</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-300 hover:text-pink-400 transition-colors">Make a Donation</a></li>
-                        <li><a href="../pages/volunteer.html" class="text-gray-300 hover:text-pink-400 transition-colors">Volunteer</a></li>
-                        <li><a href="../pages/volunteer.html" class="text-gray-300 hover:text-pink-400 transition-colors">Become a Donor Member</a></li>
-                        <li><a href="../pages/patnerwithus.html" class="text-gray-300 hover:text-pink-400 transition-colors">Partner With Us</a></li>
-                                        </ul>
-                </div>
-            </div>
-            
-            <!-- Copyright -->
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
-                <p class="text-gray-400">
-                    &copy; 2025 Sistas Wing Union. All rights reserved. Made with 💖 for women empowerment.
-                </p>
-            </div>
-        </div>
-    </footer>
+							<a
+								href="../pages/aboutus.html"
+								class="block px-2 py-2 text-gray-700 hover:bg-brand-pink hover:text-pink-700 rounded transition-colors"
+								>About, Vision & Mission</a
+							>
+							<a
+								href="../pages/volunteer.html"
+								class="block px-2 py-2 text-gray-700 hover:bg-brand-pink hover:text-pink-700 rounded transition-colors"
+								>Volunteer/Become a Donor Member</a
+							>
+							<a
+								href="../pages/patnerwithus.html"
+								class="block px-2 py-2 text-gray-700 hover:bg-brand-pink hover:text-pink-700 rounded transition-colors"
+								>Partner With Us</a
+							>
+						</div>
+						<a
+							href="../pages/initiative.html"
+							class="block px-2 py-2 text-gray-700 hover:bg-brand-pink hover:text-pink-700 rounded transition-colors"
+							>Initiatives</a
+						>
+						<div class="relative group">
+							<button
+								class="flex items-center space-x-1 text-gray-700 hover:text-pink-600 font-medium transition-colors duration-200"
+								aria-haspopup="true"
+								aria-expanded="false"
+							>
+								<span>News & Event</span>
+								<svg
+									class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M19 9l-7 7-7-7"
+									></path>
+								</svg>
+							</button>
 
-    <!-- Floating WhatsApp Button -->
-    <div class="whatsapp-float">
-                <a href="https://wa.me/your-whatsapp-invite-link" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg transition-colors duration-300" aria-label="Join our WhatsApp community">
-            <!-- TODO: Replace with actual WhatsApp invite URL -->
-            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.863 3.488"/>
-            </svg>
-        </a>
-    </div>
+							<div
+								class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 dropdown-enter group-hover:dropdown-enter-active"
+							>
+								<div class="py-2">
+									<a
+										href="../pages/Upcomingevent.html"
+										class="block px-4 py-3 text-sm text-gray-700 hover:bg-brand-pink hover:text-pink-700 transition-colors duration-150"
+										>Upcoming Event</a
+									>
+									<a
+										href="../pages/mediagallery.html"
+										class="block px-4 py-3 text-sm text-gray-700 hover:bg-brand-pink hover:text-pink-700 transition-colors duration-150"
+										>Media Gallery</a
+									>
+								</div>
+							</div>
+						</div>
+						<a
+							href="contactus.html"
+							class="block px-2 py-2 text-pink-600 font-semibold bg-pink-50 rounded"
+							>Contact</a
+						>
+						<button
+							class="w-full mt-3 bg-gradient-to-r from-pink-500 to-purple-600 text-white py-3 px-4 rounded-lg font-semibold"
+							onclick="openPaystackCheckout()"
+						>
+							Donate🧡🧡
+						</button>
+					</div>
+				</div>
+			</nav>
+		</header>
 
- 
-    <script>
-        // ========== REPLACE THESE PLACEHOLDERS ==========
-        // TODO: Replace with your actual Paystack public key
-        const PAYSTACK_PUBLIC_KEY = 'pk_test_your_paystack_public_key_here';
-        
-        // TODO: Replace with your actual WhatsApp invite link
-        const WHATSAPP_INVITE_URL = 'https://wa.me/your-whatsapp-invite-link';
-        
-        // TODO: Replace with your actual Google Form URLs or backend endpoint
-        const CONTACT_FORM_ENDPOINT = 'https://your-backend.com/contact';
-        // ================================================
+		<!-- Breadcrumb -->
+		<div class="bg-soft-gray border-b border-gray-200">
+			<div class="container mx-auto px-4 py-3">
+				<nav
+					class="flex items-center space-x-2 text-sm"
+					aria-label="Breadcrumb"
+				>
+					<a
+						href="../index.html"
+						class="flex items-center text-gray-500 hover:text-pink-600 transition-colors"
+					>
+						<svg
+							class="w-4 h-4 mr-1"
+							fill="currentColor"
+							viewBox="0 0 20 20"
+						>
+							<path
+								d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"
+							></path>
+						</svg>
+						Home
+					</a>
+					<svg
+						class="w-4 h-4 text-gray-400"
+						fill="none"
+						stroke="currentColor"
+						viewBox="0 0 24 24"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M9 5l7 7-7 7"
+						></path>
+					</svg>
+					<span class="text-pink-600 font-medium">Contact Us</span>
+				</nav>
+			</div>
+		</div>
 
-        // Mobile menu toggle
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
+		<!-- Hero Section with Wavy SVG -->
+		<section class="relative overflow-hidden">
+			<!-- Wavy SVG Background -->
+			<div class="absolute inset-0 w-full h-full overflow-hidden">
+				<svg
+					class="w-full h-full object-cover transform rotate-180"
+					viewBox="0 0 1200 400"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+					preserveAspectRatio="none"
+				>
+					<defs>
+						<linearGradient
+							id="gradient1"
+							x1="0%"
+							y1="0%"
+							x2="100%"
+							y2="100%"
+						>
+							<stop
+								offset="0%"
+								style="stop-color: #fe0592; stop-opacity: 0.8"
+							/>
+							<stop
+								offset="50%"
+								style="stop-color: #08a0ff; stop-opacity: 0.6"
+							/>
+							<stop
+								offset="100%"
+								style="stop-color: #ff0392; stop-opacity: 0.4"
+							/>
+						</linearGradient>
+					</defs>
 
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+					<path
+						d="M0,80 C300,160 600,0 1200,120 L1200,400 L0,400 Z"
+						fill="url(#gradient1)"
+					/>
+					<path
+						d="M0,150 C400,230 800,70 1200,180 L1200,400 L0,400 Z"
+						fill="#BFE6FF"
+						fill-opacity="0.3"
+					/>
+					<path
+						d="M0,250 C350,320 850,140 1200,280 L1200,400 L0,400 Z"
+						fill="#FAD1E8"
+						fill-opacity="0.2"
+					/>
+				</svg>
+			</div>
 
-        // Contact form handling
-        const contactForm = document.getElementById('contactForm');
-        const successMessage = document.getElementById('successMessage');
+			<!-- Hero Content -->
+			<div class="relative container mx-auto px-4 py-16 md:py-32">
+				<div class="max-w-3xl mx-auto text-center">
+					<h1
+						class="text-4xl md:text-5xl font-bold text-gray-800 mb-6 leading-tight"
+						id="fonts"
+					>
+						Contact Us
+					</h1>
 
-        contactForm.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            
-            const formData = new FormData(contactForm);
-            const data = Object.fromEntries(formData);
-            
-            // Basic client-side validation
-            if (!data.fullName || !data.email || !data.subject || !data.message) {
-                showNotification('Please fill in all required fields.', 'error');
-                return;
-            }
-            
-            if (!validateEmail(data.email)) {
-                showNotification('Please enter a valid email address.', 'error');
-                return;
-            }
-            
-            // Show loading state
-            const submitBtn = contactForm.querySelector('button[type="submit"]');
-            const originalText = submitBtn.textContent;
-            submitBtn.textContent = 'Sending...';
-            submitBtn.disabled = true;
-            
-            try {
-                // TODO: Replace with actual form submission
-                // For now, simulate a successful submission
-                await simulateFormSubmission(data);
-                
-                // Show success message
-                successMessage.classList.remove('hidden');
-                contactForm.reset();
-                
-                // Hide success message after 5 seconds
-                setTimeout(() => {
-                    successMessage.classList.add('hidden');
-                }, 5000);
-                
-                showNotification('Message sent successfully!', 'success');
-                
-            } catch (error) {
-                console.error('Form submission error:', error);
-                showNotification('Something went wrong. Please try again later.', 'error');
-            } finally {
-                // Reset button state
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
-            }
-        });
+					<p
+						class="text-lg md:text-xl text-black mb-8 max-w-2xl mx-auto leading-relaxed"
+					>
+						We'd love to hear from you. Reach out to us anytime!
+					</p>
+				</div>
+			</div>
+		</section>
 
-        // Simulate form submission (replace with actual implementation)
-        function simulateFormSubmission(data) {
-            return new Promise((resolve) => {
-                setTimeout(() => {
-                    console.log('Form data:', data);
-                    resolve();
-                }, 1500);
-            });
-        }
+		<!-- Contact Information Section -->
+		<section class="py-16 bg-white">
+			<div class="container mx-auto px-4">
+				<div class="max-w-5xl mx-auto">
+					<div class="text-center mb-12">
+						<h2
+							class="text-3xl md:text-4xl font-bold text-gray-800 mb-4"
+						>
+							Get in Touch
+						</h2>
+						<p class="text-lg text-gray-600 max-w-2xl mx-auto">
+							Choose the best way to reach us. We're here to help
+							and answer any questions you may have.
+						</p>
+					</div>
 
-        // Map loading function
-        function loadMap() {
-            const mapContainer = document.getElementById('map');
-            
-            // Replace with actual Google Maps embed
-            mapContainer.innerHTML = `
+					<div class="grid md:grid-cols-3 gap-10 mb-20">
+						<!-- Address Card -->
+						<div
+							class="relative group bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-10 text-center shadow-lg hover:shadow-2xl transition-all duration-500 ease-out hover:-translate-y-2 cursor-pointer"
+						>
+							<div
+								class="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-blue-700/10 opacity-0 group-hover:opacity-100 rounded-2xl transition-opacity duration-500"
+							></div>
+							<div
+								class="relative z-10 w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300"
+							>
+								<svg
+									class="w-8 h-8 text-blue-600"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+									></path>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+									></path>
+								</svg>
+							</div>
+							<h3
+								class="relative z-10 text-2xl font-semibold text-gray-800 mb-2"
+							>
+								Our Address
+							</h3>
+							<p
+								class="relative z-10 text-gray-600 leading-relaxed"
+							>
+								Dawa Industrial Zone<br />Ningo Prampram<br />Accra,
+								Ghana
+							</p>
+						</div>
+
+						<!-- Phone Card -->
+						<a
+							href="tel:+233209759737"
+							class="relative group bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-10 text-center shadow-lg hover:shadow-2xl transition-all duration-500 ease-out hover:-translate-y-2"
+						>
+							<div
+								class="absolute inset-0 bg-gradient-to-br from-pink-400/10 to-pink-600/10 opacity-0 group-hover:opacity-100 rounded-2xl transition-opacity duration-500"
+							></div>
+							<div
+								class="relative z-10 w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300"
+							>
+								<svg
+									class="w-8 h-8 text-pink-600"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+									></path>
+								</svg>
+							</div>
+							<h3
+								class="relative z-10 text-2xl font-semibold text-gray-800 mb-2"
+							>
+								Call Us
+							</h3>
+							<p
+								class="relative z-10 text-gray-600 leading-relaxed"
+							>
+								+233 209 759 737
+							</p>
+						</a>
+
+						<!-- Email Card -->
+						<a
+							href="mailto:info@swui.org"
+							class="relative group bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-10 text-center shadow-lg hover:shadow-2xl transition-all duration-500 ease-out hover:-translate-y-2"
+						>
+							<div
+								class="absolute inset-0 bg-gradient-to-br from-purple-400/10 to-pink-400/10 opacity-0 group-hover:opacity-100 rounded-2xl transition-opacity duration-500"
+							></div>
+							<div
+								class="relative z-10 w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300"
+							>
+								<svg
+									class="w-8 h-8 text-purple-600"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+									></path>
+								</svg>
+							</div>
+							<h3
+								class="relative z-10 text-2xl font-semibold text-gray-800 mb-2"
+							>
+								Email Us
+							</h3>
+							<p
+								class="relative z-10 text-gray-600 leading-relaxed"
+							>
+								info@swui.org
+							</p>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Contact Form Section -->
+
+		<!-- Map Section -->
+		<section class="flex items-center justify-center py-16 w-full">
+			<iframe
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3968.892242970164!2d0.27843847482618517!3d5.870768894112856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10208d08c257e20f%3A0xefa210ea9e875744!2sDawa%20Industrial%20Zone!5e0!3m2!1sen!2sgh!4v1760206787339!5m2!1sen!2sgh"
+				height="450"
+				class="w-full"
+				style="border: 0"
+				allowfullscreen=""
+				loading="lazy"
+				referrerpolicy="no-referrer-when-downgrade"
+			></iframe>
+		</section>
+
+		<!-- Call-to-Action Banner -->
+		<section class="py-16 bg-gradient-to-r from-pink-500 to-purple-600">
+			<div class="container mx-auto px-4">
+				<div class="max-w-4xl mx-auto text-center text-white">
+					<h2 class="text-3xl md:text-4xl font-bold mb-4" id="fonts">
+						Looking to get involved?
+					</h2>
+					<p class="text-lg md:text-xl mb-8 text-pink-100">
+						Become a volunteer or partner with us today and help us
+						create meaningful change in our communities.
+					</p>
+
+					<div
+						class="flex flex-col sm:flex-row gap-4 justify-center items-center"
+					>
+						<a href="../pages/volunteer.html">
+							<button
+								class="px-8 py-4 bg-white text-pink-600 font-semibold rounded-full hover:bg-pink-50 transition-all duration-300 transform hover:scale-105 shadow-lg"
+							>
+								Volunteer With Us
+							</button>
+						</a>
+
+						<a href="../pages/patnerwithus.html">
+							<button
+								class="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-pink-600 transition-all duration-300 transform hover:scale-105"
+							>
+								Partner With Us
+							</button>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="bg-gray-900 text-white py-12">
+			<div class="container mx-auto px-4">
+				<div class="grid md:grid-cols-4 gap-8">
+					<!-- Mission Blurb -->
+					<div class="md:col-span-2">
+						<div class="flex items-center space-x-2 mb-4">
+							<img
+								src="../images/Screenshot 2025-09-01 114611.png"
+								alt="SISTAS Wing Union"
+								class="w-8 h-8 rounded-full"
+							/>
+							<span class="text-xl font-bold" id="font"
+								>SWUI</span
+							>
+						</div>
+						<p class="text-gray-300 leading-relaxed mb-4">
+							Restoring hope to girls and women one community at a
+							time. We believe that when one woman is empowered
+							the entire nation is transformed.
+						</p>
+						<div class="flex space-x-4">
+							<a
+								href="https://www.instagram.com/sistas_wingunion"
+								class="text-gray-400 hover:text-pink-400 transition-colors"
+								aria-label="Instagram"
+								target="_blank"
+							>
+								<i class="fa-brands fa-instagram"></i>
+							</a>
+
+							<a
+								href="https://www.linkedin.com/in/sistas-wing-union-international-swui-ghana-001373387"
+								class="text-gray-400 hover:text-pink-400 transition-colors"
+								aria-label="Instagram"
+								target="_blank"
+							>
+								<i class="fa-brands fa-linkedin"></i>
+							</a>
+							<a
+								href="https://www.tiktok.com/@sistas_wingunion"
+								class="text-gray-400 hover:text-pink-400 transition-colors"
+								aria-label="Instagram"
+								target="_blank"
+							>
+								<i class="fa-brands fa-tiktok"></i>
+							</a>
+						</div>
+					</div>
+
+					<!-- Quick Navigation -->
+					<div>
+						<h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+						<ul class="space-y-2">
+							<li>
+								<a
+									href="../pages/aboutus.html"
+									class="text-gray-300 hover:text-pink-400 transition-colors"
+									>About the Union</a
+								>
+							</li>
+							<li>
+								<a
+									href="../pages/initiative.html"
+									class="text-gray-300 hover:text-pink-400 transition-colors"
+									>Our Initiatives</a
+								>
+							</li>
+
+							<li>
+								<a
+									href="../pages/Upcomingevent.html"
+									class="text-gray-300 hover:text-pink-400 transition-colors"
+									>Upcoming Events</a
+								>
+							</li>
+							<li>
+								<a
+									href="../pages/mediagallery.html"
+									class="text-gray-300 hover:text-pink-400 transition-colors"
+									>Media Gallery</a
+								>
+							</li>
+							<li>
+								<a
+									href="contactus.html"
+									class="text-pink-400 font-medium"
+									>Contact Us</a
+								>
+							</li>
+						</ul>
+					</div>
+
+					<!-- Support -->
+					<div>
+						<h3 class="text-lg font-semibold mb-4">Support Us</h3>
+						<ul class="space-y-2">
+							<li>
+								<a
+									href="#"
+									class="text-gray-300 hover:text-pink-400 transition-colors"
+									>Make a Donation</a
+								>
+							</li>
+							<li>
+								<a
+									href="../pages/volunteer.html"
+									class="text-gray-300 hover:text-pink-400 transition-colors"
+									>Volunteer</a
+								>
+							</li>
+							<li>
+								<a
+									href="../pages/volunteer.html"
+									class="text-gray-300 hover:text-pink-400 transition-colors"
+									>Become a Donor Member</a
+								>
+							</li>
+							<li>
+								<a
+									href="../pages/patnerwithus.html"
+									class="text-gray-300 hover:text-pink-400 transition-colors"
+									>Partner With Us</a
+								>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- Copyright -->
+				<div class="border-t border-gray-800 mt-8 pt-8 text-center">
+					<p class="text-gray-400">
+						&copy; 2025 Sistas Wing Union. All rights reserved. Made
+						with 💖 for women empowerment.
+					</p>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Floating WhatsApp Button -->
+		<div class="whatsapp-float">
+			<a
+				href="https://wa.me/233209759737"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="flex items-center justify-center w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg transition-colors duration-300"
+				aria-label="Join our WhatsApp community"
+			>
+				<!-- TODO: Replace with actual WhatsApp invite URL -->
+				<svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+					<path
+						d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.863 3.488"
+					/>
+				</svg>
+			</a>
+		</div>
+
+		<script>
+			// ========== REPLACE THESE PLACEHOLDERS ==========
+			// TODO: Replace with your actual Paystack public key
+			const PAYSTACK_PUBLIC_KEY = "pk_test_your_paystack_public_key_here";
+
+			// TODO: Replace with your actual WhatsApp invite link
+			const WHATSAPP_INVITE_URL = "https://wa.me/233209759737";
+
+			// TODO: Replace with your actual Google Form URLs or backend endpoint
+			const CONTACT_FORM_ENDPOINT = "https://your-backend.com/contact";
+			// ================================================
+
+			// Mobile menu toggle
+			const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+			const mobileMenu = document.getElementById("mobileMenu");
+
+			mobileMenuBtn.addEventListener("click", () => {
+				mobileMenu.classList.toggle("hidden");
+			});
+
+			// Contact form handling
+			const contactForm = document.getElementById("contactForm");
+			const successMessage = document.getElementById("successMessage");
+
+			contactForm.addEventListener("submit", async (e) => {
+				e.preventDefault();
+
+				const formData = new FormData(contactForm);
+				const data = Object.fromEntries(formData);
+
+				// Basic client-side validation
+				if (
+					!data.fullName ||
+					!data.email ||
+					!data.subject ||
+					!data.message
+				) {
+					showNotification(
+						"Please fill in all required fields.",
+						"error"
+					);
+					return;
+				}
+
+				if (!validateEmail(data.email)) {
+					showNotification(
+						"Please enter a valid email address.",
+						"error"
+					);
+					return;
+				}
+
+				// Show loading state
+				const submitBtn = contactForm.querySelector(
+					'button[type="submit"]'
+				);
+				const originalText = submitBtn.textContent;
+				submitBtn.textContent = "Sending...";
+				submitBtn.disabled = true;
+
+				try {
+					// TODO: Replace with actual form submission
+					// For now, simulate a successful submission
+					await simulateFormSubmission(data);
+
+					// Show success message
+					successMessage.classList.remove("hidden");
+					contactForm.reset();
+
+					// Hide success message after 5 seconds
+					setTimeout(() => {
+						successMessage.classList.add("hidden");
+					}, 5000);
+
+					showNotification("Message sent successfully!", "success");
+				} catch (error) {
+					console.error("Form submission error:", error);
+					showNotification(
+						"Something went wrong. Please try again later.",
+						"error"
+					);
+				} finally {
+					// Reset button state
+					submitBtn.textContent = originalText;
+					submitBtn.disabled = false;
+				}
+			});
+
+			// Simulate form submission (replace with actual implementation)
+			function simulateFormSubmission(data) {
+				return new Promise((resolve) => {
+					setTimeout(() => {
+						console.log("Form data:", data);
+						resolve();
+					}, 1500);
+				});
+			}
+
+			// Map loading function
+			function loadMap() {
+				const mapContainer = document.getElementById("map");
+
+				// Replace with actual Google Maps embed
+				mapContainer.innerHTML = `
                 <iframe 
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.8267107298743!2d-0.18217668573278897!3d5.595718995423542!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9084b2b7a773%3A0x72ab85d8b5f7db3c!2sEast%20Legon%2C%20Accra!5e0!3m2!1sen!2sgh!4v1629890234567!5m2!1sen!2sgh"
                     width="100%" 
@@ -550,146 +971,161 @@
                     referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             `;
-        }
+			}
 
-        // Paystack Integration (from home page)
-        function openPaystackCheckout() {
-            const handler = PaystackPop.setup({
-                key: PAYSTACK_PUBLIC_KEY,
-                email: 'donor@example.com',
-                amount: 1000,
-                currency: 'GHS',
-                ref: 'sw_' + Math.floor((Math.random() * 1000000000) + 1),
-                metadata: {
-                    custom_fields: [
-                        {
-                            display_name: "Purpose",
-                            variable_name: "purpose",
-                            value: "General Donation"
-                        }
-                    ]
-                },
-                callback: function(response) {
-                    showNotification('Payment successful! Thank you for your donation. Reference: ' + response.reference, 'success');
-                },
-                onClose: function() {
-                    console.log('Payment cancelled');
-                }
-            });
-            
-            handler.openIframe();
-        }
+			// Paystack Integration (from home page)
+			function openPaystackCheckout() {
+				const handler = PaystackPop.setup({
+					key: PAYSTACK_PUBLIC_KEY,
+					email: "donor@example.com",
+					amount: 1000,
+					currency: "GHS",
+					ref: "sw_" + Math.floor(Math.random() * 1000000000 + 1),
+					metadata: {
+						custom_fields: [
+							{
+								display_name: "Purpose",
+								variable_name: "purpose",
+								value: "General Donation",
+							},
+						],
+					},
+					callback: function (response) {
+						showNotification(
+							"Payment successful! Thank you for your donation. Reference: " +
+								response.reference,
+							"success"
+						);
+					},
+					onClose: function () {
+						console.log("Payment cancelled");
+					},
+				});
 
-        // Form validation helpers
-        function validateEmail(email) {
-            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return re.test(email);
-        }
+				handler.openIframe();
+			}
 
-        function showNotification(message, type = 'success') {
-            const notification = document.createElement('div');
-            notification.className = `fixed top-4 right-4 z-50 p-4 rounded-lg shadow-lg text-white max-w-sm ${
-                type === 'success' ? 'bg-green-500' : 'bg-red-500'
-            } animate-fade-in`;
-            notification.innerHTML = `
+			// Form validation helpers
+			function validateEmail(email) {
+				const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+				return re.test(email);
+			}
+
+			function showNotification(message, type = "success") {
+				const notification = document.createElement("div");
+				notification.className = `fixed top-4 right-4 z-50 p-4 rounded-lg shadow-lg text-white max-w-sm ${
+					type === "success" ? "bg-green-500" : "bg-red-500"
+				} animate-fade-in`;
+				notification.innerHTML = `
                 <div class="flex items-center">
                     <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        ${type === 'success' ? 
-                            '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>' :
-                            '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>'
-                        }
+                        ${
+							type === "success"
+								? '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>'
+								: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>'
+						}
                     </svg>
                     <span>${message}</span>
                 </div>
             `;
-            
-            document.body.appendChild(notification);
-            
-            setTimeout(() => {
-                notification.remove();
-            }, 5000);
-        }
 
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
+				document.body.appendChild(notification);
 
-        // Keyboard navigation for dropdown
-        const dropdownButton = document.querySelector('.group > button');
-        const dropdownItems = document.querySelectorAll('.group .absolute a');
+				setTimeout(() => {
+					notification.remove();
+				}, 5000);
+			}
 
-        if (dropdownButton) {
-            dropdownButton.addEventListener('keydown', (e) => {
-                if (e.key === 'ArrowDown') {
-                    e.preventDefault();
-                    dropdownItems[0]?.focus();
-                }
-            });
-        }
+			// Smooth scroll for anchor links
+			document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+				anchor.addEventListener("click", function (e) {
+					e.preventDefault();
+					const target = document.querySelector(
+						this.getAttribute("href")
+					);
+					if (target) {
+						target.scrollIntoView({
+							behavior: "smooth",
+							block: "start",
+						});
+					}
+				});
+			});
 
-        dropdownItems.forEach((item, index) => {
-            item.addEventListener('keydown', (e) => {
-                if (e.key === 'ArrowDown') {
-                    e.preventDefault();
-                    dropdownItems[index + 1]?.focus();
-                } else if (e.key === 'ArrowUp') {
-                    e.preventDefault();
-                    if (index === 0) {
-                        dropdownButton.focus();
-                    } else {
-                        dropdownItems[index - 1]?.focus();
-                    }
-                } else if (e.key === 'Escape') {
-                    dropdownButton.focus();
-                }
-            });
-        });
+			// Keyboard navigation for dropdown
+			const dropdownButton = document.querySelector(".group > button");
+			const dropdownItems =
+				document.querySelectorAll(".group .absolute a");
 
-        // Update WhatsApp link
-        const whatsappLink = document.querySelector('[href="https://wa.me/your-whatsapp-invite-link"]');
-        if (whatsappLink) {
-            whatsappLink.href = WHATSAPP_INVITE_URL;
-        }
+			if (dropdownButton) {
+				dropdownButton.addEventListener("keydown", (e) => {
+					if (e.key === "ArrowDown") {
+						e.preventDefault();
+						dropdownItems[0]?.focus();
+					}
+				});
+			}
 
-        // Intersection Observer for scroll animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+			dropdownItems.forEach((item, index) => {
+				item.addEventListener("keydown", (e) => {
+					if (e.key === "ArrowDown") {
+						e.preventDefault();
+						dropdownItems[index + 1]?.focus();
+					} else if (e.key === "ArrowUp") {
+						e.preventDefault();
+						if (index === 0) {
+							dropdownButton.focus();
+						} else {
+							dropdownItems[index - 1]?.focus();
+						}
+					} else if (e.key === "Escape") {
+						dropdownButton.focus();
+					}
+				});
+			});
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
+			// Update WhatsApp link
+			const whatsappLink = document.querySelector(
+				'[href="https://wa.me/233209759737"]'
+			);
+			if (whatsappLink) {
+				whatsappLink.href = WHATSAPP_INVITE_URL;
+			}
 
-        // Observe elements for scroll animations
-        document.querySelectorAll('.grid > div, .bg-white.rounded-2xl').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-            observer.observe(el);
-        });
+			// Intersection Observer for scroll animations
+			const observerOptions = {
+				threshold: 0.1,
+				rootMargin: "0px 0px -50px 0px",
+			};
 
-        console.log('📞 SISTAS Wing Union Contact Page Loaded Successfully!');
-        console.log('📝 Remember to replace placeholders:');
-        console.log('   - Contact form endpoint');
-        console.log('   - Google Maps embed URL');
-        console.log('   - Paystack public key');
-        console.log('   - WhatsApp invite link');
-    </script>
-</body>
+			const observer = new IntersectionObserver((entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						entry.target.style.opacity = "1";
+						entry.target.style.transform = "translateY(0)";
+					}
+				});
+			}, observerOptions);
+
+			// Observe elements for scroll animations
+			document
+				.querySelectorAll(".grid > div, .bg-white.rounded-2xl")
+				.forEach((el) => {
+					el.style.opacity = "0";
+					el.style.transform = "translateY(20px)";
+					el.style.transition =
+						"opacity 0.6s ease-out, transform 0.6s ease-out";
+					observer.observe(el);
+				});
+
+			console.log(
+				"📞 SISTAS Wing Union Contact Page Loaded Successfully!"
+			);
+			console.log("📝 Remember to replace placeholders:");
+			console.log("   - Contact form endpoint");
+			console.log("   - Google Maps embed URL");
+			console.log("   - Paystack public key");
+			console.log("   - WhatsApp invite link");
+		</script>
+	</body>
 </html>
