@@ -22,14 +22,14 @@
 			href="../images/SWUI_logo.png"
 			type="image/x-icon"
 		/>
-		<title>Our Initiatives | SWUI</title>
+		<title>Partner With Us | SWUI</title>
 		<meta
 			name="description"
-			content="Discover SISTAS Wing Union's initiatives: Her Tech Rising, Happy Smile Donation, and Examine Her Initiative. Programs that empower women and transform communities."
+			content="Partner with SISTAS Wing Union to empower women and transform communities. Explore corporate sponsorship, event collaboration, and community engagement opportunities."
 		/>
 		<meta
 			name="keywords"
-			content="women empowerment, tech initiatives, community programs, examine her initiative, SISTAS Wing Union"
+			content="partnership, women empowerment, corporate sponsorship, collaboration, SISTAS Wing Union"
 		/>
 		<script
 			src="https://kit.fontawesome.com/9f7fe64ab7.js"
@@ -43,8 +43,7 @@
 			href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"
 			rel="stylesheet"
 		/>
-		<!-- Paystack Inline Script -->
-		<script src="https://js.paystack.co/v1/inline.js"></script>
+
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -114,19 +113,6 @@
 				transform: translateY(-2px);
 			}
 
-			/* Initiative card styles */
-			.initiative-card {
-				background: linear-gradient(135deg, #ffffff, #f9fafb);
-				transition: all 0.3s ease;
-				border: 1px solid rgba(0, 0, 0, 0.05);
-			}
-
-			.initiative-card:hover {
-				background: linear-gradient(135deg, #f9fafb, #f3f4f6);
-				box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-					0 10px 10px -5px rgba(0, 0, 0, 0.04);
-			}
-
 			/* Loading spinner */
 			.spinner {
 				border: 3px solid #f3f3f3;
@@ -180,10 +166,21 @@
 				}
 			}
 
-			#top {
-				font-family: "PT serif", serif;
+			/* Partnership card hover effects */
+			.partnership-card {
+				background: linear-gradient(135deg, #ffffff, #f9fafb);
+				transition: all 0.3s ease;
 			}
 
+			.partnership-card:hover {
+				background: linear-gradient(135deg, #f9fafb, #f3f4f6);
+				box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+					0 10px 10px -5px rgba(0, 0, 0, 0.04);
+			}
+
+			#top {
+				font-family: "PT Serif", serif;
+			}
 			#font {
 				font-family: "Dancing Script", cursive;
 				font-size: 1.5rem;
@@ -191,7 +188,6 @@
 			#fonts {
 				font-family: "Dancing Script", cursive;
 			}
-			/* Section divider wave */
 		</style>
 	</head>
 	<body class="bg-brand-soft-gray text-brand-charcoal font-sans" id="top">
@@ -199,9 +195,7 @@
 		<header class="sticky top-0 z-40 bg-white shadow-lg">
 			<nav class="container mx-auto px-4 py-4">
 				<div class="flex items-center justify-between">
-					<!-- Logo -->
 					<div class="flex items-center space-x-2">
-						<!-- TODO: Replace with actual logo -->
 						<img
 							src="../images/Screenshot 2025-09-01 114611.png"
 							alt="SISTAS Wing Union Logo"
@@ -220,7 +214,7 @@
 						<!-- About Us Dropdown (Active) -->
 						<div class="relative group">
 							<button
-								class="flex items-center space-x-1 text-gray-700 hover:text-pink-600 font-semibold transition-colors duration-200"
+								class="flex items-center space-x-1 text-pink-600 font-semibold transition-colors duration-200"
 								aria-haspopup="true"
 								aria-expanded="false"
 							>
@@ -255,7 +249,7 @@
 										>Volunteer/Become a Donor Member</a
 									>
 									<a
-										href="../pages/partnerwithus.html"
+										href="partner.html"
 										class="block px-4 py-3 text-sm text-gray-700 hover:bg-brand-pink hover:text-pink-700 transition-colors duration-150"
 										>Partner With Us</a
 									>
@@ -264,8 +258,8 @@
 						</div>
 
 						<a
-							href="initiative.html"
-							class="text-pink-600 font-medium transition-colors duration-200"
+							href="../pages/initiative.html"
+							class="text-gray-700 hover:text-pink-600 font-medium transition-colors duration-200"
 							>Initiatives</a
 						>
 						<div class="relative group">
@@ -361,7 +355,7 @@
 								>About, Vision & Mission</a
 							>
 							<a
-								href="../pages/volunteer.html"
+								href="volunteer.html"
 								class="block px-2 py-2 text-gray-700 hover:bg-brand-pink hover:text-pink-700 rounded transition-colors"
 								>Volunteer/Become a Donor Member</a
 							>
@@ -372,7 +366,7 @@
 							>
 						</div>
 						<a
-							href="initiative.html"
+							href="../pages/initiative.html"
 							class="block px-2 py-2 text-gray-700 hover:bg-brand-pink hover:text-pink-700 rounded transition-colors"
 							>Initiatives</a
 						>
@@ -417,13 +411,14 @@
 						</div>
 						<a
 							href="../pages/contactus.html"
-							class="block px-2 py-2 text-gray-700 hover:bg-brand-pink hover:text-pink-700 rounded transition-colors"
+							class="block px-2 py-2 text-pink-600 font-semibold bg-pink-50 rounded"
 							>Contact</a
 						>
 						<button
 							class="w-full mt-3 bg-gradient-to-r from-pink-500 to-purple-600 text-white py-3 px-4 rounded-lg font-semibold"
+							onclick="openPaystackCheckout()"
 						>
-							Donate Donate🧡🧡
+							Donate🧡🧡
 						</button>
 					</div>
 				</div>
@@ -466,8 +461,8 @@
 						></path>
 					</svg>
 					<span class="text-pink-600 font-medium"
-						>Our Initiatives</span
-					>
+						>Partner With Us
+					</span>
 				</nav>
 			</div>
 		</div>
@@ -491,13 +486,9 @@
 							x2="100%"
 							y2="100%"
 						>
-							<!-- <stop offset="0%" style="stop-color:#FAD1E8;stop-opacity:0.8" />
-        <stop offset="50%" style="stop-color:#BFE6FF;stop-opacity:0.6" />
-        <stop offset="100%" style="stop-color:#FAD1E8;stop-opacity:0.4" /> -->
-
 							<stop
 								offset="0%"
-								style="stop-color: #fe0592; stop-opacity: 0.8"
+								style="stop-color: #fb0b93; stop-opacity: 0.8"
 							/>
 							<stop
 								offset="50%"
@@ -527,123 +518,46 @@
 				</svg>
 			</div>
 
-			<!-- Content -->
-			<div
-				class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center"
-			>
-				<h1
-					class="text-4xl md:text-6xl font-bold text-brand-charcoal mb-6"
-					id="fonts"
-				>
-					Our Initiatives
-				</h1>
-				<p class="text-xl md:text-2xl text-black max-w-4xl mx-auto">
-					Discover the programs and projects that drive our mission to
-					empower women and communities.
-				</p>
+			<div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28">
+				<div class="text-center fade-in-up">
+					<h1
+						class="text-4xl md:text-6xl font-bold text-brand-charcoal mb-6"
+						id="fonts"
+					>
+						Partner With Us
+					</h1>
+					<p
+						class="text-xl md:text-2xl text-black max-w-3xl mx-auto mb-10"
+					>
+						Let's collaborate to empower women and transform
+						communities together.
+					</p>
+				</div>
 			</div>
 		</section>
 
-		<!-- Initiatives Overview Section -->
+		<!-- Why Partner With SISTAS Section -->
 		<section class="py-20 bg-white">
 			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center mb-16">
+					<h2
+						class="text-3xl md:text-4xl font-bold text-brand-charcoal mb-4"
+					>
+						Why Partner With Us
+					</h2>
+					<p class="text-lg text-gray-600 max-w-2xl mx-auto">
+						Join us in creating meaningful change and building a
+						stronger community of empowered women.
+					</p>
+				</div>
+
 				<div class="grid md:grid-cols-3 gap-8">
-					<!-- Examine Her Initiative Card -->
+					<!-- Card 1: Empower Women in Tech -->
 					<div
-						class="initiative-card rounded-2xl p-8 text-center hover-lift shadow-md"
+						class="partnership-card rounded-2xl p-8 text-center hover-lift shadow-md"
 					>
 						<div
-							class="inline-flex items-center justify-center w-20 h-20 rounded-full mb-6"
-							style="
-								background: linear-gradient(
-									135deg,
-									#fad1e8,
-									#bfe6ff
-								);
-							"
-						>
-							<svg
-								class="w-10 h-10 text-white"
-								fill="none"
-								stroke="currentColor"
-								viewBox="0 0 24 24"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-								></path>
-							</svg>
-						</div>
-						<h3 class="text-2xl font-bold text-brand-charcoal mb-4">
-							Examine Her Initiative
-						</h3>
-						<p class="text-gray-600 mb-6 leading-relaxed">
-							A well-rounded women's health program delivering
-							preventive screenings (including breast cancer
-							screening), health sensitization, reproductive and
-							maternal support, and improved access to period care
-							for girls in underserved communities.
-						</p>
-						<button
-							onclick="scrollToSection('examine-her-initiative')"
-							class="btn-primary text-black px-6 py-3 rounded-full font-semibold hover-lift"
-						>
-							Learn More
-						</button>
-					</div>
-
-					<!-- Happy Smile Donation Card -->
-					<div
-						class="initiative-card rounded-2xl p-8 text-center hover-lift shadow-md"
-					>
-						<div
-							class="inline-flex items-center justify-center w-20 h-20 rounded-full mb-6"
-							style="
-								background: linear-gradient(
-									135deg,
-									#bfe6ff,
-									#9dd1f1
-								);
-							"
-						>
-							<svg
-								class="w-10 h-10 text-white"
-								fill="none"
-								stroke="currentColor"
-								viewBox="0 0 24 24"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-								></path>
-							</svg>
-						</div>
-						<h3 class="text-2xl font-bold text-brand-charcoal mb-4">
-							Happy Smile Donation
-						</h3>
-						<p class="text-gray-600 mb-6 leading-relaxed">
-							A giving initiative supporting underprivileged women
-							and children through donations and community
-							outreach.
-						</p>
-						<button
-							onclick="scrollToSection('happy-smile-donation')"
-							class="btn-secondary text-black px-6 py-3 rounded-full font-semibold hover-lift"
-						>
-							Learn More
-						</button>
-					</div>
-
-					<!-- Her Tech Rising Card -->
-					<div
-						class="initiative-card rounded-2xl p-8 text-center hover-lift shadow-md"
-					>
-						<div
-							class="inline-flex items-center justify-center w-20 h-20 rounded-full mb-6"
+							class="inline-flex items-center justify-center w-16 h-16 rounded-full mb-6"
 							style="
 								background: linear-gradient(
 									135deg,
@@ -653,7 +567,7 @@
 							"
 						>
 							<svg
-								class="w-10 h-10 text-white"
+								class="w-8 h-8 text-white"
 								fill="none"
 								stroke="currentColor"
 								viewBox="0 0 24 24"
@@ -666,238 +580,260 @@
 								></path>
 							</svg>
 						</div>
-						<h3 class="text-2xl font-bold text-brand-charcoal mb-4">
-							Her Tech Rising
+						<h3 class="text-xl font-bold text-brand-charcoal mb-4">
+							Empower Women in Tech
 						</h3>
-						<p class="text-gray-600 mb-6 leading-relaxed">
-							A program to encourage women in technology, building
-							skills and creating opportunities for growth in the
-							tech industry.
+						<p class="text-gray-600">
+							Support women breaking barriers in technology and
+							entrepreneurship through mentorship, funding, and
+							career development programs.
 						</p>
-						<button
-							onclick="scrollToSection('her-tech-rising')"
-							class="btn-primary text-black px-6 py-3 rounded-full font-semibold hover-lift"
-						>
-							Learn More
-						</button>
 					</div>
-				</div>
-			</div>
-		</section>
 
-		<!-- Section Divider -->
-		<div class="section-divider"></div>
-
-		<!-- Examine Her Initiative Section -->
-		<section id="examine-her-initiative" class="py-20 bg-brand-soft-gray">
-			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div class="grid lg:grid-cols-2 gap-12 items-center">
-					<div>
-						<h2
-							class="text-3xl md:text-4xl font-bold text-brand-charcoal mb-6"
-							id="fonts"
-						>
-							Examine Her Initiative
-						</h2>
-						<div class="prose prose-lg text-gray-600 space-y-4">
-							<p>
-								The Examine Her Initiative is focused on broad
-								women's health needs: from community health
-								sensitization and preventive screenings (such as
-								breast cancer screening) to reproductive and
-								maternal support. We place special emphasis on
-								ensuring adolescent girls have access to
-								dignified period care and education in
-								underserved areas.
-							</p>
-							<p>
-								Activities include community health drives,
-								screening and referral services, school and
-								community-based sensitization on menstrual and
-								reproductive health, mother-and-child support
-								programs, and partnerships with local health
-								providers to improve access and continuity of
-								care.
-							</p>
-							<p>
-								We also connect women and girls to support
-								networks, provide practical resources, and
-								advocate for policies that enhance health equity
-								across communities.
-							</p>
-						</div>
-						<div class="mt-8">
-							<a
-								href="volunteer.html"
-								class="btn-primary text-black px-8 py-4 rounded-full font-semibold hover-lift inline-block"
-							>
-								Join/Support This Initiative
-							</a>
-						</div>
-					</div>
-					<div class="relative">
-						<div class="bg-white rounded-2xl p-8 shadow-xl">
-							<img
-								src="../images/examine-her.jpg"
-								alt="Community women's health screening and education"
-								class="w-full h-64 object-cover rounded-lg mb-4"
-							/>
-
-							<div class="text-center">
-								<h4
-									class="text-lg font-semibold text-brand-charcoal mb-2"
-								>
-									Community Screening & Education
-								</h4>
-								<p class="text-gray-600 text-sm">
-									Early detection, access to care, and
-									supportive resources
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- Happy Smile Donation Section -->
-		<section id="happy-smile-donation" class="py-20 bg-white">
-			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div class="grid lg:grid-cols-2 gap-12 items-center">
-					<div class="relative order-2 lg:order-1">
+					<!-- Card 2: Drive Social Impact -->
+					<div
+						class="partnership-card rounded-2xl p-8 text-center hover-lift shadow-md"
+					>
 						<div
-							class="bg-brand-soft-gray rounded-2xl p-8 shadow-xl"
+							class="inline-flex items-center justify-center w-16 h-16 rounded-full mb-6"
+							style="
+								background: linear-gradient(
+									135deg,
+									#bfe6ff,
+									#9dd1f1
+								);
+							"
 						>
-							<img
-								src="../images/donate-image.webp"
-								alt="Community outreach and donation activities"
-								class="w-full h-64 object-cover rounded-lg mb-4"
-							/>
-
-							<div class="text-center">
-								<h4
-									class="text-lg font-semibold text-brand-charcoal mb-2"
-								>
-									Spreading Joy Through Giving
-								</h4>
-								<p class="text-gray-600 text-sm">
-									Community support that makes a difference
-								</p>
-							</div>
-						</div>
-					</div>
-					<div class="order-1 lg:order-2">
-						<h2
-							class="text-3xl md:text-4xl font-bold text-brand-charcoal mb-6"
-							id="fonts"
-						>
-							Happy Smile Donation
-						</h2>
-						<div class="prose prose-lg text-gray-600 space-y-4">
-							<p>
-								The Happy Smile Donation initiative embodies our
-								commitment to community support and social
-								responsibility. We focus on providing direct
-								assistance to underprivileged women and children
-								who need it most.
-							</p>
-							<p>
-								Our donation drives include essential items like
-								clothing, school supplies, hygiene products, and
-								food packages. We also organize special events
-								during holidays and back-to-school seasons to
-								ensure that families have what they need to
-								thrive.
-							</p>
-							<p>
-								Beyond material support, Happy Smile Donation
-								creates opportunities for community connection
-								and empowerment. We partner with local
-								organizations, schools, and healthcare centers
-								to identify families in need and deliver support
-								with dignity and respect.
-							</p>
-						</div>
-						<div class="mt-8">
-							<a
-								href="partner.html"
-								class="btn-secondary text-black px-8 py-4 rounded-full font-semibold hover-lift inline-block"
+							<svg
+								class="w-8 h-8 text-white"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
 							>
-								Join/Support This Initiative
-							</a>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+								></path>
+							</svg>
 						</div>
+						<h3 class="text-xl font-bold text-brand-charcoal mb-4">
+							Drive Social Impact
+						</h3>
+						<p class="text-gray-600">
+							Your contributions help fund initiatives like Her
+							Tech Rising Happy Smile Donation and SWUI Examine
+							Her, creating lasting positive change in
+							communities.
+						</p>
+					</div>
+
+					<!-- Card 3: Build a Strong Network -->
+					<div
+						class="partnership-card rounded-2xl p-8 text-center hover-lift shadow-md"
+					>
+						<div
+							class="inline-flex items-center justify-center w-16 h-16 rounded-full mb-6"
+							style="
+								background: linear-gradient(
+									135deg,
+									#fad1e8,
+									#bfe6ff
+								);
+							"
+						>
+							<svg
+								class="w-8 h-8 text-white"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+								></path>
+							</svg>
+						</div>
+						<h3 class="text-xl font-bold text-brand-charcoal mb-4">
+							Build a Strong Network
+						</h3>
+						<p class="text-gray-600">
+							Collaborate with a vibrant community of changemakers
+							and innovators while building valuable connections
+							and relationships.
+						</p>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- Her Tech Rising Section -->
-		<section id="her-tech-rising" class="py-20 bg-brand-soft-gray">
+		<!-- Partnership Opportunities Section -->
+		<section class="py-20 bg-brand-soft-gray">
 			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div class="grid lg:grid-cols-2 gap-12 items-center">
-					<div>
-						<h2
-							class="text-3xl md:text-4xl font-bold text-brand-charcoal mb-6"
-							id="fonts"
+				<div class="text-center mb-16">
+					<h2
+						class="text-3xl md:text-4xl font-bold text-brand-charcoal mb-4"
+					>
+						Ways to Partner With Us
+					</h2>
+					<p class="text-lg text-gray-600 max-w-2xl mx-auto">
+						Choose the partnership opportunity that aligns best with
+						your organization's goals and values.
+					</p>
+				</div>
+
+				<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+					<!-- Corporate Sponsorship -->
+					<div class="bg-white rounded-xl p-6 shadow-md hover-lift">
+						<div
+							class="w-12 h-12 brand-pink rounded-lg flex items-center justify-center mb-4"
 						>
-							Her Tech Rising
-						</h2>
-						<div class="prose prose-lg text-gray-600 space-y-4">
-							<p>
-								Her Tech Rising is our flagship program designed
-								to bridge the gender gap in technology. We
-								believe that women deserve equal representation
-								and opportunities in the rapidly evolving tech
-								industry.
-							</p>
-							<p>
-								Through mentorship programs, coding bootcamps,
-								networking events, and career development
-								workshops, we provide women with the tools,
-								knowledge, and connections needed to thrive in
-								technology careers. Our program covers
-								everything from software development and data
-								science to entrepreneurship and leadership in
-								tech.
-							</p>
-							<p>
-								Since its launch, Her Tech Rising has supported
-								over 500 women in their tech journey, with 85%
-								of participants securing new roles or advancing
-								their careers within six months of completing
-								the program.
-							</p>
-						</div>
-						<div class="mt-8">
-							<a
-								href="volunteer.html"
-								class="btn-primary text_black px-8 py-4 rounded-full font-semibold hover-lift inline-block"
+							<svg
+								class="w-6 h-6 text-white"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
 							>
-								Join/Support This Initiative
-							</a>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+								></path>
+							</svg>
 						</div>
+						<h3 class="text-lg font-bold text-brand-charcoal mb-2">
+							Corporate Sponsorship
+						</h3>
+						<p class="text-gray-600 text-sm">
+							Support our initiatives through financial
+							sponsorship and gain brand visibility in the women
+							empowerment space.
+						</p>
 					</div>
-					<div class="relative">
-						<div class="bg-white rounded-2xl p-8 shadow-xl">
-							<img
-								src="../images/Tech.jpg"
-								alt="Women in tech collaborating on coding projects"
-								class="w-full h-64 object-cover rounded-lg mb-4"
-							/>
-							<!-- TODO: Replace with actual Her Tech Rising program image -->
-							<div class="text-center">
-								<h4
-									class="text-lg font-semibold text-brand-charcoal mb-2"
-								>
-									Empowering Women in Technology
-								</h4>
-								<p class="text-gray-600 text-sm">
-									Building the next generation of women tech
-									leaders
-								</p>
-							</div>
+
+					<!-- Event Collaboration -->
+					<div class="bg-white rounded-xl p-6 shadow-md hover-lift">
+						<div
+							class="w-12 h-12 brand-blue rounded-lg flex items-center justify-center mb-4"
+						>
+							<svg
+								class="w-6 h-6 text-white"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+								></path>
+							</svg>
 						</div>
+						<h3 class="text-lg font-bold text-brand-charcoal mb-2">
+							Event Collaboration
+						</h3>
+						<p class="text-gray-600 text-sm">
+							Co-host workshops, conferences, and networking
+							events that benefit both our communities and advance
+							women's causes.
+						</p>
 					</div>
+
+					<!-- Resource Sharing -->
+					<div class="bg-white rounded-xl p-6 shadow-md hover-lift">
+						<div
+							class="w-12 h-12 brand-pink rounded-lg flex items-center justify-center mb-4"
+						>
+							<svg
+								class="w-6 h-6 text-white"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"
+								></path>
+							</svg>
+						</div>
+						<h3 class="text-lg font-bold text-brand-charcoal mb-2">
+							Resource Sharing
+						</h3>
+						<p class="text-gray-600 text-sm">
+							Share expertise, technology, workspace, or
+							educational resources to accelerate our impact and
+							reach.
+						</p>
+					</div>
+
+					<!-- Community Engagement -->
+					<div class="bg-white rounded-xl p-6 shadow-md hover-lift">
+						<div
+							class="w-12 h-12 brand-blue rounded-lg flex items-center justify-center mb-4"
+						>
+							<svg
+								class="w-6 h-6 text-white"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"
+								></path>
+							</svg>
+						</div>
+						<h3 class="text-lg font-bold text-brand-charcoal mb-2">
+							Community Engagement
+						</h3>
+						<p class="text-gray-600 text-sm">
+							Engage your employees in volunteer opportunities and
+							corporate social responsibility initiatives with us.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Partner Form Section -->
+		<section id="partner-form" class="py-20 bg-white">
+			<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center mb-12">
+					<h2
+						class="text-3xl md:text-4xl font-bold text-brand-charcoal mb-4"
+					>
+						Partnership Application
+					</h2>
+					<p class="text-lg text-gray-600">
+						Tell us about your organization and how you'd like to
+						partner with us.
+					</p>
+				</div>
+
+				<!-- Google Form Embed -->
+				<div class="bg-brand-soft-gray rounded-2xl p-8 shadow-lg">
+					<!-- TODO: Replace with actual Google Form embed URL -->
+					<iframe
+						src="https://forms.gle/BToyP4t6XTnyzWcv6"
+						width="100%"
+						height="800"
+						frameborder="0"
+						marginheight="0"
+						marginwidth="0"
+						class="rounded-lg"
+						title="Partnership Application Form"
+					>
+						Loading partnership application form...
+					</iframe>
 				</div>
 			</div>
 		</section>
@@ -906,28 +842,18 @@
 		<section class="py-20 bg-brand-charcoal text-black">
 			<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 				<h2 class="text-3xl md:text-4xl font-bold mb-6" id="fonts">
-					Together, we can create lasting impact. Support one of our
-					initiatives today.
+					Together, we can empower more women. Be a partner today.
 				</h2>
 				<p class="text-xl mb-8 opacity-90">
-					Every contribution, whether through volunteering,
-					partnerships, or donations, helps us empower more women and
-					strengthen communities.
+					Join our mission to create lasting change and build stronger
+					communities.
 				</p>
-				<div class="flex flex-col sm:flex-row gap-4 justify-center">
-					<a
-						href="../pages/volunteer.html"
-						class="btn-secondary text-black px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover-lift inline-block"
-					>
-						Get Involved
-					</a>
-					<button
-						onclick="openDonationCheckout()"
-						class="btn-primary text-black px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover-lift"
-					>
-						Donate Now
-					</button>
-				</div>
+				<button
+					onclick="scrollToPartnerForm()"
+					class="btn-secondary text-black px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover-lift"
+				>
+					Get Started
+				</button>
 			</div>
 		</section>
 
@@ -994,11 +920,12 @@
 							</li>
 							<li>
 								<a
-									href="initiative.html"
-									class="text-pink-400 font-medium"
+									href="../pages/initiative.html"
+									class="text-gray-300 hover:text-pink-400 transition-colors"
 									>Our Initiatives</a
 								>
 							</li>
+
 							<li>
 								<a
 									href="../pages/mediagallery.html"
@@ -1010,7 +937,7 @@
 								<a
 									href="../pages/Upcomingevent.html"
 									class="text-gray-300 hover:text-pink-400 transition-colors"
-									>News & Updates</a
+									>News & Event</a
 								>
 							</li>
 							<li>
@@ -1029,7 +956,7 @@
 						<ul class="space-y-2">
 							<li>
 								<a
-									href="index.html#donate"
+									href="#"
 									class="text-gray-300 hover:text-pink-400 transition-colors"
 									>Make a Donation</a
 								>
@@ -1050,8 +977,8 @@
 							</li>
 							<li>
 								<a
-									href="../pages/partnerwithus.html"
-									class="text-gray-300 hover:text-pink-400 transition-colors"
+									href="partnerwithus.html"
+									class="text-pink-300 font-medium"
 									>Partner With Us</a
 								>
 							</li>
@@ -1099,15 +1026,11 @@
 				mobileMenu.classList.toggle("hidden");
 			});
 
-			// Smooth scrolling to sections
-			function scrollToSection(sectionId) {
-				const section = document.getElementById(sectionId);
-				if (section) {
-					section.scrollIntoView({
-						behavior: "smooth",
-						block: "start",
-					});
-				}
+			// Smooth scrolling for anchor links
+			function scrollToPartnerForm() {
+				document.getElementById("partner-form").scrollIntoView({
+					behavior: "smooth",
+				});
 			}
 
 			// Paystack donation checkout
@@ -1144,6 +1067,37 @@
 				handler.openIframe();
 			}
 
+			// Partner form submission
+			function handlePartnerFormSubmit(event) {
+				event.preventDefault();
+
+				const submitButton = event.target.querySelector(
+					'button[type="submit"]'
+				);
+				const submitText = submitButton.querySelector(".submit-text");
+				const spinner = submitButton.querySelector(".spinner");
+
+				// Show loading state
+				submitText.textContent = "Submitting...";
+				spinner.classList.remove("hidden");
+				submitButton.disabled = true;
+
+				// Simulate form submission (replace with actual form handling)
+				setTimeout(() => {
+					alert(
+						"Thank you for your partnership application! We will review your submission and contact you within 2-3 business days."
+					);
+
+					// Reset form
+					event.target.reset();
+
+					// Reset button state
+					submitText.textContent = "Submit Partnership Application";
+					spinner.classList.add("hidden");
+					submitButton.disabled = false;
+				}, 2000);
+			}
+
 			// Intersection Observer for animations
 			const observerOptions = {
 				threshold: 0.1,
@@ -1161,7 +1115,7 @@
 			// Observe elements for animation
 			document.addEventListener("DOMContentLoaded", () => {
 				const animateElements = document.querySelectorAll(
-					".initiative-card, .prose"
+					".partnership-card, .bg-white.rounded-xl"
 				);
 				animateElements.forEach((el) => {
 					observer.observe(el);
@@ -1169,16 +1123,13 @@
 			});
 
 			// TODO: Production Notes
-			// 1. Replace placeholder images with actual initiative photos
+			// 1. Replace Google Form embed URL with actual form
 			// 2. Replace Paystack public key with production key
 			// 3. Replace WhatsApp invite URL with actual group invite
 			// 4. Replace placeholder logo with actual SISTAS Wing Union logo
-			// 5. Update social media links with actual profiles
-			// 6. Implement server-side payment verification for security
-			// 7. Add Google Analytics or other tracking if needed
-			// 8. Optimize images for web performance and add proper alt text
-			// 9. Consider adding testimonials or success stories for each initiative
-			// 10. Add metrics/impact numbers for each program when available
+			// 5. Implement server-side payment verification for security
+			// 6. Add Google Analytics or other tracking if needed
+			// 7. Optimize images and add proper alt text for accessibility
 		</script>
 	</body>
 </html>
