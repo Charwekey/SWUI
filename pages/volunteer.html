@@ -148,6 +148,41 @@
 				opacity: 1;
 				transform: translateY(0);
 			}
+
+		
+
+/* Slide-up animation */
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.animate-slideUp {
+    animation: slideUp 0.8s ease-out forwards;
+}
+
+/* Blinking cursor */
+.cursor {
+    display: inline-block;
+    width: 3px;
+    background-color: #fff;
+    margin-left: 2px;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+
+
+
 		</style>
 	</head>
 	<body class="bg-white font-sans" id="top">
@@ -201,7 +236,7 @@
 							>
 								<div class="py-2">
 									<a
-										href="../pages/aboutus.html"
+										href="./aboutus.html"
 										class="block px-4 py-3 text-sm text-gray-700 hover:bg-brand-pink hover:text-pink-700 transition-colors duration-150"
 										>About, Vision & Mission</a
 									>
@@ -211,7 +246,7 @@
 										>Volunteer/Become a Member</a
 									>
 									<a
-										href="../pages/patnerwithus.html"
+										href="./partnerwithus.html"
 										class="block px-4 py-3 text-sm text-gray-700 hover:bg-brand-pink hover:text-pink-700 transition-colors duration-150"
 										>Partner With Us</a
 									>
@@ -220,7 +255,7 @@
 						</div>
 
 						<a
-							href="../pages/initiative.html"
+							href="./initiative.html"
 							class="text-gray-700 hover:text-pink-600 font-medium transition-colors duration-200"
 							>Initiatives</a
 						>
@@ -251,12 +286,12 @@
 							>
 								<div class="py-2">
 									<a
-										href="../pages/Upcomingevent.html"
+										href="./Upcomingevent.html"
 										class="block px-4 py-3 text-sm text-gray-700 hover:bg-brand-pink hover:text-pink-700 transition-colors duration-150"
 										>Upcoming Event</a
 									>
 									<a
-										href="../pages/mediagallery.html"
+										href="./mediagallery.html"
 										class="block px-4 py-3 text-sm text-gray-700 hover:bg-brand-pink hover:text-pink-700 transition-colors duration-150"
 										>Media Gallery</a
 									>
@@ -264,7 +299,7 @@
 							</div>
 						</div>
 						<a
-							href="../pages/contactus.html"
+							href="./contactus.html"
 							class="text-gray-700 hover:text-pink-600 font-medium transition-colors duration-200"
 							>Contact</a
 						>
@@ -314,7 +349,7 @@
 							</p>
 
 							<a
-								href="../pages/aboutus.html"
+								href="./aboutus.html"
 								class="block px-2 py-2 text-gray-700 hover:bg-brand-pink hover:text-pink-700 rounded transition-colors"
 								>About, Vision & Mission</a
 							>
@@ -324,13 +359,13 @@
 								>Volunteer/Become a Member</a
 							>
 							<a
-								href="../pages/patnerwithus.html"
+								href="./partnerwithus.html"
 								class="block px-2 py-2 text-gray-700 hover:bg-brand-pink hover:text-pink-700 rounded transition-colors"
 								>Partner With Us</a
 							>
 						</div>
 						<a
-							href="../pages/initiative.html"
+							href="./initiative.html"
 							class="block px-2 py-2 text-gray-700 hover:bg-brand-pink hover:text-pink-700 rounded transition-colors"
 							>Initiatives</a
 						>
@@ -361,12 +396,12 @@
 							>
 								<div class="py-2">
 									<a
-										href="../pages/Upcomingevent.html"
+										href="./Upcomingevent.html"
 										class="block px-4 py-3 text-sm text-gray-700 hover:bg-brand-pink hover:text-pink-700 transition-colors duration-150"
 										>Upcoming Event</a
 									>
 									<a
-										href="../pages/mediagallery.html"
+										href="./mediagallery.html"
 										class="block px-4 py-3 text-sm text-gray-700 hover:bg-brand-pink hover:text-pink-700 transition-colors duration-150"
 										>Media Gallery</a
 									>
@@ -374,7 +409,7 @@
 							</div>
 						</div>
 						<a
-							href="../pages/contactus.html"
+							href="./contactus.html"
 							class="block px-2 py-2 text-pink-600 font-semibold bg-pink-50 rounded"
 							>Contact</a
 						>
@@ -432,78 +467,33 @@
 		</div>
 
 		<!-- Hero Section with Wavy SVG Background -->
-		<section
-			class="relative overflow-hidden bg-gradient-to-br from-gray-50 via-white to-brand-pink/10"
-		>
-			<!-- Wavy SVG Background -->
-			<div class="absolute inset-0 w-full h-full overflow-hidden">
-				<svg
-					class="w-full h-full object-cover transform rotate-180"
-					viewBox="0 0 1200 400"
-					fill="none"
-					xmlns="http://www.w3.org/2000/svg"
-					preserveAspectRatio="none"
-				>
-					<defs>
-						<linearGradient
-							id="gradient1"
-							x1="0%"
-							y1="0%"
-							x2="100%"
-							y2="100%"
-						>
-							<stop
-								offset="0%"
-								style="stop-color: #fe0592; stop-opacity: 0.8"
-							/>
-							<stop
-								offset="50%"
-								style="stop-color: #08a0ff; stop-opacity: 0.6"
-							/>
-							<stop
-								offset="100%"
-								style="stop-color: #ff0392; stop-opacity: 0.4"
-							/>
-						</linearGradient>
-					</defs>
+	<!-- Volunteer Hero Section -->
+<section class="relative overflow-hidden bg-cover bg-center bg-no-repeat h-[100vh]"
+    style="background-image: url('../images/IMG-20251005-WA0045.jpg');">
 
-					<path
-						d="M0,80 C300,160 600,0 1200,120 L1200,400 L0,400 Z"
-						fill="url(#gradient1)"
-					/>
-					<path
-						d="M0,150 C400,230 800,70 1200,180 L1200,400 L0,400 Z"
-						fill="#BFE6FF"
-						fill-opacity="0.3"
-					/>
-					<path
-						d="M0,250 C350,320 850,140 1200,280 L1200,400 L0,400 Z"
-						fill="#FAD1E8"
-						fill-opacity="0.2"
-					/>
-				</svg>
-			</div>
+    <!-- Gradient Overlay -->
+    <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-transparent"></div>
 
-			<!-- Hero Content -->
-			<div class="relative container mx-auto px-4 py-32">
-				<div class="max-w-4xl mx-auto text-center fade-in-up">
-					<h1
-						class="text-4xl md:text-5xl font-bold text-gray-800 mb-4 leading-tight"
-						id="fonts"
-					>
-						Volunteer or Become a Donor Member
-					</h1>
-					<p
-						class="text-lg md:text-xl text-black max-w-3xl mx-auto leading-relaxed"
-					>
-						Join our mission to empower women and create meaningful
-						change. Whether you want to contribute your time as a
-						volunteer or commit long-term as a member, there's a
-						place for you in our community.
-					</p>
-				</div>
-			</div>
-		</section>
+    <!-- Content -->
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center text-white">
+        <!-- Typewriter Heading -->
+        <h1 id="typewriter-volunteer"
+            class="text-4xl md:text-6xl font-bold mb-6 leading-tight"
+            style="font-family: 'Dancing Script', cursive;">
+        </h1>
+
+        <!-- Slide-up Paragraph -->
+        <p id="volunteer-text"
+            class="text-xl md:text-2xl text-gray-100 max-w-4xl mx-auto opacity-0 translate-y-10 leading-relaxed">
+            Join our mission to empower women and create meaningful change. Whether you want to volunteer
+            your time or commit long-term as a donor member, there’s a place for you in our community.
+        </p>
+    </div>
+</section>
+
+<!-- Typewriter Script -->
+
+
 
 		<!-- Main Content Section - Two Cards -->
 		<section class="py-16 bg-white">
@@ -788,13 +778,13 @@
 								class="flex flex-col sm:flex-row gap-4 justify-center"
 							>
 								<a
-									href="../pages/contactus.html"
+									href="./contactus.html"
 									class="px-8 py-3 border-2 border-gray-400 text-gray-700 font-semibold rounded-full hover:border-pink-400 hover:bg-brand-pink/20 hover:text-pink-700 transition-all duration-300"
 								>
 									Contact Us
 								</a>
 								<a
-									href="../pages/aboutus.html"
+									href="./aboutus.html"
 									class="px-8 py-3 border-2 border-gray-400 text-gray-700 font-semibold rounded-full hover:border-blue-400 hover:bg-brand-blue/20 hover:text-blue-700 transition-all duration-300"
 								>
 									Learn More About Us
@@ -862,35 +852,35 @@
 						<ul class="space-y-2">
 							<li>
 								<a
-									href="../pages/aboutus.html"
+									href="./aboutus.html"
 									class="text-gray-300 hover:text-pink-400 transition-colors"
 									>About the Union</a
 								>
 							</li>
 							<li>
 								<a
-									href="../pages/initiative.html"
+									href="./initiative.html"
 									class="text-gray-300 hover:text-pink-400 transition-colors"
 									>Our Initiatives</a
 								>
 							</li>
 							<li>
 								<a
-									href="../pages/mediagallery.html"
+									href="./mediagallery.html"
 									class="text-gray-300 hover:text-pink-400 transition-colors"
 									>Media Gallery</a
 								>
 							</li>
 							<li>
 								<a
-									href="../pages/Upcomingevent.html"
+									href="./Upcomingevent.html"
 									class="text-gray-300 hover:text-pink-400 transition-colors"
 									>News & Event</a
 								>
 							</li>
 							<li>
 								<a
-									href="../pages/contactus.html"
+									href="./contactus.html"
 									class="text-gray-300 hover:text-pink-400 transition-colors"
 									>Contact Us</a
 								>
@@ -927,7 +917,7 @@
 							</li>
 							<li>
 								<a
-									href="../pages/patnerwithus.html"
+									href="./partnerwithus.html"
 									class="text-gray-300 hover:text-pink-400 transition-colors"
 									>Partner With Us</a
 								>
@@ -936,21 +926,11 @@
 					</div>
 				</div>
 
-				<!-- Copyright -->
-				<div class="border-t border-gray-800 mt-8 pt-8 text-center">
-					<p class="text-gray-400">
-						&copy; 2025 Sistas Wing Union. All rights reserved. Made
-						with 💖 for women empowerment.
-					</p>
-				</div>
-			</div>
-		</footer>
-
-		<!-- WhatsApp Floating Button -->
+				
 			<!-- Copyright -->
 				<div class="border-t border-gray-800 mt-8 pt-8 text-center">
 					<p class="text-gray-400">
-						&copy; 2025 Sistas Wing Union. All rights reserved. Sistas Wing Union International
+						&copy; 2025 Sistas Wing Union. All rights reserved. 
 					</p>
 				</div>
 			</div>
@@ -1100,6 +1080,30 @@
 					});
 				});
 			}
+
+
+				const typewriterVolunteer = document.getElementById("typewriter-volunteer");
+const volunteerText = document.getElementById("volunteer-text");
+
+const volunteerHeading = `Volunteer or Become a Donor Member`;
+let idx = 0;
+const typingSpeed = 55;
+
+function typeWriterVolunteer() {
+    if (idx < volunteerHeading.length) {
+        typewriterVolunteer.innerHTML =
+            volunteerHeading.slice(0, idx) + "<span class='cursor'></span>";
+        idx++;
+        setTimeout(typeWriterVolunteer, typingSpeed);
+    } else {
+        typewriterVolunteer.innerHTML = volunteerHeading;
+        setTimeout(() => {
+            volunteerText.classList.add("animate-slideUp");
+        }, 400);
+    }
+}
+
+window.addEventListener("DOMContentLoaded", typeWriterVolunteer);
 
 			// Update WhatsApp link
 			document.querySelector('[href="https://wa.me/233209759737"]').href =
