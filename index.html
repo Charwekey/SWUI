@@ -148,6 +148,60 @@
 			#top {
 				font-family: "PT serif", serif;
 			}
+	#typewriter::after {
+		content: "|";
+		display: inline-block;
+		margin-left: 5px;
+		animation: blink 0.8s infinite;
+		color: white;
+	}
+
+	@keyframes blink {
+		50% {
+			opacity: 0;
+		}
+	}
+
+	.highlight {
+		background: linear-gradient(to right, #1e40af, blue);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-weight: 700;
+	}
+
+	#typewriter {
+		font-family: "Dancing Script", cursive;
+		font-weight: 700;
+	}
+
+	/* Slide-up animation */
+	@keyframes slideUp {
+		from {
+			opacity: 0;
+			transform: translateY(20px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	.animate-slideUp {
+		animation: slideUp 1s ease-out forwards;
+	}
+
+	@keyframes bounce-smooth {
+	0%, 100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-6px);
+	}
+}
+.animate-bounce-smooth {
+	animation: bounce-smooth 2s ease-in-out infinite;
+}
+	
 		</style>
 	</head>
 	<body class="bg-white font-sans" id="top">
@@ -341,7 +395,7 @@
 						>
 
 						<button
-							class="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-6 py-2 rounded-full font-semibold hover:from-pink-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"
+							class="bg-gradient-to-r from-blue-300 to-blue-300 text-black px-8 py-2 rounded-full font-medium hover:pink-300  transition-all duration-200 transform hover:scale-105"
 							onclick="openPaystackCheckout()"
 						>
 							Donate
@@ -449,7 +503,7 @@
 							>Contact</a
 						>
 						<button
-							class="w-full mt-3 bg-gradient-to-r from-pink-500 to-purple-600 text-white py-3 px-4 rounded-lg font-semibold"
+							class="w-full mt-3 bg-gradient-to-r from-blue-300 to-blue-300 text-white py-3 px-4 rounded-lg font-semibold"
 							onclick="openPaystackCheckout()"
 						>
 							Donate🧡🧡
@@ -478,59 +532,63 @@
 		</div>
 
 		<!-- Hero Section with Wavy SVG -->
-		<section class="relative overflow-hidden">
-			<!-- Wavy SVG Background -->
-			<div class="absolute inset-0 w-full h-screen overflow-hidden">
-				<svg
-					class="w-full h-full object-cover transform rotate-180"
-					viewBox="0 0 1200 400"
-					fill="none"
-					xmlns="http://www.w3.org/2000/svg"
-					preserveAspectRatio="none"
-				>
-					<defs>
-						<linearGradient
-							id="gradient1"
-							x1="0%"
-							y1="0%"
-							x2="100%"
-							y2="100%"
-						>
-							<stop
-								offset="0%"
-								style="stop-color: #fe0592; stop-opacity: 0.8"
-							/>
-							<stop
-								offset="50%"
-								style="stop-color: #08a0ff; stop-opacity: 0.6"
-							/>
-							<stop
-								offset="100%"
-								style="stop-color: #ff0392; stop-opacity: 0.4"
-							/>
-						</linearGradient>
-					</defs>
+		 <section class="header">
+		 
 
-					<path
-						d="M0,80 C300,160 600,0 1200,120 L1200,400 L0,400 Z"
-						fill="url(#gradient1)"
-					/>
-					<path
-						d="M0,150 C400,230 800,70 1200,180 L1200,400 L0,400 Z"
-						fill="#BFE6FF"
-						fill-opacity="0.3"
-					/>
-					<path
-						d="M0,250 C350,320 850,140 1200,280 L1200,400 L0,400 Z"
-						fill="#FAD1E8"
-						fill-opacity="0.2"
-					/>
-				</svg>
-			</div>
+
+
+  
+  <!-- Wavy SVG Background -->
+  <!-- <div class="absolute inset-0 w-full h-screen overflow-hidden">
+    <svg
+      class="w-full h-full object-cover transform rotate-180"
+      viewBox="0 0 1200 400"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      preserveAspectRatio="none"
+    >
+      <defs> -->
+        <!-- Soft Vibrant Pink Gradient -->
+        <!-- <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#ff5fa2; stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#fd7fbc; stop-opacity:1" />
+        </linearGradient>
+      </defs> -->
+
+      <!-- Animated smooth pink wave -->
+      <!-- <path
+        fill="url(#gradient1)"
+        d="M0,120 C300,200 600,60 1200,160 L1200,400 L0,400 Z"
+      >
+        <animate
+          attributeName="d"
+          dur="8s"
+          repeatCount="indefinite"
+          values="
+            M0,120 C300,200 600,60 1200,160 L1200,400 L0,400 Z;
+            M0,130 C300,210 600,80 1200,170 L1200,400 L0,400 Z;
+            M0,120 C300,200 600,60 1200,160 L1200,400 L0,400 Z
+          "
+        />
+      </path>
+    </svg>
+  </div> -->
+
+  
+
+
+
+  
+
+
+
+
+
+
 
 			<!-- Hero Content -->
-			<div class="relative container mx-auto px-4 py-20 md:py-32">
-				<div class="max-w-4xl mx-auto text-center">
+			<!-- <div class="relative container mx-auto px-4 py-20 md:py-32" id="body">
+				<div class="max-w-4xl mx-auto text-center" >
 					<h1
 						class="text-4xl md:text-6xl font-bold text-gray-800 mb-6 leading-tight"
 						id="modal-titlee"
@@ -538,7 +596,7 @@
 						Empowering Women & Girls In Under Served Communities
 						Through
 						<span
-							class="bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent"
+							class="bg-gradient-to-r from-blue-600 to-blue-600 bg-clip-text text-transparent"
 							>Unity & Action</span
 						>
 					</h1>
@@ -556,7 +614,7 @@
 						class="flex flex-col sm:flex-row gap-4 justify-center items-center"
 					>
 						<button
-							class="px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold rounded-full hover:from-pink-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
+							class="px-8 py-4 bg-gradient-to-r from-blue-300 to-blue-300 text-gray-800font-semibold rounded-full  transition-all duration-300 transform hover:scale-105 shadow-lg"
 							onclick="openPaystackCheckout()"
 						>
 							Donate Now
@@ -572,11 +630,156 @@
 					</div>
 				</div>
 			</div>
-		</section>
+		</section> -->
 
-		<!-- Initiatives Preview Section -->
+		<!-- <section
+	class="relative overflow-hidden bg-cover bg-center bg-no-repeat"
+	style="background-image: url('images/this.jpg')"
+>
+	
+	<div class="absolute inset-0 bg-gradient-to-r from-pink-200/70 via-white/30 to-transparent"></div>
 
-		<!-- Contact Quick Info -->
+	
+	<div class="relative container mx-auto px-6 py-10 md:py-20 flex items-center">
+		
+		<div
+			class="max-w-3xl text-left p-10 md:p-14 rounded-3xl backdrop-blur-lg bg-white/10 border border-white/10 shadow-lg"
+		>
+
+			<div class="animate-slideIn">
+				<h1
+					class="text-4xl md:text-6xl font-bold text-blue-800 mb-6 leading-tight"
+					id="modal-titlee"
+				>
+					Empowering Women & Girls In Under Served Communities
+					Through
+					<span
+						class="bg-gradient-to-r from-blue-600 to-pink-500 bg-clip-text text-transparent"
+						>Unity & Action</span
+					>
+				</h1>
+
+				<p
+					class="text-lg md:text-xl text-gray-800 mb-8 max-w-2xl leading-relaxed"
+				>
+					Join Sistas Wing Union in our mission to create meaningful change,
+					support women's initiatives, and build stronger communities
+					through collective action and empowerment.
+				</p>
+
+				<div class="flex flex-col sm:flex-row gap-4">
+					<button
+						class="px-8 py-4 bg-gradient-to-r from-blue-300 to-blue-400 text-gray-800 font-semibold rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
+						onclick="openPaystackCheckout()"
+					>
+						Donate Now
+					</button>
+
+					<a href="pages/initiative.html">
+						<button
+							class="px-8 py-4 bg-white text-gray-800 font-semibold rounded-full border-2 border-gray-300 hover:border-pink-400 hover:bg-pink-50 transition-all duration-300 shadow-lg"
+						>
+							Explore Initiatives
+						</button>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<style>
+		@keyframes slideIn {
+			from {
+				opacity: 0;
+				transform: translateX(-50px);
+			}
+			to {
+				opacity: 1;
+				transform: translateX(0);
+			}
+		}
+
+		.animate-slideIn {
+			animation: slideIn 1.2s ease-out forwards;
+		}
+	</style>
+</section> -->
+
+
+
+
+<section class="relative overflow-hidden bg-cover bg-center bg-no-repeat" 
+	style="background-image: url('images/image1.jpg');">
+	<!-- Gradient Overlay -->
+	<div class="absolute inset-0 bg-gradient-to-r from-pink-600  to-transparent"></div>
+
+	<!-- Hero Content -->
+	<div class="relative container mx-auto px-6 py-24 md:py-40 flex items-center">
+		<div class="max-w-3xl text-left animate-slideIn">
+			<!-- <h1
+				class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight"
+				id="modal-titlee"
+			>
+				Empowering Women & Girls In Underserved Communities
+				Through
+				<span
+					class="bg-gradient-to-r from-blue-800 to-blue-800 bg-clip-text text-transparent"
+					>Unity & Action</span
+				>
+			</h1> -->
+			<!-- Google Font -->
+<!-- <link
+	href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap"
+	rel="stylesheet"
+/> -->
+<!-- Google Font -->
+
+
+		<h1
+				id="typewriter"
+				class="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white"
+				style="font-family: 'Dancing Script', cursive;"
+			></h1>
+
+			<!-- Quote Paragraph -->
+			<p
+				id="quote"
+				class="text-lg md:text-xl text-gray-100 mb-8 max-w-2xl leading-relaxed opacity-0 translate-y-10"
+			>
+				Join Sistas Wing Union in our mission to create meaningful change,
+				support women's initiatives, and build stronger communities
+				through collective action and empowerment.
+			</p>
+
+			<!-- Buttons -->
+			<div id="buttons" class="flex flex-col sm:flex-row gap-4 opacity-0 translate-y-10">
+				<button
+					class="px-8 py-4 bg-gradient-to-r from-blue-300 to-blue-400 text-gray-800 font-semibold rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
+					onclick="openPaystackCheckout()"
+				>
+					Donate Now
+				</button>
+
+				<a href="pages/initiative.html">
+					<button
+						class="px-8 py-4 bg-white text-gray-800 font-semibold rounded-full border-2 border-gray-300 hover:border-pink-400 hover:bg-pink-50 transition-all duration-300 shadow-lg"
+					>
+						Explore Initiatives
+					</button>
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Styles -->
+
+
+<!-- Script -->
+
+
+
+		
 
 		<!-- Footer -->
 		<footer class="bg-gray-900 text-white py-12">
@@ -709,30 +912,108 @@
 				<!-- Copyright -->
 				<div class="border-t border-gray-800 mt-8 pt-8 text-center">
 					<p class="text-gray-400">
-						&copy; 2025 Sistas Wing Union. All rights reserved. Made
-						with 💖 for women empowerment.
+						&copy; 2025 Sistas Wing Union. All rights reserved. Sistas Wing Union International
 					</p>
 				</div>
 			</div>
 		</footer>
 
-		<!-- Floating WhatsApp Button -->
-		<div class="whatsapp-float">
-			<a
-				href="https://wa.me/233209759737"
-				target="_blank"
-				rel="noopener noreferrer"
-				class="flex items-center justify-center w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg transition-colors duration-300"
-				aria-label="Join our WhatsApp community"
-			>
-				<!-- TODO: Replace with actual WhatsApp invite URL -->
-				<svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
-					<path
-						d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.863 3.488"
-					/>
-				</svg>
-			</a>
-		</div>
+<footer class="bg-gray-900 text-white py-12 relative">
+  <div class="container mx-auto px-6">
+    <div class="grid md:grid-cols-4 gap-8">
+
+      <!-- Mission Section -->
+      <div class="md:col-span-2">
+        <div class="flex items-center space-x-2 mb-4">
+          <img
+            src="images/Screenshot 2025-09-01 114611.png"
+            alt="SISTAS Wing Union"
+            class="w-8 h-8 rounded-full"
+          />
+          <span class="text-xl font-bold">SWUI</span>
+        </div>
+        <p class="text-gray-300 leading-relaxed mb-4">
+          Restoring hope to girls and women one community at a time.
+          We believe that when one woman is empowered, the entire nation
+          is transformed.
+        </p>
+        <div class="flex space-x-4">
+          <a href="https://www.instagram.com/sistas_wingunion" target="_blank" class="text-gray-400 hover:text-pink-400 transition">
+            <i class="fa-brands fa-instagram text-xl"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/sistas-wing-union-international-swui-ghana-001373387" target="_blank" class="text-gray-400 hover:text-pink-400 transition">
+            <i class="fa-brands fa-linkedin text-xl"></i>
+          </a>
+          <a href="https://www.tiktok.com/@sistas_wingunion" target="_blank" class="text-gray-400 hover:text-pink-400 transition">
+            <i class="fa-brands fa-tiktok text-xl"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="text-lg font-semibold mb-2 border-b-2 border-pink-500 inline-block pb-1">
+          Quick Links
+        </h3>
+        <ul class="space-y-2 mt-3">
+          <li><a href="pages/aboutus.html" class="text-gray-300 hover:text-pink-400">About the Union</a></li>
+          <li><a href="pages/initiative.html" class="text-gray-300 hover:text-pink-400">Our Initiatives</a></li>
+          <li><a href="pages/mediagallery.html" class="text-gray-300 hover:text-pink-400">Media Gallery</a></li>
+          <li><a href="pages/Upcomingevent.html" class="text-gray-300 hover:text-pink-400">News & Event</a></li>
+          <li><a href="pages/contactus.html" class="text-gray-300 hover:text-pink-400">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Support -->
+      <div>
+        <h3 class="text-lg font-semibold mb-2 border-b-2 border-pink-500 inline-block pb-1">
+          Support Us
+        </h3>
+        <ul class="space-y-2 mt-3">
+          <li><a href="index.html#donate" class="text-gray-300 hover:text-pink-400">Make a Donation</a></li>
+          <li><a href="pages/volunteer.html" class="text-gray-300 hover:text-pink-400">Volunteer</a></li>
+          <li><a href="pages/volunteer.html" class="text-gray-300 hover:text-pink-400">Become a Donor Member</a></li>
+          <li><a href="pages/patnerwithus.html" class="text-gray-300 hover:text-pink-400">Partner With Us</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="border-t border-gray-800 mt-8 pt-6 text-center text-gray-400">
+      &copy; 2025 Sistas Wing Union International. All rights reserved.
+    </div>
+  </div>
+
+  <!-- Bottom Pink Strip -->
+  <div class="absolute bottom-0 left-0 w-full h-2 bg-pink-500"></div>
+</footer>
+
+<div class="fixed bottom-6 right-6 flex flex-col items-center space-y-2 z-50">
+	<!-- Animated Text -->
+	<span class="text-green-800 bg-white px-3 py-1 rounded-full text-sm font-medium animate-bounce-smooth shadow-md">
+		Chat with us 💬
+	</span>
+
+	<!-- WhatsApp Button -->
+	<a
+		href="https://wa.me/233209759737"
+		target="_blank"
+		rel="noopener noreferrer"
+		class="flex items-center justify-center w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg transition-transform duration-300 hover:scale-110"
+		aria-label="Join our WhatsApp community"
+	>
+		<svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+			<path
+				d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.863 3.488"
+			/>
+		</svg>
+	</a>
+</div>
+
+
+
+
+
 
 		<script>
 			// ========== REPLACE THESE PLACEHOLDERS ==========
@@ -972,6 +1253,36 @@
 			console.log(
 				"💡 Remember: Server-side payment verification is required for production!"
 			);
+
+
+				const typewriterElement = document.getElementById("typewriter");
+	const quote = document.getElementById("quote");
+	const buttons = document.getElementById("buttons");
+
+	const text = `Empowering Women & Girls In Underserved Communities Through <span class="highlight">Unity & Action</span>`;
+	let index = 0;
+
+	// 🔥 Faster typing speed
+	const speed = 50; // Smaller = faster
+
+	function typeWriter() {
+		if (index < text.length) {
+			typewriterElement.innerHTML =
+				text.slice(0, index) + "<span class='cursor'></span>";
+			index++;
+			setTimeout(typeWriter, speed);
+		} else {
+			typewriterElement.innerHTML = text;
+
+			// Slide in quote + buttons after short delay
+			setTimeout(() => {
+				quote.classList.add("animate-slideUp");
+				buttons.classList.add("animate-slideUp");
+			}, 400);
+		}
+	}
+
+	window.onload = typeWriter;
 		</script>
 	</body>
 </html>
