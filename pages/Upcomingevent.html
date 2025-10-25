@@ -184,6 +184,35 @@
         .event-type-bootcamp {
             background: linear-gradient(135deg, var(--brand-pink), var(--brand-blue));
         }
+
+        /* Slide-up animation */
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.animate-slideUp {
+    animation: slideUp 0.8s ease-out forwards;
+}
+
+/* Blinking cursor */
+.cursor {
+    display: inline-block;
+    width: 3px;
+    background-color: #fff;
+    margin-left: 2px;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
     </style>
 </head>
 <body class="bg-brand-soft-gray text-brand-charcoal font-sans" id="top">
@@ -310,43 +339,29 @@
     </div>
 
     <!-- Hero Section -->
-    <section class="relative bg-white overflow-hidden">
-        <!-- Wavy SVG Background -->
-   <div class="absolute inset-0 w-full h-full overflow-hidden">
-  <svg class="w-full h-full object-cover transform rotate-180" 
-       viewBox="0 0 1200 400" 
-       fill="none" 
-       xmlns="http://www.w3.org/2000/svg" 
-       preserveAspectRatio="none">
-    <defs>
-      <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-       <stop offset="0%" style="stop-color:#fe0592;stop-opacity:0.8" />
-        <stop offset="50%" style="stop-color:#08a0ff;stop-opacity:0.6" />
-        <stop offset="100%" style="stop-color:#ff0392;stop-opacity:0.4" />
-      </linearGradient>
-    </defs>
+    <!-- Upcoming Events Hero Section -->
+<section class="relative overflow-hidden bg-cover bg-center bg-no-repeat h-[100vh]"
+    style="background-image: url('../images/IMG-20251005-WA0044.jpg');">
+    
+    <!-- Gradient Overlay -->
+    <div class="absolute inset-0 bg-gradient-to-r from-pink-600/70 to-transparent"></div>
 
-    <path d="M0,80 C300,160 600,0 1200,120 L1200,400 L0,400 Z" fill="url(#gradient1)" />
-    <path d="M0,150 C400,230 800,70 1200,180 L1200,400 L0,400 Z" fill="#BFE6FF" fill-opacity="0.3" />
-    <path d="M0,250 C350,320 850,140 1200,280 L1200,400 L0,400 Z" fill="#FAD1E8" fill-opacity="0.2" />
-  </svg>
-</div>
+    <!-- Content -->
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center text-white">
+        <!-- Typewriter Heading -->
+        <h1 id="typewriter-events"
+            class="text-4xl md:text-6xl font-bold mb-6 leading-tight"
+            style="font-family: 'Dancing Script', cursive;">
+        </h1>
 
+        <!-- Slide-up Paragraph -->
+        <p id="events-text"
+            class="text-xl md:text-2xl text-gray-100 max-w-4xl mx-auto opacity-0 translate-y-10 leading-relaxed">
+            Stay informed about our latest programs, workshops, and community gatherings.
+        </p>
+    </div>
+</section>
 
-
-        
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
-            <div class="text-center fade-in-up">
-                <h1 class="text-4xl md:text-6xl font-bold text-brand-charcoal mb-6" id="fonts"
-                >
-                    Upcoming Events
-                </h1>
-                <p class="text-xl md:text-2xl text-black max-w-4xl mx-auto">
-                    Stay informed about our latest programs, workshops, and community gatherings.
-                </p>
-            </div>
-        </div>
-    </section>
 
     <!-- Events List Section -->
     <section class="py-20 bg-white">
@@ -692,6 +707,8 @@
                 }, 2000);
             }
         }
+
+
         
         // Paystack donation checkout
         function openDonationCheckout() {
@@ -744,6 +761,30 @@
             });
         });
         
+
+
+        const typewriterEvents = document.getElementById("typewriter-events");
+const eventsText = document.getElementById("events-text");
+
+const eventsHeading = `Upcoming Events`;
+let idx3 = 0;
+const typingSpeed3 = 50;
+
+function typeWriterEvents() {
+    if (idx3 < eventsHeading.length) {
+        typewriterEvents.innerHTML =
+            eventsHeading.slice(0, idx3) + "<span class='cursor'></span>";
+        idx3++;
+        setTimeout(typeWriterEvents, typingSpeed3);
+    } else {
+        typewriterEvents.innerHTML = eventsHeading;
+        setTimeout(() => {
+            eventsText.classList.add("animate-slideUp");
+        }, 400);
+    }
+}
+
+window.addEventListener("DOMContentLoaded", typeWriterEvents);
         // TODO: Production Notes
         // 1. Replace all Google Form URLs with actual event registration forms
         // 2. Replace Paystack public key with production key  
