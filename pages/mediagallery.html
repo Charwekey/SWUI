@@ -595,327 +595,225 @@
 
 
 
-    <section class="py-12">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-wrap justify-center gap-4 mb-12">
-          <button
-            class="filter-tab active px-6 py-3 rounded-full font-medium text-brand-gray"
-            data-filter="all"
-          >
-            All Photos
-          </button>
-          <button
-            class="filter-tab px-6 py-3 rounded-full font-medium text-gray-600 bg-gray-100"
-            data-filter="Community Outreach"
-          >
-            Community Outreach
-          </button>
-          <button
-            class="filter-tab px-6 py-3 rounded-full font-medium text-gray-600 bg-gray-100"
-            data-filter="community"
-          >
-            Community Events
-          </button>
-          <button
-            class="filter-tab px-6 py-3 rounded-full font-medium text-gray-600 bg-gray-100"
-            data-filter="campaigns"
-          >
-            Campaigns
-          </button>
-          <button
-            class="filter-tab px-6 py-3 rounded-full font-medium text-gray-600 bg-gray-100"
-            data-filter="tech"
-          >
-            Tech Events
-          </button>
-        </div>
-      </div>
-    </section>
+  <header class="bg-white shadow-sm mt-16 ml-50">
+    <div class="max-w-7xl mx-0 auto px-6 py-6">
+      <h1 class="text-4xl font-bold text-pink-600 " id="fonts">Media — SWUI Initiatives</h1>
+      <p class="text-sm text-gray-600 mt-1">Reports, photos and videos from our outreachs and programs.</p>
+    </div>
+  </header>
 
-    <!-- Photo Gallery -->
-    <section class="py-8">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl font-bold text-center text-brand-gray mb-12">
-          Community Engagement Outreach
-        </h2>
+    <main class="max-w-7xl mx-auto px-6 py-10 space-y-12">
 
-        <!-- Loading Spinner -->
-        <div
-          id="loading-spinner"
-          class="flex justify-center items-center py-12 hidden"
-        >
-          <div class="spinner"></div>
-        </div>
-
-        <!-- Gallery Grid -->
-        <div
-          id="gallery-grid"
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
-          <!-- Workshop Photos -->
-          <div
-            class="gallery-item filter-item workshops rounded-xl shadow-lg overflow-hidden bg-white"
-            data-src="../images/IMG-20251005-WA0045.jpg"
-            data-caption="Women learning coding fundamentals at our Tech Rising workshop"
-          >
-            <div class="relative">
-              <img
-                src="../images/IMG-20251005-WA0045.jpg"
-                alt="Tech Workshop"
-                class="w-full h-64 object-cover"
-              />
-              
-            </div>
-          </div>
-
-          <div
-            class="gallery-item filter-item workshops rounded-xl shadow-lg overflow-hidden bg-white"
-            data-src="../imagesIMG-20251005-WA0044.jpg/"
-            data-caption="Digital skills training session for women entrepreneurs"
-          >
-            <div class="relative">
-              <img
-                src="../images/IMG-20251005-WA0044.jpg"
-                alt="Skills Training"
-                class="w-full h-64 object-cover"
-              />
-              
-            </div>
-          </div>
-
-          <!-- Community Events -->
-          <div
-            class="gallery-item filter-item community rounded-xl shadow-lg overflow-hidden bg-white"
-            data-src="../images/IMG-20251005-WA0047.jpg"
-            data-caption="Happy Smile Donation drive supporting local families"
-          >
-            <div class="relative">
-              <img
-                src="../images/IMG-20251005-WA0047.jpg"
-                alt="Community Outreach"
-                class="w-full h-64 object-cover"
-              />
-              
-            </div>
-          </div>
-
-          <div
-            class="gallery-item filter-item community rounded-xl shadow-lg overflow-hidden bg-white"
-            data-src="../images/IMG-20251005-WA0048.jpg"
-            data-caption="Holiday celebration with supported families"
-          >
-            <div class="relative">
-              <img
-                src="../images/IMG-20251005-WA0048.jpg"
-                alt="Holiday Event"
-                class="w-full h-64 object-cover"
-              />
-              
-            </div>
-           
-          </div>
-
-          <div
-            class="gallery-item filter-item community rounded-xl shadow-lg overflow-hidden bg-white"
-            data-src="../images/WhatsApp Image 2025-10-05 at 20.47.53_5f2d575a.jpg"
-            data-caption="Holiday celebration with supported families"
-          >
-            <div class="relative">
-              <img
-                src="../images/WhatsApp Image 2025-10-05 at 20.47.53_5f2d575a.jpg"
-                alt="Holiday Event"
-                class="w-full h-64 object-cover"
-              />
-              
-            </div>
-           
-          </div>
- </div>
-    </section>
-
-           <section class="py-8">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl font-bold text-center text-brand-gray mb-12">
-          
-        </h2>
-
-        <!-- Loading Spinner -->
-        <div
-          id="loading-spinner"
-          class="flex justify-center items-center py-12 hidden"
-        >
-          <div class="spinner"></div>
-        </div>
-
-        <!-- Gallery Grid -->
-        <div
-          id="gallery-grid"
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
-          <!-- Tech Events -->
-          <div
-            class="gallery-item filter-item tech rounded-xl shadow-lg overflow-hidden bg-white"
-            data-src="../images/IMG-20250920-WA0149.jpg"
-            data-caption="Women in Tech conference keynote presentation"
-          >
-            <div class="relative">
-              <img
-                src="../images/IMG-20250920-WA0149.jpg"
-                alt="Tech Conference"
-                class="w-full h-64 object-cover"
-              />
-              
-            </div>
-            
-          </div>
-
-          <div
-            class="gallery-item filter-item tech rounded-xl shadow-lg overflow-hidden bg-white"
-            data-src="../images/IMG-20250920-WA0150.jpg"
-            data-caption="Intensive coding bootcamp graduation ceremony"
-          >
-            <div class="relative">
-              <img
-                src="../images/IMG-20250920-WA0150.jpg"
-                alt="Coding Bootcamp"
-                class="w-full h-64 object-cover"
-              />
-              
-            </div>
-            
-          </div>
-
-          <div
-            class="gallery-item filter-item workshops rounded-xl shadow-lg overflow-hidden bg-white"
-            data-src="../images/IMG-20250920-WA0151.jpg"
-            data-caption="One-on-one mentorship session between tech professional and mentee"
-          >
-            <div class="relative">
-              <img
-                src="../images/IMG-20250920-WA0151.jpg"
-                alt="Mentorship Program"
-                class="w-full h-64 object-cover"
-              />
-              
-            </div>
-          
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Video Section -->
-    <section class="py-16 bg-gray-50">
-      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2
-          class="text-3xl font-bold text-center text-brand-gray mb-12"
-          id="fonts"
-        >
-          Videos from Our Communtiy Engagement Outreach
-        </h2>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-          <!-- Video Card 1 -->
-          <div class="video-card bg-white rounded-xl shadow-lg overflow-hidden">
-            <div class="aspect-w-16 aspect-h-9 relative">
-                <video class="w-full h-64" controls>
-                <source src="../images/VID-20251005-WA0001.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
-           
-          </div>
-
-          <!-- Video Card 2 -->
-          <div class="video-card bg-white rounded-xl shadow-lg overflow-hidden">
-            <div class="aspect-w-16 aspect-h-9 relative">
-              <video class="w-full h-64" controls preload="metadata" title="Happy Smile Donation Impact">
-                <source src="../images/VID-20251005-WA0002.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
-
-          </div>
-
-          <!-- Video Card 3 -->
+  <!-- Section: Examine Her Initiative -->
+  <section class="bg-white rounded-2xl shadow px-6 py-8">
+    <div class="grid md:grid-cols-2 gap-8 items-start">
       
-        </div>
-      </div>
-    </section>
-
-     <section class="py-16 bg-gray-50">
-      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2
-          class="text-3xl font-bold text-center text-brand-gray mb-12"
-          id="fonts"
-        >
-          Videos from Our Examine Her Initiative Outreach
-        </h2>
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-           <div class="video-card bg-white rounded-xl shadow-lg overflow-hidden">
-            <div class="aspect-w-16 aspect-h-9 relative">
-              <video class="w-full h-64" controls preload="metadata" title="Examine Her Initiative Campaign">
-                <source src="../images/WhatsApp Video 2025-10-05 at 20.56.28_8190fd95.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
-
-            </div>
-          
-
-            <div class="video-card bg-white rounded-xl shadow-lg overflow-hidden">
-            <div class="aspect-w-16 aspect-h-9 relative">
-              <video class="w-full h-64" controls preload="metadata" title="Examine Her Initiative Campaign">
-                <source src="../images/WhatsApp Video 2025-10-05 at 20.57.36_1a7a99b3.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
-           
-          
+      <!-- Left: Preview Images -->
+      <div id="examine-gallery" class="space-y-3 transition-all duration-500">
+        <div class="grid grid-cols-2 gap-3">
+          <div class="rounded-lg overflow-hidden gallery-item shadow">
+            <img src="../images/IMG-20251018-WA0032.jpg" alt="examine 1" class="w-full h-40 object-cover">
           </div>
-
-
-          <!-- Video Card 3 -->
-     </div>
-      </div>
-    </section>
-
-  
-
-    <!-- Impact Highlights Banner -->
-    <section class="py-16 bg-gradient-to-r from-pink-500 to-purple-600">
-      <div class="container mx-auto px-4">
-        <div class="max-w-4xl mx-auto text-center text-white">
-          <h2 class="text-3xl md:text-4xl font-bold mb-4" id="fonts">
-            Want to be part of our story?
-          </h2>
-          <p class="text-lg md:text-xl mb-8 text-pink-100">
-            Join us in creating impact and making a difference in the lives of
-            women across Ghana.
-          </p>
-
-          <div
-            class="flex flex-col sm:flex-row gap-4 justify-center items-center"
-          >
-            <a href="./volunteer.html">
-              <button
-                class="px-8 py-4 bg-white text-pink-600 font-semibold rounded-full hover:bg-pink-50 transition-all duration-300 transform hover:scale-105 shadow-lg"
-              >
-                Get Involved
-              </button>
-            </a>
-
-            <a href="./partnerwithus.html">
-              <button
-                class="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-pink-600 transition-all duration-300 transform hover:scale-105"
-              >
-                Partner With Us
-              </button>
-            </a>
+          <div class="rounded-lg overflow-hidden gallery-item shadow">
+            <img src="../images/IMG-20251019-WA0374.jpg" alt="examine 2" class="w-full h-40 object-cover">
+          </div>
+          <div class="rounded-lg overflow-hidden gallery-item shadow">
+            <img src="../images/IMG-20251019-WA0375.jpg" alt="examine 3" class="w-full h-40 object-cover">
+          </div>
+          <div class="rounded-lg overflow-hidden gallery-item shadow">
+            <img src="../images/WhatsApp Image 2025-10-23 at 17.03.13_becbf019.jpg" alt="examine 4" class="w-full h-40 object-cover">
           </div>
         </div>
       </div>
-    </section>
+
+      <!-- Right: Text -->
+      <div>
+        <h2 class="text-2xl font-semibold text-pink-600">Examine Her Initiative — Breast Cancer Screening (Dawa)</h2>
+        <p class="mt-3 text-gray-600">
+          Brief: Breast Cancer Screening and Sensitization Exercise at Dawa, Ningo-Prampram Municipality.
+        </p>
+
+        <!-- Initial Preview -->
+        <div class="mt-4 text-gray-700 space-y-2">
+          <p>Sistas Wing Union International successfully conducted a Breast Cancer Screening and Sensitization Exercise at Dawa as part of the “Examine Her” initiative.</p>
+          <p class="text-sm text-gray-500">Event date: <strong>Monday, 13 October 2025</strong> — Exercise started at 9:00 AM and ended at 2:00 PM.</p>
+        </div>
+
+        <!-- Hidden parts -->
+        <div id="report-examine-part1" class="hidden mt-4 text-gray-700 space-y-2 fade-in">
+          <p>The “Examine Her” initiative aims to promote women’s health and early detection of breast cancer. The event began at 9:00 a.m. and included free screenings and health talks.</p>
+          <p>Health professionals educated participants on causes, symptoms, self-examinations, and treatment importance.</p>
+        </div>
+
+        <div id="report-examine-part2" class="hidden mt-4 text-gray-700 space-y-2 fade-in">
+          <p>A total of <strong>85 women were screened</strong>, with <strong>13 cases</strong> referred for further medical attention. Survivor testimonies and emotional stories highlighted the importance of awareness.</p>
+          <p>SWUI reaffirmed its commitment to advocacy and regular screenings for women in rural areas.</p>
+        </div>
+
+        <div id="report-examine-part3" class="hidden mt-4 text-gray-700 fade-in">
+          <p>The exercise ended with group photos, media coverage, and words of encouragement from partners.</p>
+        </div>
+
+        <div class="mt-5">
+          <button onclick="toggleStepwise('examine', this)"
+            class="inline-flex items-center gap-2 bg-pink-600 text-white px-4 py-2 rounded-lg hover:bg-pink-700 transition">
+            Read More
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Community Outreach -->
+  <section class="bg-white rounded-2xl shadow px-6 py-8">
+    <div class="grid md:grid-cols-2 gap-8 items-start">
+      
+      <!-- Left: Preview Images -->
+      <div id="outreach-gallery" class="space-y-3 transition-all duration-500">
+        <div class="grid grid-cols-2 gap-3">
+          <div class="rounded-lg overflow-hidden gallery-item shadow">
+            <img src="../images/IMG-20251005-WA0044.jpg" alt="outreach 1" class="w-full h-40 object-cover">
+          </div>
+          <div class="rounded-lg overflow-hidden gallery-item shadow">
+            <img src="../images/IMG-20251005-WA0045.jpg" alt="outreach 2" class="w-full h-40 object-cover">
+          </div>
+          <div class="rounded-lg overflow-hidden gallery-item shadow">
+            <img src="../images/IMG-20251005-WA0047.jpg" alt="outreach 3" class="w-full h-40 object-cover">
+          </div>
+          <div class="rounded-lg overflow-hidden gallery-item shadow">
+            <img src="../images/IMG-20251005-WA0048.jpg" alt="outreach 4" class="w-full h-40 object-cover">
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Text -->
+      <div>
+        <h2 class="text-2xl font-semibold text-pink-600">Community Outreach — Empowering Through Service</h2>
+        <p class="mt-3 text-gray-600">
+          Brief: Empowering communities through impactful initiatives, education, and sustainable support.
+        </p>
+
+        <!-- Initial Preview -->
+        <div class="mt-4 text-gray-700 space-y-2">
+          <p>The Sistas Wing Union International continues its mission to make a difference through organized outreach programs focused on women, youth, and community growth.</p>
+          <p class="text-sm text-gray-500">Event date: <strong>Sunday, 5 October 2025</strong> — Community support and engagement meeting.</p>
+        </div>
+
+        <!-- Hidden parts -->
+        <div id="report-outreach-part1" class="hidden mt-4 text-gray-700 space-y-2 fade-in">
+          <p>Our team engaged residents with health education, youth mentorship, and small business training sessions aimed at promoting self-sufficiency.</p>
+          <p>Through partnerships and volunteering, we distributed essential supplies and provided hands-on assistance to families in need.</p>
+        </div>
+
+        <div id="report-outreach-part2" class="hidden mt-4 text-gray-700 space-y-2 fade-in">
+          <p>Over <strong>100 participants</strong> benefited from skill-building sessions and educational talks on leadership, health, and social development.</p>
+          <p>Smiles and gratitude filled the day, reflecting the power of compassion and collective effort.</p>
+        </div>
+
+        <div id="report-outreach-part3" class="hidden mt-4 text-gray-700 fade-in">
+          <p>The event concluded with a shared meal, heartfelt speeches, and renewed commitment to community building.</p>
+        </div>
+
+        <div class="mt-5">
+          <button onclick="toggleStepwise('outreach', this)"
+            class="inline-flex items-center gap-2 bg-pink-600 text-white px-4 py-2 rounded-lg hover:bg-pink-700 transition">
+            Read More
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Section -->
+  <section class="bg-white rounded-2xl shadow px-6 py-8">
+    <h2 class="text-2xl font-semibold text-pink-600 text-center">Video Gallery — Our Initiatives</h2>
+    <p class="text-center text-gray-600 mt-2">All videos are kept in a separate section for quick access.</p>
+
+    <div class="grid md:grid-cols-2 gap-6 mt-6">
+      <div class="rounded-lg overflow-hidden shadow">
+        <video controls class="w-full h-[500px] object-cover">
+          <source src="../images/VID-20251005-WA0001.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="p-3 border-t">
+          <p class="text-sm font-medium">Community Outreach — Screening Highlights</p>
+        </div>
+      </div>
+
+      <div class="rounded-lg overflow-hidden shadow">
+        <video controls class="w-full h-[500px] object-cover">
+          <source src="../images/WhatsApp Video 2025-10-05 at 20.56.28_8190fd95.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="p-3 border-t">
+          <p class="text-sm font-medium">Examine Her Initiative — Event Clip</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+  const steps = { examine: 0, outreach: 0 };
+
+  function toggleStepwise(section, btn) {
+    const part1 = document.getElementById(`report-${section}-part1`);
+    const part2 = document.getElementById(`report-${section}-part2`);
+    const part3 = document.getElementById(`report-${section}-part3`);
+    const gallery = document.getElementById(`${section}-gallery`);
+
+    if (steps[section] === 0) {
+      part1.classList.remove("hidden");
+      steps[section]++;
+      btn.textContent = "Read More";
+    } 
+    else if (steps[section] === 1) {
+      part2.classList.remove("hidden");
+      steps[section]++;
+      btn.textContent = "Read More";
+    } 
+    else if (steps[section] === 2) {
+      part3.classList.remove("hidden");
+
+      // Append new images below
+      const newImgs = `
+        <div class="grid grid-cols-2 gap-3 mt-3 fade-in">
+          <div class="rounded-lg overflow-hidden gallery-item shadow">
+            <img src="../images/${section}-extra1.jpg" alt="extra 1" class="w-full h-40 object-cover">
+          </div>
+          <div class="rounded-lg overflow-hidden gallery-item shadow">
+            <img src="../images/${section}-extra2.jpg" alt="extra 2" class="w-full h-40 object-cover">
+          </div>
+        </div>
+      `;
+      gallery.insertAdjacentHTML('beforeend', newImgs);
+
+      steps[section]++;
+      btn.textContent = "Show Less";
+    } 
+    else {
+      // Reset everything
+      part1.classList.add("hidden");
+      part2.classList.add("hidden");
+      part3.classList.add("hidden");
+      gallery.querySelectorAll(".fade-in").forEach(el => el.remove());
+      steps[section] = 0;
+      btn.textContent = "Read More";
+      btn.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  }
+</script>
+
+<style>
+  .fade-in {
+    animation: fadeIn 0.7s ease forwards;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12">
